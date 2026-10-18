@@ -1,0 +1,9 @@
+# Rendered map scans and tile caches for tools/review (rebuilt on demand)
+.cache/
+__pycache__/
+# Source scans of the rulebook (large; kept outside version control)
+*.pdf
+*.epub
+# Check overlays drawn by tools/map/overlay.py (regenerate as needed)
+data/map/checks/
+data/map/E_test_overlay.png

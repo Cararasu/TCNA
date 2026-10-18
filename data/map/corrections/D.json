@@ -1,0 +1,2846 @@
+{
+ "hexes": {
+  "0117": {
+   "terrain": "desert"
+  },
+  "0134": {
+   "terrain": "rough"
+  },
+  "0215": {
+   "terrain": "saltmarsh"
+  },
+  "0217": {
+   "terrain": "desert"
+  },
+  "0315": {
+   "terrain": "saltmarsh"
+  },
+  "0317": {
+   "terrain": "saltmarsh"
+  },
+  "0318": {
+   "terrain": "desert"
+  },
+  "0334": {
+   "terrain": "rough"
+  },
+  "0415": {
+   "terrain": "saltmarsh"
+  },
+  "0430": {
+   "terrain": "gravel"
+  },
+  "0431": {
+   "terrain": "gravel"
+  },
+  "0504": {
+   "terrain": "saltmarsh"
+  },
+  "0505": {
+   "terrain": "saltmarsh"
+  },
+  "0506": {
+   "terrain": "saltmarsh"
+  },
+  "0507": {
+   "terrain": "saltmarsh"
+  },
+  "0508": {
+   "terrain": "saltmarsh"
+  },
+  "0517": {
+   "terrain": "saltmarsh"
+  },
+  "0521": {
+   "terrain": "rough"
+  },
+  "0528": {
+   "terrain": "desert"
+  },
+  "0529": {
+   "terrain": "desert"
+  },
+  "0530": {
+   "terrain": "gravel"
+  },
+  "0532": {
+   "terrain": "gravel"
+  },
+  "0608": {
+   "terrain": "saltmarsh"
+  },
+  "0617": {
+   "terrain": "desert"
+  },
+  "0628": {
+   "terrain": "saltmarsh"
+  },
+  "0630": {
+   "terrain": "gravel"
+  },
+  "0632": {
+   "terrain": "gravel"
+  },
+  "0713": {
+   "terrain": "rough"
+  },
+  "0714": {
+   "terrain": "saltmarsh"
+  },
+  "0715": {
+   "terrain": "saltmarsh"
+  },
+  "0716": {
+   "terrain": "saltmarsh"
+  },
+  "0719": {
+   "terrain": "saltmarsh"
+  },
+  "0720": {
+   "terrain": "saltmarsh"
+  },
+  "0727": {
+   "terrain": "desert"
+  },
+  "0728": {
+   "terrain": "desert"
+  },
+  "0729": {
+   "terrain": "desert"
+  },
+  "0733": {
+   "terrain": "gravel"
+  },
+  "0813": {
+   "terrain": "saltmarsh"
+  },
+  "0818": {
+   "terrain": "saltmarsh"
+  },
+  "0819": {
+   "terrain": "saltmarsh"
+  },
+  "0831": {
+   "terrain": "gravel"
+  },
+  "0913": {
+   "terrain": "saltmarsh"
+  },
+  "0914": {
+   "terrain": "saltmarsh"
+  },
+  "0915": {
+   "terrain": "saltmarsh"
+  },
+  "0916": {
+   "terrain": "saltmarsh"
+  },
+  "0917": {
+   "terrain": "saltmarsh"
+  },
+  "0918": {
+   "terrain": "saltmarsh"
+  },
+  "0919": {
+   "terrain": "saltmarsh"
+  },
+  "1010": {
+   "terrain": "saltmarsh"
+  },
+  "1011": {
+   "terrain": "saltmarsh"
+  },
+  "1012": {
+   "terrain": "saltmarsh"
+  },
+  "1109": {
+   "landmarks": [
+    {
+     "type": "village",
+     "name": "Qara"
+    }
+   ]
+  },
+  "1112": {
+   "terrain": "saltmarsh"
+  },
+  "1113": {
+   "terrain": "saltmarsh"
+  },
+  "1114": {
+   "terrain": "saltmarsh"
+  },
+  "1115": {
+   "terrain": "saltmarsh"
+  },
+  "1117": {
+   "terrain": "gravel"
+  },
+  "1118": {
+   "terrain": "gravel"
+  },
+  "1130": {
+   "terrain": "desert"
+  },
+  "1134": {
+   "terrain": "desert"
+  },
+  "1204": {
+   "terrain": "rough"
+  },
+  "1213": {
+   "terrain": "saltmarsh"
+  },
+  "1214": {
+   "terrain": "saltmarsh"
+  },
+  "1215": {
+   "terrain": "gravel"
+  },
+  "1220": {
+   "terrain": "desert"
+  },
+  "1314": {
+   "terrain": "saltmarsh"
+  },
+  "1316": {
+   "terrain": "saltmarsh"
+  },
+  "1317": {
+   "terrain": "saltmarsh"
+  },
+  "1412": {
+   "terrain": "saltmarsh"
+  },
+  "1417": {
+   "terrain": "saltmarsh"
+  },
+  "1418": {
+   "terrain": "saltmarsh"
+  },
+  "1428": {
+   "terrain": "desert"
+  },
+  "1429": {
+   "terrain": "desert"
+  },
+  "1512": {
+   "terrain": "saltmarsh"
+  },
+  "1513": {
+   "terrain": "saltmarsh"
+  },
+  "1514": {
+   "terrain": "saltmarsh"
+  },
+  "1515": {
+   "terrain": "saltmarsh"
+  },
+  "1516": {
+   "terrain": "saltmarsh"
+  },
+  "1518": {
+   "terrain": "saltmarsh"
+  },
+  "1528": {
+   "terrain": "desert"
+  },
+  "1612": {
+   "terrain": "saltmarsh"
+  },
+  "1613": {
+   "terrain": "saltmarsh"
+  },
+  "1614": {
+   "terrain": "saltmarsh"
+  },
+  "1615": {
+   "terrain": "saltmarsh"
+  },
+  "1616": {
+   "terrain": "saltmarsh"
+  },
+  "1617": {
+   "terrain": "saltmarsh"
+  },
+  "1618": {
+   "terrain": "saltmarsh"
+  },
+  "1619": {
+   "terrain": "saltmarsh"
+  },
+  "1620": {
+   "terrain": "saltmarsh"
+  },
+  "1627": {
+   "terrain": "desert"
+  },
+  "1632": {
+   "terrain": "desert"
+  },
+  "1707": {
+   "terrain": "rough"
+  },
+  "1714": {
+   "terrain": "saltmarsh"
+  },
+  "1717": {
+   "terrain": "saltmarsh"
+  },
+  "1720": {
+   "terrain": "saltmarsh"
+  },
+  "1721": {
+   "terrain": "saltmarsh"
+  },
+  "1723": {
+   "terrain": "desert"
+  },
+  "1814": {
+   "terrain": "saltmarsh"
+  },
+  "1815": {
+   "terrain": "rough"
+  },
+  "1816": {
+   "terrain": "saltmarsh"
+  },
+  "1820": {
+   "terrain": "saltmarsh"
+  },
+  "1821": {
+   "terrain": "saltmarsh"
+  },
+  "1822": {
+   "terrain": "saltmarsh"
+  },
+  "1907": {
+   "terrain": "rough"
+  },
+  "1916": {
+   "terrain": "saltmarsh"
+  },
+  "1917": {
+   "terrain": "saltmarsh"
+  },
+  "1918": {
+   "terrain": "saltmarsh"
+  },
+  "1919": {
+   "terrain": "saltmarsh"
+  },
+  "1920": {
+   "terrain": "saltmarsh"
+  },
+  "1922": {
+   "terrain": "saltmarsh"
+  },
+  "1923": {
+   "terrain": "saltmarsh"
+  },
+  "1924": {
+   "terrain": "saltmarsh"
+  },
+  "1930": {
+   "terrain": "desert"
+  },
+  "2018": {
+   "terrain": "saltmarsh"
+  },
+  "2019": {
+   "terrain": "saltmarsh"
+  },
+  "2020": {
+   "terrain": "saltmarsh"
+  },
+  "2021": {
+   "terrain": "saltmarsh"
+  },
+  "2022": {
+   "terrain": "saltmarsh"
+  },
+  "2024": {
+   "terrain": "saltmarsh"
+  },
+  "2025": {
+   "terrain": "saltmarsh"
+  },
+  "2030": {
+   "terrain": "desert"
+  },
+  "2031": {
+   "terrain": "desert"
+  },
+  "2109": {
+   "terrain": "saltmarsh"
+  },
+  "2111": {
+   "terrain": "saltmarsh"
+  },
+  "2119": {
+   "terrain": "saltmarsh"
+  },
+  "2121": {
+   "terrain": "saltmarsh"
+  },
+  "2122": {
+   "terrain": "saltmarsh"
+  },
+  "2123": {
+   "terrain": "saltmarsh"
+  },
+  "2126": {
+   "terrain": "saltmarsh"
+  },
+  "2127": {
+   "terrain": "saltmarsh"
+  },
+  "2128": {
+   "terrain": "saltmarsh"
+  },
+  "2129": {
+   "terrain": "saltmarsh"
+  },
+  "2130": {
+   "terrain": "saltmarsh"
+  },
+  "2132": {
+   "terrain": "saltmarsh"
+  },
+  "2134": {
+   "terrain": "desert"
+  },
+  "2222": {
+   "terrain": "saltmarsh"
+  },
+  "2224": {
+   "terrain": "saltmarsh"
+  },
+  "2225": {
+   "terrain": "saltmarsh"
+  },
+  "2226": {
+   "terrain": "saltmarsh"
+  },
+  "2227": {
+   "terrain": "saltmarsh"
+  },
+  "2228": {
+   "terrain": "saltmarsh"
+  },
+  "2229": {
+   "terrain": "saltmarsh"
+  },
+  "2232": {
+   "terrain": "saltmarsh"
+  },
+  "2309": {
+   "terrain": "saltmarsh"
+  },
+  "2316": {
+   "terrain": "rough"
+  },
+  "2317": {
+   "terrain": "rough"
+  },
+  "2333": {
+   "terrain": "saltmarsh"
+  },
+  "2334": {
+   "terrain": "rough"
+  },
+  "2419": {
+   "terrain": "rough"
+  },
+  "2422": {
+   "terrain": "rough"
+  },
+  "2424": {
+   "terrain": "rough"
+  },
+  "2511": {
+   "terrain": "saltmarsh"
+  },
+  "2512": {
+   "terrain": "saltmarsh"
+  },
+  "2516": {
+   "terrain": "rough"
+  },
+  "2523": {
+   "terrain": "rough"
+  },
+  "2526": {
+   "terrain": "rough"
+  },
+  "2530": {
+   "terrain": "rough"
+  },
+  "2612": {
+   "terrain": "saltmarsh"
+  },
+  "2814": {
+   "landmarks": [
+    {
+     "type": "village",
+     "name": "Bir Khadir"
+    }
+   ]
+  },
+  "2824": {
+   "terrain": "saltmarsh"
+  },
+  "2903": {
+   "landmarks": [
+    {
+     "type": "village",
+     "name": "Bir el Qatrani"
+    }
+   ]
+  },
+  "2909": {
+   "landmarks": [
+    {
+     "type": "village",
+     "name": "Bir el Geflaz"
+    }
+   ]
+  },
+  "2916": {
+   "terrain": "rough"
+  },
+  "2933": {
+   "terrain": "saltmarsh"
+  },
+  "3015": {
+   "landmarks": [
+    {
+     "type": "village",
+     "name": "Bir Talab"
+    }
+   ]
+  },
+  "3115": {
+   "landmarks": [
+    {
+     "type": "village",
+     "name": "Minqar Qaim"
+    }
+   ]
+  },
+  "3116": {
+   "terrain": "rough"
+  },
+  "3227": {
+   "landmarks": [
+    {
+     "type": "village",
+     "name": "Qotifya"
+    }
+   ]
+  },
+  "3232": {
+   "landmarks": [
+    {
+     "type": "village",
+     "name": "Sidi Abd el Rahman"
+    }
+   ]
+  },
+  "3233": {
+   "terrain": "saltmarsh"
+  },
+  "3315": {
+   "terrain": "saltmarsh"
+  },
+  "3319": {
+   "terrain": "rough"
+  },
+  "3326": {
+   "landmarks": [
+    {
+     "type": "village",
+     "name": "Galal"
+    }
+   ]
+  },
+  "3328": {
+   "landmarks": [
+    {
+     "type": "village",
+     "name": "Ghaza"
+    }
+   ]
+  },
+  "3329": {
+   "landmarks": [
+    {
+     "type": "village",
+     "name": "El Daba"
+    }
+   ]
+  },
+  "3331": {
+   "terrain": "saltmarsh"
+  },
+  "3332": {
+   "terrain": "saltmarsh"
+  },
+  "3414": {
+   "terrain": "saltmarsh"
+  },
+  "3420": {
+   "terrain": "rough"
+  },
+  "3421": {
+   "terrain": "rough"
+  },
+  "3429": {
+   "terrain": "saltmarsh"
+  },
+  "3516": {
+   "terrain": "rough"
+  },
+  "3517": {
+   "terrain": "rough"
+  },
+  "3518": {
+   "terrain": "rough"
+  },
+  "3519": {
+   "terrain": "rough"
+  },
+  "3520": {
+   "terrain": "rough"
+  },
+  "3612": {
+   "landmarks": [
+    {
+     "type": "village",
+     "name": "Charing Cross"
+    }
+   ]
+  },
+  "3614": {
+   "terrain": "rough"
+  },
+  "3714": {
+   "landmarks": [
+    {
+     "type": "village",
+     "name": "Mersa Matruh"
+    },
+    {
+     "type": "port"
+    }
+   ]
+  }
+ },
+ "sides": {
+  "0110|NW": {
+   "river": null,
+   "feature": {
+    "type": "slope",
+    "down": "0209"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "0117|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "0118|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "0119|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "0120|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "0121|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "0122|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "0123|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "0124|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "0125|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "0217|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "0218|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "0219|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "0220|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "0224|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "0318|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "0319|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "0320|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "0321|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "0325|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
+  "0325|NW": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
+  "0417|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "0418|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "0419|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "0420|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "0421|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "0502|NE": {
+   "river": null,
+   "feature": {
+    "type": "slope",
+    "down": "0502"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "0502|NW": {
+   "river": null,
+   "feature": {
+    "type": "slope",
+    "down": "0502"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "0504|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
+  "0504|NW": {
+   "river": null,
+   "feature": {
+    "type": "slope",
+    "down": "0504"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "0506|NW": {
+   "river": null,
+   "feature": {
+    "type": "slope",
+    "down": "0506"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "0507|NE": {
+   "river": "minor",
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "0508|NW": {
+   "river": "minor",
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "0518|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "0519|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "0521|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "0606|E": {
+   "river": "minor",
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "0606|NE": {
+   "river": "minor",
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "0612|NE": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "0712|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "0806|NW": {
+   "river": null,
+   "feature": {
+    "type": "slope",
+    "down": "0806"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "0818|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
+  "0907|NE": {
+   "river": "minor",
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "0908|NE": {
+   "river": "minor",
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
+  "0908|NW": {
+   "river": "minor",
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "0909|NW": {
+   "river": "minor",
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "1006|E": {
+   "river": null,
+   "feature": {
+    "type": "slope",
+    "down": "1007"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "1007|NE": {
+   "river": "minor",
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "1008|NE": {
+   "river": "minor",
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
+  "1008|NW": {
+   "river": "minor",
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "1024|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "1109|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
+  "1110|NE": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
+  "1128|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "1130|NW": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
+  "1208|NE": {
+   "river": null,
+   "feature": {
+    "type": "escarpment",
+    "down": "1208"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "1208|NW": {
+   "river": null,
+   "feature": {
+    "type": "escarpment",
+    "down": "1208"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
+  "1210|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
+  "1219|NE": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
+  "1226|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "1227|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "1228|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "1229|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "1229|NW": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
+  "1312|NE": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
+  "1326|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "1327|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "1328|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "1329|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "1329|NW": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
+  "1409|NE": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
+  "1425|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "1426|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "1427|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "1513|NE": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
+  "1526|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "1527|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "1614|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
+  "1621|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
+  "1622|NE": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
+  "1622|NW": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "1623|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "1624|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "1626|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "1712|NE": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
+  "1716|NW": {
+   "river": null,
+   "feature": {
+    "type": "escarpment",
+    "down": "1716"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
+  "1720|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "1721|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "1722|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "1723|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
+  "1724|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
+  "1732|NE": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
+  "1813|NE": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
+  "1901|NE": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "unfinished_road"
+    }
+   ]
+  },
+  "1911|NE": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
+  "1914|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
+  "1930|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
+  "1931|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
+  "1932|NE": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
+  "2001|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "unfinished_road"
+    }
+   ]
+  },
+  "2002|NE": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "unfinished_road"
+    }
+   ]
+  },
+  "2015|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
+  "2017|NE": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
+  "2103|NE": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "unfinished_road"
+    }
+   ]
+  },
+  "2129|NE": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
+  "2203|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "unfinished_road"
+    }
+   ]
+  },
+  "2204|NE": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "unfinished_road"
+    }
+   ]
+  },
+  "2222|NE": {
+   "river": null,
+   "feature": {
+    "type": "escarpment",
+    "down": "2222"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "2223|E": {
+   "river": null,
+   "feature": {
+    "type": "escarpment",
+    "down": "2224"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "2233|NE": {
+   "river": null,
+   "feature": {
+    "type": "escarpment",
+    "down": "2233"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "2305|NE": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "unfinished_road"
+    }
+   ]
+  },
+  "2322|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
+  "2330|NW": {
+   "river": null,
+   "feature": {
+    "type": "escarpment",
+    "down": "2330"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
+  "2331|NW": {
+   "river": null,
+   "feature": {
+    "type": "escarpment",
+    "down": "2331"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "2332|E": {
+   "river": null,
+   "feature": {
+    "type": "escarpment",
+    "down": "2333"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "2334|NW": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
+  "2405|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "unfinished_road"
+    }
+   ]
+  },
+  "2406|NE": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "unfinished_road"
+    }
+   ]
+  },
+  "2412|NE": {
+   "river": null,
+   "feature": {
+    "type": "ridge"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
+  "2415|E": {
+   "river": null,
+   "feature": {
+    "type": "ridge"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "2415|NW": {
+   "river": null,
+   "feature": {
+    "type": "ridge"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
+  "2429|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
+  "2429|NE": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
+  "2431|NE": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
+  "2507|NE": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "unfinished_road"
+    }
+   ]
+  },
+  "2530|NE": {
+   "river": null,
+   "feature": {
+    "type": "ridge"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
+  "2531|NE": {
+   "river": null,
+   "feature": {
+    "type": "ridge"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "2531|NW": {
+   "river": null,
+   "feature": {
+    "type": "ridge"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "2532|NW": {
+   "river": null,
+   "feature": {
+    "type": "ridge"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "2607|NE": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "unfinished_road"
+    }
+   ]
+  },
+  "2614|NE": {
+   "river": null,
+   "feature": {
+    "type": "ridge"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
+  "2708|NE": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "unfinished_road"
+    }
+   ]
+  },
+  "2714|NE": {
+   "river": null,
+   "feature": {
+    "type": "ridge"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
+  "2733|NE": {
+   "river": null,
+   "feature": {
+    "type": "ridge"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
+  "2803|NW": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
+  "2808|NE": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "unfinished_road"
+    }
+   ]
+  },
+  "2827|NE": {
+   "river": null,
+   "feature": {
+    "type": "ridge"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "2903|NE": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
+  "2909|NE": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "unfinished_road"
+    }
+   ]
+  },
+  "2915|NE": {
+   "river": null,
+   "feature": {
+    "type": "ridge"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
+  "3009|NE": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "unfinished_road"
+    }
+   ]
+  },
+  "3015|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
+  "3018|NE": {
+   "river": null,
+   "feature": {
+    "type": "slope",
+    "down": "3119"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "3024|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
+  "3024|NW": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
+  "3026|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
+  "3110|NE": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "unfinished_road"
+    }
+   ]
+  },
+  "3118|NE": {
+   "river": null,
+   "feature": {
+    "type": "slope",
+    "down": "3218"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
+  "3122|NE": {
+   "river": null,
+   "feature": {
+    "type": "slope",
+    "down": "3222"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
+  "3122|NW": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
+  "3127|NE": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "3210|NE": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "unfinished_road"
+    }
+   ]
+  },
+  "3219|NW": {
+   "river": null,
+   "feature": {
+    "type": "slope",
+    "down": "3319"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "3230|NW": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "railroad"
+    }
+   ]
+  },
+  "3308|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
+  "3311|NE": {
+   "river": null,
+   "feature": {
+    "type": "slope",
+    "down": "3411"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "unfinished_road"
+    }
+   ]
+  },
+  "3313|NW": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
+  "3315|E": {
+   "river": null,
+   "feature": {
+    "type": "slope",
+    "down": "3316"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
+  "3315|NE": {
+   "river": null,
+   "feature": {
+    "type": "slope",
+    "down": "3415"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
+  "3317|NW": {
+   "river": null,
+   "feature": {
+    "type": "slope",
+    "down": "3416"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "3318|NE": {
+   "river": null,
+   "feature": {
+    "type": "slope",
+    "down": "3418"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
+  "3319|NE": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "3322|NE": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "3322|NW": {
+   "river": null,
+   "feature": {
+    "type": "slope",
+    "down": "3322"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "railroad"
+    }
+   ]
+  },
+  "3325|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "road"
+    },
+    {
+     "k": "railroad"
+    }
+   ]
+  },
+  "3405|NW": {
+   "river": null,
+   "feature": {
+    "type": "slope",
+    "down": "3505"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "3406|NW": {
+   "river": null,
+   "feature": {
+    "type": "slope",
+    "down": "3506"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "3411|NE": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "unfinished_road"
+    }
+   ]
+  },
+  "3416|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "3417|NW": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "3419|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "road"
+    },
+    {
+     "k": "railroad"
+    }
+   ]
+  },
+  "3419|NE": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "3419|NW": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "road"
+    },
+    {
+     "k": "railroad"
+    }
+   ]
+  },
+  "3420|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "road"
+    },
+    {
+     "k": "railroad"
+    }
+   ]
+  },
+  "3420|NE": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "3421|E": {
+   "river": null,
+   "feature": {
+    "type": "slope",
+    "down": "3422"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "road"
+    }
+   ]
+  },
+  "3512|NE": {
+   "river": null,
+   "feature": {
+    "type": "slope",
+    "down": "3612"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "unfinished_road"
+    }
+   ]
+  },
+  "3514|NW": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "railroad"
+    }
+   ]
+  },
+  "3515|NE": {
+   "river": null,
+   "feature": {
+    "type": "slope",
+    "down": "3615"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "railroad"
+    }
+   ]
+  },
+  "3515|NW": {
+   "river": null,
+   "feature": {
+    "type": "slope",
+    "down": "3614"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "3516|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "railroad"
+    }
+   ]
+  },
+  "3516|NE": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "3516|NW": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "railroad"
+    }
+   ]
+  },
+  "3517|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "road"
+    },
+    {
+     "k": "railroad"
+    }
+   ]
+  },
+  "3517|NW": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "road"
+    }
+   ]
+  },
+  "3518|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "road"
+    },
+    {
+     "k": "railroad"
+    }
+   ]
+  },
+  "3601|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    },
+    {
+     "k": "railroad"
+    }
+   ]
+  },
+  "3602|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    },
+    {
+     "k": "railroad"
+    }
+   ]
+  },
+  "3603|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "railroad"
+    }
+   ]
+  },
+  "3604|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "railroad"
+    }
+   ]
+  },
+  "3607|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "railroad"
+    }
+   ]
+  },
+  "3609|NE": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "railroad"
+    }
+   ]
+  },
+  "3611|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "road"
+    },
+    {
+     "k": "railroad"
+    }
+   ]
+  },
+  "3611|NW": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "road"
+    },
+    {
+     "k": "railroad"
+    }
+   ]
+  },
+  "3612|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "road"
+    },
+    {
+     "k": "railroad"
+    }
+   ]
+  },
+  "3612|NW": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "3613|NW": {
+   "river": null,
+   "feature": {
+    "type": "slope",
+    "down": "3713"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "3614|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "3615|NW": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "road"
+    },
+    {
+     "k": "railroad"
+    }
+   ]
+  },
+  "3701|NE": {
+   "river": null,
+   "feature": {
+    "type": "slope",
+    "down": "3801"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "3709|NE": {
+   "river": null,
+   "feature": {
+    "type": "slope",
+    "down": "3809"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "3710|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "road"
+    },
+    {
+     "k": "railroad"
+    }
+   ]
+  },
+  "3710|NE": {
+   "river": null,
+   "feature": {
+    "type": "slope",
+    "down": "3810"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "3711|NE": {
+   "river": null,
+   "feature": {
+    "type": "slope",
+    "down": "3811"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "3711|NW": {
+   "river": null,
+   "feature": {
+    "type": "slope",
+    "down": "3810"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "3712|E": {
+   "river": null,
+   "feature": {
+    "type": "slope",
+    "down": "3713"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "3712|NW": {
+   "river": null,
+   "feature": {
+    "type": "slope",
+    "down": "3811"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "3713|NW": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "3714|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "road"
+    },
+    {
+     "k": "railroad"
+    }
+   ]
+  },
+  "3804|NE": {
+   "river": null,
+   "feature": {
+    "type": "slope",
+    "down": "3905"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "3805|NE": {
+   "river": null,
+   "feature": {
+    "type": "slope",
+    "down": "3906"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "3805|NW": {
+   "river": null,
+   "feature": {
+    "type": "slope",
+    "down": "3905"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "3806|NE": {
+   "river": null,
+   "feature": {
+    "type": "slope",
+    "down": "3907"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "3806|NW": {
+   "river": null,
+   "feature": {
+    "type": "slope",
+    "down": "3906"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "3807|NE": {
+   "river": null,
+   "feature": {
+    "type": "slope",
+    "down": "3908"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "3807|NW": {
+   "river": null,
+   "feature": {
+    "type": "slope",
+    "down": "3907"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "3808|E": {
+   "river": null,
+   "feature": {
+    "type": "slope",
+    "down": "3809"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "3808|NW": {
+   "river": null,
+   "feature": {
+    "type": "slope",
+    "down": "3908"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "3809|NW": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "3810|NE": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "3811|NW": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "3904|E": {
+   "river": null,
+   "feature": {
+    "type": "slope",
+    "down": "3905"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "3908|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  }
+ }
+}

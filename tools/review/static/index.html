@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CNA Map Review</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="vendor/leaflet.css">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <div id="map"></div>
+
+  <div id="toolbar" class="panel">
+    <label>Map <select id="map-select"></select></label>
+    <form id="goto">
+      <input id="goto-hex" placeholder="Go to hex, e.g. 3002" maxlength="5" autocomplete="off">
+      <button type="submit">Go</button>
+    </form>
+    <button id="undo" type="button" title="Undo (Ctrl+Z)" disabled>Undo</button>
+    <span id="save-status" class="muted"></span>
+    <span id="goto-msg"></span>
+  </div>
+
+  <div id="warnings" class="panel">
+    <div class="panel-title row">
+      <span>Warnings <span id="warn-count" class="muted"></span></span>
+      <button id="warn-next" type="button" title="Next warning (N)">Next</button>
+    </div>
+    <div id="warn-filters"></div>
+    <ol id="warn-list"></ol>
+  </div>
+
+  <div id="layers" class="panel">
+    <div class="panel-title">Layers</div>
+    <label><input type="checkbox" data-layer="terrain" checked> Terrain tint</label>
+    <label><input type="checkbox" data-layer="uncertain" checked> Uncertain terrain</label>
+    <label><input type="checkbox" data-layer="rivers" checked> Rivers and wadis</label>
+    <label><input type="checkbox" data-layer="features" checked> Ridges, slopes, escarpments</label>
+    <label><input type="checkbox" data-layer="crossings" checked> Crossings</label>
+    <label><input type="checkbox" data-layer="landmarks" checked> Landmarks</label>
+    <label><input type="checkbox" data-layer="reviewed" checked> Reviewed marks</label>
+    <label><input type="checkbox" data-layer="edited" checked> Edited marks</label>
+    <label><input type="checkbox" data-layer="outlines"> Hex outlines</label>
+    <label class="opacity">Overlay opacity <input type="range" id="opacity" min="0" max="100" value="100"></label>
+    <div id="progress" class="muted"></div>
+  </div>
+
+  <div id="editor" class="panel">
+    <div id="editor-body" class="muted">
+      Click inside a hex to edit it, or near a hexside to edit that side.
+    </div>
+  </div>
+
+  <div id="info" class="panel">
+    <div id="info-body" class="muted">Move the mouse over the map.</div>
+  </div>
+
+  <details id="legend" class="panel">
+    <summary class="panel-title">Legend and keys</summary>
+    <div id="legend-body"></div>
+  </details>
+
+  <script src="vendor/leaflet.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
