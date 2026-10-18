@@ -21,7 +21,7 @@ from PIL import Image
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from hexgrid import DIRECTIONS, Grid, TiledGrid, _gridline_score, hex_id, neighbour, parse_id  # noqa: E402
-from lines import SideFrame, build_masks, line_on_side, river_on_side  # noqa: E402
+from lines import SideFrame, border_on_side, build_masks, line_on_side, river_on_side, wadi_on_side  # noqa: E402
 
 Image.MAX_IMAGE_PIXELS = None
 
@@ -236,6 +236,9 @@ def analyse_side(reg, grid, row, col, direction, interiors):
     fa, fb = interiors.get((row, col)), interiors.get(nb)
     river = river_on_side(frame.sample(reg.lines['water']),
                           fa['sea'] if fa else 0.0, fb['sea'] if fb else 0.0)
+    # A side is a river or a wadi, not both; blue water decides for the river.
+    wadi = wadi_on_side(frame.sample(reg.lines['wadi'])) and not river
+    border = border_on_side(frame.sample(reg.lines['border']))
     crossings = []
     if not (feat and feat['type'] == 'escarpment'):
         for kind in ('road', 'track', 'railroad'):
@@ -249,7 +252,7 @@ def analyse_side(reg, grid, row, col, direction, interiors):
         others = [x['t'] for x in crossings if x['kind'] != 'track']
         crossings = [x for x in crossings
                      if x['kind'] != 'track' or all(abs(x['t'] - t) > 0.12 for t in others)]
-    return feat, river, crossings
+    return feat, river, crossings, wadi, border
 
 
 def load_grid(path):
@@ -272,6 +275,7 @@ def groups(grid, hexes):
 # A printed hex outline scores well above this; phantom positions over the
 # turn track, holding boxes and margins score near zero.
 MIN_OUTLINE = 30.0
+MIN_OUTLINE_SEA = 8.0
 
 
 def main():
@@ -297,13 +301,32 @@ def main():
     # also keep positions that most of their neighbours surround, since a
     # hole inside the map is a real hex whose gridlines are faint (the sheet's
     # fold line, dense artwork) rather than a phantom over the margins.
-    outlines = {}
+    outlines, sea = {}, {}
     for block in groups(grid, hexes):
         box = block_box(block, 40)
-        lum = np.asarray(img.crop(box).convert('L'), dtype=np.float32)
+        crop = img.crop(box)
+        rgb = np.asarray(crop, dtype=np.int16)
+        # Weighted luminance as in fit_grid: a plain RGB mean halves the
+        # gridline contrast on brown terrain.
+        lum = np.asarray(crop.convert('L'), dtype=np.float32)
+        water = (rgb[..., 2] > rgb[..., 0] + 35) & (rgb[..., 2] > 165) & (rgb.mean(-1) > 158)
         for h in block:
             outlines[h] = _gridline_score(grid, lum, [h], offset=(box[0], box[1]), sides=DIRECTIONS)
-    keep = {h for h, v in outlines.items() if v >= MIN_OUTLINE}
+            # Edge columns are half-hexes cut by the sheet edge (the strip
+            # that overlaps the next section), so judge them by the three
+            # sides facing into the map.
+            if h[1] == 1 or h[1] >= 34:
+                inner = ('E', 'NE', 'SE') if h[1] == 1 else ('W', 'NW', 'SW')
+                outlines[h] = max(outlines[h], _gridline_score(grid, lum, [h], offset=(box[0], box[1]),
+                                                               sides=inner))
+            pts = hex_interior(grid, *h) - (box[0], box[1])
+            x = np.clip(pts[:, 0].round().astype(int), 0, water.shape[1] - 1)
+            y = np.clip(pts[:, 1].round().astype(int), 0, water.shape[0] - 1)
+            sea[h] = float(water[y, x].mean())
+    # Gridlines printed on the blue sea are faint (outline 10-25 where land
+    # hexes score 40+), but unprinted open sea scores about 0.
+    keep = {h for h, v in outlines.items()
+            if v >= MIN_OUTLINE or (sea[h] > 0.8 and v >= MIN_OUTLINE_SEA)}
 
     def enclosed(h):
         n = sum(neighbour(*h, d) in keep for d in DIRECTIONS)
@@ -341,9 +364,10 @@ def main():
                      'outline': round(outline, 1),
                      'mix': {k: round(v, 2) for k, v in f.items() if v >= 0.03}, 'sides': {}}
             for d in ('E', 'NE', 'NW'):
-                feat, river, cross = analyse_side(reg, grid, r, c, d, interiors)
-                if feat or river or cross:
-                    entry['sides'][d] = {'feature': feat, 'river': river, 'crossings': cross}
+                feat, river, cross, wadi, border = analyse_side(reg, grid, r, c, d, interiors)
+                if feat or river or cross or wadi or border:
+                    entry['sides'][d] = {'feature': feat, 'river': river, 'crossings': cross,
+                                         'wadi': wadi, 'border': border}
             result[hex_id(r, c)] = entry
         print(f'block of {len(block)} hexes done ({len(result)} kept so far)', flush=True)
 
@@ -371,7 +395,8 @@ def main():
                 if not len(corners) or np.min(np.linalg.norm(corners - m, axis=1)) > 40:
                     keep.append(x)
             s['crossings'] = keep
-        e['sides'] = {d: s for d, s in e['sides'].items() if s['feature'] or s['river'] or s['crossings']}
+        e['sides'] = {d: s for d, s in e['sides'].items()
+                      if s['feature'] or s['river'] or s['crossings'] or s['wadi'] or s['border']}
 
     with open(a.out, 'w', encoding='utf-8') as f:
         json.dump(dict(sorted(result.items())), f, indent=1)

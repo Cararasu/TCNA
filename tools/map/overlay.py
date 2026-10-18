@@ -9,7 +9,7 @@ Dl delta, Sm salt marsh, S sea; a trailing c marks a coastal hex, ? an
 uncertain one).
 Hexside features are thick lines (magenta ridge, orange slope, red
 escarpment) with a tick pointing to the "down" hex; rivers are cyan (wide
-major, thin minor). Line crossings are circles on the side (green track, pink
+major, thin minor), wadis teal, borders black. Line crossings are circles on the side (green track, pink
 road, blue railroad).
 """
 import argparse
@@ -92,6 +92,10 @@ def main():
             continue
         r, c = parse_id(hid)
         p0, p1 = (P(p) for p in grid.side(r, c, d))
+        if s.get('wadi'):
+            draw.line([tuple(p0), tuple(p1)], fill=(47, 158, 143), width=10)
+        if s.get('border'):
+            draw.line([tuple(p0), tuple(p1)], fill=(20, 20, 20), width=6)
         if s.get('river'):
             draw.line([tuple(p0), tuple(p1)], fill=RIVER,
                       width=14 if s['river'] == 'major' else 6)

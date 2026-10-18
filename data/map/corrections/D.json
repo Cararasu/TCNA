@@ -52,7 +52,7 @@
    "terrain": "saltmarsh"
   },
   "0521": {
-   "terrain": "rough"
+   "terrain": "desert"
   },
   "0528": {
    "terrain": "desert"
@@ -1271,6 +1271,13 @@
    "border": false,
    "cross": []
   },
+  "1533|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
   "1614|E": {
    "river": null,
    "feature": null,
@@ -1326,6 +1333,13 @@
    "cross": []
   },
   "1626|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "1632|E": {
    "river": null,
    "feature": null,
    "wadi": false,

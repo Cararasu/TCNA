@@ -21,6 +21,7 @@ import re
 import subprocess
 import sys
 import threading
+import urllib.request
 from http import HTTPStatus
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
@@ -35,6 +36,14 @@ Image.MAX_IMAGE_PIXELS = None
 
 PDF = ROOT / 'The Campaign for North Africa_text.pdf'
 PAGES = {'A': 188, 'B': 189, 'C': 190, 'D': 191, 'E': 192}  # PDF page per map section
+# The text PDF stores Map A's colour layer at only ~100 dpi; the Internet
+# Archive's single-page images of the same scan are full 300 dpi, so Map A is
+# taken from there instead (page images are numbered from 0).
+ARCHIVE_PAGE = ('https://archive.org/download/campaign-for-north-africa/'
+                'The%20Campaign%20for%20North%20Africa_jp2.zip/'
+                'The%20Campaign%20for%20North%20Africa_jp2%2FThe%20Campaign%20for%20North%20Africa_{n:04d}.jp2'
+                '?ext=jpg')
+FROM_ARCHIVE = {'A'}
 DATA = ROOT / 'data' / 'map'
 CACHE = ROOT / '.cache' / 'review'
 STATIC = Path(__file__).resolve().parent / 'static'
@@ -55,6 +64,14 @@ class MapImage:
         if self.path.exists():
             return
         self.path.parent.mkdir(parents=True, exist_ok=True)
+        if self.id in FROM_ARCHIVE:
+            url = ARCHIVE_PAGE.format(n=PAGES[self.id] - 1)
+            print(f'downloading map {self.id} from the Internet Archive (once)...', flush=True)
+            tmp = self.path.with_suffix('.download')
+            urllib.request.urlretrieve(url, tmp)
+            Image.open(tmp).convert('RGB').save(self.path)
+            tmp.unlink()
+            return
         print(f'rendering map {self.id} from the PDF (takes a few minutes, once)...', flush=True)
         subprocess.run(['pdftoppm', '-r', '300', '-f', str(PAGES[self.id]), '-l', str(PAGES[self.id]),
                         '-png', '-singlefile', str(PDF), str(self.path.with_suffix(''))], check=True)
@@ -158,7 +175,9 @@ def overlay(map_id):
                       't': e['terrain'], 'u': bool(e.get('uncertain')), 'coastal': bool(e.get('coastal')),
                       'mix': e.get('mix', {})})
         for d, s in e['sides'].items():
-            side = {'river': s.get('river'),
+            # A side is a river or a wadi, not both; blue water decides for the river.
+            side = {'river': s.get('river'), 'wadi': bool(s.get('wadi')) and not s.get('river'),
+                    'border': bool(s.get('border')),
                     'cross': [{'k': x['kind'], 't': x['t']} for x in s['crossings']]}
             if s.get('feature'):
                 side['feature'] = s['feature']

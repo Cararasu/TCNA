@@ -3,7 +3,7 @@
   "terrain": "rough",
   "uncertain": false,
   "coastal": false,
-  "outline": 67.4,
+  "outline": 83.1,
   "mix": {
    "clear": 0.16,
    "delta": 0.04,
@@ -80,7 +80,9 @@
       "kind": "track",
       "t": 0.887
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -102,7 +104,9 @@
       "kind": "track",
       "t": 0.442
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -238,7 +242,9 @@
      "down": "0120"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -321,7 +327,9 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
@@ -335,7 +343,9 @@
       "kind": "track",
       "t": 0.643
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -359,12 +369,16 @@
       "kind": "road",
       "t": 0.242
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -432,7 +446,7 @@
   "terrain": "clear",
   "uncertain": false,
   "coastal": false,
-  "outline": 79.8,
+  "outline": 97.6,
   "mix": {
    "clear": 0.98
   },
@@ -506,7 +520,9 @@
       "kind": "track",
       "t": 0.553
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -528,7 +544,9 @@
       "kind": "track",
       "t": 0.458
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -644,7 +662,9 @@
      "down": "0318"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -678,7 +698,9 @@
      "down": "0220"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": {
@@ -686,7 +708,9 @@
      "down": "0220"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": {
@@ -694,7 +718,9 @@
      "down": "0220"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -775,7 +801,9 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
@@ -789,7 +817,9 @@
       "kind": "railroad",
       "t": 0.614
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -816,12 +846,16 @@
       "kind": "railroad",
       "t": 0.786
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -879,7 +913,7 @@
   "terrain": "clear",
   "uncertain": false,
   "coastal": false,
-  "outline": 44.7,
+  "outline": 89.2,
   "mix": {
    "clear": 1.0
   },
@@ -889,7 +923,7 @@
   "terrain": "rough",
   "uncertain": false,
   "coastal": false,
-  "outline": 83.0,
+  "outline": 88.0,
   "mix": {
    "clear": 0.17,
    "gravel": 0.04,
@@ -927,7 +961,9 @@
       "kind": "track",
       "t": 0.964
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
@@ -937,7 +973,9 @@
       "kind": "track",
       "t": 0.881
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -959,7 +997,9 @@
       "kind": "track",
       "t": 0.934
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -982,7 +1022,9 @@
       "kind": "track",
       "t": 0.952
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -1004,7 +1046,9 @@
       "kind": "track",
       "t": 0.961
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -1037,7 +1081,9 @@
       "kind": "track",
       "t": 0.584
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -1059,7 +1105,9 @@
       "kind": "track",
       "t": 0.481
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -1175,7 +1223,9 @@
      "down": "0319"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -1282,7 +1332,9 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": true
    },
    "NE": {
     "feature": null,
@@ -1292,7 +1344,9 @@
       "kind": "road",
       "t": 0.439
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -1315,17 +1369,17 @@
      {
       "kind": "road",
       "t": 0.418
-     },
-     {
-      "kind": "railroad",
-      "t": 0.966
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -1379,11 +1433,21 @@
   },
   "sides": {}
  },
+ "0335": {
+  "terrain": "clear",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 30.1,
+  "mix": {
+   "clear": 1.0
+  },
+  "sides": {}
+ },
  "0401": {
   "terrain": "clear",
   "uncertain": false,
   "coastal": false,
-  "outline": 91.2,
+  "outline": 92.4,
   "mix": {
    "clear": 0.98
   },
@@ -1467,7 +1531,9 @@
       "kind": "track",
       "t": 0.49
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -1490,7 +1556,9 @@
       "kind": "track",
       "t": 0.455
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -1605,7 +1673,9 @@
      "down": "0419"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -1625,7 +1695,9 @@
      "down": "0420"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": {
@@ -1633,7 +1705,9 @@
      "down": "0420"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -1726,7 +1800,9 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
@@ -1735,12 +1811,10 @@
      {
       "kind": "road",
       "t": 0.763
-     },
-     {
-      "kind": "railroad",
-      "t": 0.071
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -1764,12 +1838,16 @@
       "kind": "road",
       "t": 0.782
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -1822,7 +1900,7 @@
   "terrain": "clear",
   "uncertain": false,
   "coastal": false,
-  "outline": 41.2,
+  "outline": 82.4,
   "mix": {
    "clear": 1.0
   },
@@ -1832,7 +1910,7 @@
   "terrain": "clear",
   "uncertain": false,
   "coastal": false,
-  "outline": 89.9,
+  "outline": 96.6,
   "mix": {
    "clear": 0.97
   },
@@ -1916,7 +1994,9 @@
       "kind": "track",
       "t": 0.053
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -1949,7 +2029,9 @@
       "kind": "track",
       "t": 0.352
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -2002,7 +2084,9 @@
      "down": "0515"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -2021,7 +2105,9 @@
      "type": "ridge"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -2082,7 +2168,9 @@
      "down": "0520"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": {
@@ -2090,7 +2178,9 @@
      "down": "0520"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": {
@@ -2098,7 +2188,9 @@
      "down": "0520"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -2202,7 +2294,9 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": true
    },
    "NE": {
     "feature": null,
@@ -2212,7 +2306,9 @@
       "kind": "railroad",
       "t": 0.785
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
@@ -2222,7 +2318,9 @@
       "kind": "road",
       "t": 0.307
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -2243,7 +2341,9 @@
       "kind": "road",
       "t": 0.634
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -2273,7 +2373,9 @@
      "down": "0532"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -2379,7 +2481,9 @@
       "kind": "track",
       "t": 0.329
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -2422,7 +2526,9 @@
       "kind": "track",
       "t": 0.101
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -2475,7 +2581,9 @@
      "down": "0615"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -2601,7 +2709,9 @@
      "down": "0626"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -2646,7 +2756,9 @@
       "kind": "railroad",
       "t": 0.144
      }
-    ]
+    ],
+    "wadi": false,
+    "border": true
    },
    "NE": {
     "feature": null,
@@ -2660,7 +2772,9 @@
       "kind": "railroad",
       "t": 0.715
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -2684,12 +2798,16 @@
       "kind": "road",
       "t": 0.506
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -2741,7 +2859,7 @@
   "terrain": "clear",
   "uncertain": false,
   "coastal": false,
-  "outline": 32.9,
+  "outline": 66.0,
   "mix": {
    "clear": 1.0
   },
@@ -2751,7 +2869,7 @@
   "terrain": "clear",
   "uncertain": false,
   "coastal": false,
-  "outline": 77.9,
+  "outline": 94.3,
   "mix": {
    "clear": 0.23,
    "marsh": 0.14,
@@ -2768,7 +2886,9 @@
       "kind": "track",
       "t": 0.818
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -2789,7 +2909,9 @@
       "kind": "track",
       "t": 0.667
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -2862,7 +2984,9 @@
       "kind": "track",
       "t": 0.673
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -2903,7 +3027,9 @@
       "kind": "track",
       "t": 0.411
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -2926,7 +3052,9 @@
       "kind": "track",
       "t": 0.417
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -2980,7 +3108,9 @@
       "kind": "road",
       "t": 0.163
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -3003,7 +3133,9 @@
       "kind": "road",
       "t": 0.297
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -3044,7 +3176,9 @@
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -3061,7 +3195,9 @@
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -3153,12 +3289,16 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": true
    },
    "NW": {
     "feature": null,
@@ -3172,7 +3312,9 @@
       "kind": "railroad",
       "t": 0.717
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -3195,7 +3337,9 @@
       "kind": "road",
       "t": 0.47
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -3237,7 +3381,9 @@
      "down": "0832"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -3256,7 +3402,7 @@
   "terrain": "clear",
   "uncertain": false,
   "coastal": false,
-  "outline": 76.1,
+  "outline": 81.5,
   "mix": {
    "clear": 0.98
   },
@@ -3282,7 +3428,9 @@
       "kind": "track",
       "t": 0.344
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -3304,7 +3452,9 @@
       "kind": "track",
       "t": 0.559
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
@@ -3314,7 +3464,9 @@
       "kind": "track",
       "t": 0.373
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -3336,7 +3488,9 @@
       "kind": "track",
       "t": 0.421
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -3373,7 +3527,9 @@
       "kind": "track",
       "t": 0.306
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -3397,7 +3553,9 @@
       "kind": "track",
       "t": 0.372
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -3531,7 +3689,9 @@
       "kind": "track",
       "t": 0.485
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -3557,7 +3717,9 @@
       "kind": "railroad",
       "t": 0.491
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": {
@@ -3565,7 +3727,9 @@
      "down": "0819"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": {
@@ -3573,7 +3737,9 @@
      "down": "0819"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -3596,7 +3762,9 @@
      "down": "0820"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": {
@@ -3604,7 +3772,9 @@
      "down": "0820"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -3617,7 +3787,15 @@
    "sea": 0.93,
    "blue": 0.07
   },
-  "sides": {}
+  "sides": {
+   "NW": {
+    "feature": null,
+    "river": null,
+    "crossings": [],
+    "wadi": false,
+    "border": true
+   }
+  }
  },
  "0822": {
   "terrain": "clear",
@@ -3633,12 +3811,9 @@
    "E": {
     "feature": null,
     "river": null,
-    "crossings": [
-     {
-      "kind": "railroad",
-      "t": 0.556
-     }
-    ]
+    "crossings": [],
+    "wadi": false,
+    "border": true
    }
   }
  },
@@ -3653,20 +3828,12 @@
    "dark": 0.05
   },
   "sides": {
-   "E": {
-    "feature": null,
-    "river": null,
-    "crossings": [
-     {
-      "kind": "railroad",
-      "t": 0.958
-     }
-    ]
-   },
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -3679,7 +3846,15 @@
    "delta": 0.96,
    "tan": 0.03
   },
-  "sides": {}
+  "sides": {
+   "NW": {
+    "feature": null,
+    "river": null,
+    "crossings": [],
+    "wadi": false,
+    "border": true
+   }
+  }
  },
  "0825": {
   "terrain": "delta",
@@ -3728,7 +3903,9 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": true
    },
    "NE": {
     "feature": null,
@@ -3738,7 +3915,9 @@
       "kind": "road",
       "t": 0.618
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -3771,12 +3950,16 @@
       "kind": "railroad",
       "t": 0.632
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -3828,7 +4011,7 @@
   "terrain": "clear",
   "uncertain": false,
   "coastal": false,
-  "outline": 35.6,
+  "outline": 71.2,
   "mix": {
    "clear": 1.0
   },
@@ -3838,7 +4021,7 @@
   "terrain": "clear",
   "uncertain": false,
   "coastal": false,
-  "outline": 80.5,
+  "outline": 93.6,
   "mix": {
    "clear": 0.87,
    "marsh": 0.04,
@@ -3864,7 +4047,9 @@
      "down": "0903"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -4017,7 +4202,9 @@
       "kind": "track",
       "t": 0.193
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -4074,7 +4261,9 @@
       "kind": "track",
       "t": 0.568
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -4097,7 +4286,9 @@
       "kind": "track",
       "t": 0.788
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -4116,7 +4307,9 @@
      "down": "0922"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -4138,7 +4331,9 @@
      "down": "0922"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": {
@@ -4146,7 +4341,9 @@
      "down": "0922"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -4170,7 +4367,9 @@
       "kind": "track",
       "t": 0.503
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -4188,12 +4387,9 @@
    "E": {
     "feature": null,
     "river": null,
-    "crossings": [
-     {
-      "kind": "railroad",
-      "t": 0.583
-     }
-    ]
+    "crossings": [],
+    "wadi": false,
+    "border": true
    },
    "NE": {
     "feature": {
@@ -4201,7 +4397,9 @@
      "down": "0924"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -4223,7 +4421,9 @@
      "down": "0925"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": {
@@ -4231,7 +4431,9 @@
      "down": "0925"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": {
@@ -4239,7 +4441,9 @@
      "down": "0925"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -4262,7 +4466,9 @@
       "kind": "track",
       "t": 0.671
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -4283,7 +4489,9 @@
       "kind": "track",
       "t": 0.564
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -4312,7 +4520,9 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
@@ -4326,7 +4536,9 @@
       "kind": "railroad",
       "t": 0.802
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -4349,17 +4561,17 @@
      {
       "kind": "road",
       "t": 0.487
-     },
-     {
-      "kind": "railroad",
-      "t": 0.95
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -4410,7 +4622,7 @@
   "terrain": "desert",
   "uncertain": false,
   "coastal": false,
-  "outline": 73.2,
+  "outline": 75.9,
   "mix": {
    "clear": 0.11,
    "brown": 0.1,
@@ -4477,7 +4689,9 @@
       "kind": "track",
       "t": 0.445
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -4631,7 +4845,9 @@
       "kind": "track",
       "t": 0.588
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -4672,7 +4888,9 @@
      "down": "1023"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -4694,7 +4912,9 @@
      "down": "1023"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": {
@@ -4702,7 +4922,9 @@
      "down": "1023"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -4754,7 +4976,9 @@
       "kind": "track",
       "t": 0.419
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -4776,7 +5000,9 @@
       "kind": "track",
       "t": 0.875
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -4797,7 +5023,9 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
@@ -4806,12 +5034,10 @@
      {
       "kind": "road",
       "t": 0.9
-     },
-     {
-      "kind": "railroad",
-      "t": 0.894
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -4838,12 +5064,16 @@
       "kind": "railroad",
       "t": 0.936
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -4885,7 +5115,7 @@
   "terrain": "clear",
   "uncertain": false,
   "coastal": false,
-  "outline": 33.8,
+  "outline": 67.5,
   "mix": {
    "clear": 1.0
   },
@@ -4895,7 +5125,7 @@
   "terrain": "desert",
   "uncertain": false,
   "coastal": false,
-  "outline": 61.7,
+  "outline": 79.0,
   "mix": {
    "clear": 0.09,
    "brown": 0.09,
@@ -4951,7 +5181,9 @@
      "down": "1106"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -4985,7 +5217,9 @@
       "kind": "track",
       "t": 0.505
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -5048,7 +5282,9 @@
      "down": "1112"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -5111,7 +5347,9 @@
       "kind": "track",
       "t": 0.774
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -5145,7 +5383,9 @@
       "kind": "track",
       "t": 0.179
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -5270,7 +5510,9 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": true
    },
    "NE": {
     "feature": null,
@@ -5278,9 +5520,11 @@
     "crossings": [
      {
       "kind": "railroad",
-      "t": 0.827
+      "t": 0.826
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
@@ -5294,7 +5538,9 @@
       "kind": "railroad",
       "t": 0.502
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -5316,7 +5562,9 @@
       "kind": "road",
       "t": 0.246
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -5337,14 +5585,18 @@
      "down": "1232"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": {
      "type": "ridge"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -5363,7 +5615,9 @@
      "down": "1232"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -5381,7 +5635,7 @@
   "terrain": "clear",
   "uncertain": false,
   "coastal": false,
-  "outline": 88.5,
+  "outline": 92.4,
   "mix": {
    "clear": 0.97
   },
@@ -5446,7 +5700,9 @@
       "kind": "track",
       "t": 0.255
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -5475,7 +5731,9 @@
      "down": "1309"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -5592,7 +5850,9 @@
       "kind": "track",
       "t": 0.777
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
@@ -5602,7 +5862,9 @@
       "kind": "track",
       "t": 0.531
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -5623,7 +5885,9 @@
       "kind": "track",
       "t": 0.732
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -5742,7 +6006,9 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": true
    },
    "NE": {
     "feature": null,
@@ -5756,7 +6022,9 @@
       "kind": "railroad",
       "t": 0.669
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -5780,12 +6048,16 @@
       "kind": "road",
       "t": 0.328
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -5830,7 +6102,7 @@
   "terrain": "clear",
   "uncertain": false,
   "coastal": false,
-  "outline": 35.5,
+  "outline": 70.9,
   "mix": {
    "clear": 1.0
   },
@@ -5840,7 +6112,7 @@
   "terrain": "desert",
   "uncertain": false,
   "coastal": false,
-  "outline": 59.8,
+  "outline": 61.2,
   "mix": {
    "clear": 0.15,
    "marsh": 0.04,
@@ -5919,7 +6191,9 @@
       "kind": "track",
       "t": 0.79
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -5938,7 +6212,9 @@
      "down": "1309"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -5958,7 +6234,9 @@
      "down": "1309"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -6029,7 +6307,9 @@
       "kind": "track",
       "t": 0.321
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -6064,7 +6344,9 @@
       "kind": "track",
       "t": 0.451
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -6086,7 +6368,9 @@
       "kind": "track",
       "t": 0.51
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -6119,7 +6403,9 @@
       "kind": "track",
       "t": 0.466
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -6141,7 +6427,9 @@
       "kind": "track",
       "t": 0.741
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -6162,7 +6450,9 @@
       "kind": "track",
       "t": 0.611
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -6266,12 +6556,16 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
@@ -6285,7 +6579,9 @@
       "kind": "railroad",
       "t": 0.624
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -6306,12 +6602,10 @@
      {
       "kind": "road",
       "t": 0.453
-     },
-     {
-      "kind": "railroad",
-      "t": 0.799
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -6352,7 +6646,7 @@
   "terrain": "desert",
   "uncertain": false,
   "coastal": false,
-  "outline": 63.5,
+  "outline": 89.4,
   "mix": {
    "clear": 0.25,
    "gravel": 0.04,
@@ -6420,7 +6714,9 @@
       "kind": "track",
       "t": 0.25
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -6442,7 +6738,9 @@
       "kind": "track",
       "t": 0.636
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
@@ -6452,7 +6750,9 @@
       "kind": "track",
       "t": 0.439
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -6472,7 +6772,9 @@
      "down": "1409"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -6494,7 +6796,9 @@
       "kind": "track",
       "t": 0.499
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -6526,7 +6830,9 @@
      "down": "1512"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -6545,7 +6851,9 @@
      "down": "1512"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -6620,7 +6928,9 @@
       "kind": "track",
       "t": 0.804
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -6662,7 +6972,9 @@
       "kind": "track",
       "t": 0.412
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -6684,7 +6996,9 @@
       "kind": "track",
       "t": 0.964
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
@@ -6694,7 +7008,9 @@
       "kind": "track",
       "t": 0.028
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -6715,7 +7031,9 @@
       "kind": "track",
       "t": 0.719
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -6786,7 +7104,9 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
@@ -6796,7 +7116,9 @@
       "kind": "road",
       "t": 0.148
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -6815,7 +7137,9 @@
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -6860,7 +7184,7 @@
   "terrain": "clear",
   "uncertain": false,
   "coastal": false,
-  "outline": 29.1,
+  "outline": 61.7,
   "mix": {
    "clear": 0.95,
    "tan": 0.03
@@ -6871,7 +7195,7 @@
   "terrain": "desert",
   "uncertain": false,
   "coastal": false,
-  "outline": 43.0,
+  "outline": 60.7,
   "mix": {
    "desert": 0.96
   },
@@ -6940,7 +7264,9 @@
       "kind": "track",
       "t": 0.289
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -6984,7 +7310,9 @@
      "down": "1510"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -7004,7 +7332,9 @@
      "down": "1510"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": {
@@ -7012,7 +7342,9 @@
      "down": "1510"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -7036,7 +7368,9 @@
       "kind": "track",
       "t": 0.528
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": {
@@ -7044,7 +7378,9 @@
      "down": "1511"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": {
@@ -7052,7 +7388,9 @@
      "down": "1511"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -7074,7 +7412,9 @@
      "down": "1512"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": {
@@ -7082,7 +7422,9 @@
      "down": "1512"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": {
@@ -7090,7 +7432,9 @@
      "down": "1512"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -7180,7 +7524,9 @@
       "kind": "track",
       "t": 0.506
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -7242,7 +7588,9 @@
       "kind": "track",
       "t": 0.389
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -7279,7 +7627,9 @@
       "kind": "track",
       "t": 0.633
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -7323,7 +7673,9 @@
       "kind": "road",
       "t": 0.082
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -7343,17 +7695,16 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": [
-     {
-      "kind": "railroad",
-      "t": 0.217
-     }
-    ]
+    "crossings": [],
+    "wadi": false,
+    "border": true
    },
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
@@ -7361,9 +7712,11 @@
     "crossings": [
      {
       "kind": "railroad",
-      "t": 0.2
+      "t": 0.576
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -7376,18 +7729,7 @@
    "clear": 0.1,
    "tan": 0.84
   },
-  "sides": {
-   "NW": {
-    "feature": null,
-    "river": null,
-    "crossings": [
-     {
-      "kind": "railroad",
-      "t": 0.909
-     }
-    ]
-   }
-  }
+  "sides": {}
  },
  "1532": {
   "terrain": "rough",
@@ -7415,7 +7757,7 @@
   "terrain": "clear",
   "uncertain": false,
   "coastal": false,
-  "outline": 62.0,
+  "outline": 77.2,
   "mix": {
    "clear": 0.98
   },
@@ -7425,7 +7767,7 @@
   "terrain": "desert",
   "uncertain": false,
   "coastal": false,
-  "outline": 67.3,
+  "outline": 84.7,
   "mix": {
    "clear": 0.08,
    "brown": 0.04,
@@ -7483,7 +7825,9 @@
       "kind": "track",
       "t": 0.565
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -7507,7 +7851,9 @@
       "kind": "track",
       "t": 0.564
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -7539,7 +7885,9 @@
       "kind": "track",
       "t": 0.459
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -7562,7 +7910,9 @@
       "kind": "track",
       "t": 0.719
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -7584,7 +7934,9 @@
       "kind": "track",
       "t": 0.709
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -7692,7 +8044,9 @@
       "kind": "track",
       "t": 0.586
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -7753,7 +8107,9 @@
       "kind": "track",
       "t": 0.775
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -7777,7 +8133,9 @@
       "kind": "track",
       "t": 0.693
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -7813,7 +8171,9 @@
       "kind": "track",
       "t": 0.904
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -7835,7 +8195,9 @@
       "kind": "road",
       "t": 0.233
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -7856,12 +8218,16 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
@@ -7869,9 +8235,11 @@
     "crossings": [
      {
       "kind": "railroad",
-      "t": 0.216
+      "t": 0.105
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -7921,7 +8289,7 @@
   "terrain": "clear",
   "uncertain": false,
   "coastal": false,
-  "outline": 40.6,
+  "outline": 83.8,
   "mix": {
    "clear": 0.96
   },
@@ -7931,7 +8299,7 @@
   "terrain": "desert",
   "uncertain": false,
   "coastal": false,
-  "outline": 28.0,
+  "outline": 35.9,
   "mix": {
    "brown": 0.03,
    "desert": 0.97
@@ -7965,7 +8333,9 @@
       "kind": "track",
       "t": 0.657
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
@@ -7975,7 +8345,9 @@
       "kind": "track",
       "t": 0.111
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -7997,7 +8369,9 @@
       "kind": "track",
       "t": 0.18
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -8032,7 +8406,9 @@
       "kind": "track",
       "t": 0.721
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -8074,7 +8450,9 @@
      "down": "1808"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -8190,7 +8568,9 @@
       "kind": "track",
       "t": 0.625
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -8231,7 +8611,9 @@
       "kind": "track",
       "t": 0.973
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
@@ -8241,7 +8623,9 @@
       "kind": "track",
       "t": 0.345
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -8263,7 +8647,9 @@
       "kind": "track",
       "t": 0.455
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -8319,7 +8705,9 @@
       "kind": "track",
       "t": 0.425
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -8343,7 +8731,9 @@
       "kind": "road",
       "t": 0.752
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
@@ -8353,7 +8743,9 @@
       "kind": "road",
       "t": 0.788
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -8371,7 +8763,9 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
@@ -8385,7 +8779,9 @@
       "kind": "railroad",
       "t": 0.198
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -8414,12 +8810,16 @@
       "kind": "railroad",
       "t": 0.68
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -8458,7 +8858,7 @@
   "terrain": "clear",
   "uncertain": false,
   "coastal": false,
-  "outline": 71.6,
+  "outline": 90.6,
   "mix": {
    "clear": 0.98
   },
@@ -8468,7 +8868,7 @@
   "terrain": "desert",
   "uncertain": false,
   "coastal": false,
-  "outline": 66.2,
+  "outline": 72.2,
   "mix": {
    "brown": 0.03,
    "desert": 0.96
@@ -8493,7 +8893,9 @@
       "kind": "track",
       "t": 0.311
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -8552,7 +8954,9 @@
       "kind": "track",
       "t": 0.81
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -8571,7 +8975,9 @@
      "down": "1908"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -8593,7 +8999,9 @@
      "down": "1808"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -8612,7 +9020,9 @@
      "down": "1909"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -8719,7 +9129,9 @@
       "kind": "track",
       "t": 0.971
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
@@ -8729,7 +9141,9 @@
       "kind": "track",
       "t": 0.285
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -8751,7 +9165,9 @@
       "kind": "track",
       "t": 0.564
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -8773,7 +9189,9 @@
       "kind": "track",
       "t": 0.193
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -8834,7 +9252,9 @@
       "kind": "road",
       "t": 0.909
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
@@ -8844,7 +9264,9 @@
       "kind": "road",
       "t": 0.302
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -8868,7 +9290,9 @@
       "kind": "road",
       "t": 0.191
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -8890,7 +9314,9 @@
       "kind": "railroad",
       "t": 0.703
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
@@ -8898,9 +9324,11 @@
     "crossings": [
      {
       "kind": "railroad",
-      "t": 0.294
+      "t": 0.303
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -8916,20 +9344,12 @@
    "dark": 0.07
   },
   "sides": {
-   "E": {
-    "feature": null,
-    "river": null,
-    "crossings": [
-     {
-      "kind": "railroad",
-      "t": 0.508
-     }
-    ]
-   },
    "NE": {
     "feature": null,
     "river": "minor",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -8948,22 +9368,23 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": [
-     {
-      "kind": "railroad",
-      "t": 0.58
-     }
-    ]
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -8988,7 +9409,9 @@
       "kind": "road",
       "t": 0.454
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
@@ -8998,12 +9421,16 @@
       "kind": "railroad",
       "t": 0.927
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -9025,7 +9452,9 @@
       "kind": "road",
       "t": 0.374
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -9047,7 +9476,9 @@
       "kind": "road",
       "t": 0.396
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -9067,7 +9498,7 @@
   "terrain": "clear",
   "uncertain": false,
   "coastal": false,
-  "outline": 37.7,
+  "outline": 77.3,
   "mix": {
    "clear": 0.89,
    "tan": 0.06
@@ -9078,7 +9509,7 @@
   "terrain": "desert",
   "uncertain": false,
   "coastal": false,
-  "outline": 33.4,
+  "outline": 52.4,
   "mix": {
    "brown": 0.04,
    "desert": 0.96
@@ -9103,7 +9534,9 @@
      "down": "2002"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -9122,7 +9555,9 @@
      "down": "2002"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -9142,7 +9577,9 @@
      "down": "2003"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -9182,7 +9619,9 @@
      "down": "1908"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
@@ -9192,7 +9631,9 @@
       "kind": "track",
       "t": 0.223
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -9213,7 +9654,9 @@
      "down": "1908"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": {
@@ -9221,7 +9664,9 @@
      "down": "1908"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -9242,7 +9687,9 @@
      "down": "1909"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": {
@@ -9250,7 +9697,9 @@
      "down": "1909"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -9344,7 +9793,9 @@
       "kind": "track",
       "t": 0.562
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -9438,7 +9889,9 @@
       "kind": "road",
       "t": 0.523
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -9478,17 +9931,16 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": [
-     {
-      "kind": "railroad",
-      "t": 0.392
-     }
-    ]
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -9511,7 +9963,9 @@
       "kind": "railroad",
       "t": 0.653
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
@@ -9525,7 +9979,9 @@
       "kind": "track",
       "t": 0.492
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
@@ -9533,9 +9989,11 @@
     "crossings": [
      {
       "kind": "railroad",
-      "t": 0.807
+      "t": 0.805
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -9555,7 +10013,9 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
@@ -9565,7 +10025,9 @@
       "kind": "road",
       "t": 0.584
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -9588,9 +10050,11 @@
     "crossings": [
      {
       "kind": "railroad",
-      "t": 0.487
+      "t": 0.494
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -9621,7 +10085,9 @@
      "down": "2033"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": {
@@ -9629,7 +10095,9 @@
      "down": "2032"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -9637,7 +10105,7 @@
   "terrain": "rough",
   "uncertain": false,
   "coastal": false,
-  "outline": 56.6,
+  "outline": 57.0,
   "mix": {
    "clear": 0.05,
    "delta": 0.07,
@@ -9650,7 +10118,9 @@
      "down": "2034"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": {
@@ -9658,7 +10128,9 @@
      "down": "2033"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -9666,7 +10138,7 @@
   "terrain": "desert",
   "uncertain": false,
   "coastal": false,
-  "outline": 41.4,
+  "outline": 42.3,
   "mix": {
    "clear": 0.09,
    "gravel": 0.05,
@@ -9680,7 +10152,9 @@
      "down": "2102"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": {
@@ -9688,7 +10162,9 @@
      "down": "2101"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -9723,7 +10199,9 @@
      "type": "ridge"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": {
@@ -9731,7 +10209,9 @@
      "down": "2003"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -9772,7 +10252,9 @@
       "kind": "track",
       "t": 0.062
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -9866,7 +10348,9 @@
       "kind": "track",
       "t": 0.946
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
@@ -9876,7 +10360,9 @@
       "kind": "track",
       "t": 0.21
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -9898,7 +10384,9 @@
       "kind": "track",
       "t": 0.266
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -9992,7 +10480,9 @@
       "kind": "road",
       "t": 0.411
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
@@ -10002,7 +10492,9 @@
       "kind": "road",
       "t": 0.621
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -10036,7 +10528,9 @@
       "kind": "railroad",
       "t": 0.591
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
@@ -10046,7 +10540,9 @@
       "kind": "railroad",
       "t": 0.393
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -10064,7 +10560,9 @@
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -10081,17 +10579,23 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": true
    },
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -10113,14 +10617,18 @@
     "crossings": [
      {
       "kind": "railroad",
-      "t": 0.868
+      "t": 0.862
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": true
    }
   }
  },
@@ -10137,7 +10645,9 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
@@ -10149,9 +10659,11 @@
      },
      {
       "kind": "railroad",
-      "t": 0.622
+      "t": 0.616
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -10175,12 +10687,16 @@
       "kind": "road",
       "t": 0.727
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -10229,7 +10745,7 @@
   "terrain": "clear",
   "uncertain": false,
   "coastal": false,
-  "outline": 29.0,
+  "outline": 59.2,
   "mix": {
    "clear": 0.87,
    "tan": 0.05,
@@ -10241,7 +10757,7 @@
   "terrain": "clear",
   "uncertain": false,
   "coastal": false,
-  "outline": 54.1,
+  "outline": 66.6,
   "mix": {
    "clear": 0.54,
    "gravel": 0.04,
@@ -10267,7 +10783,9 @@
      "down": "2102"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -10289,7 +10807,9 @@
      "down": "2103"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": {
@@ -10297,7 +10817,9 @@
      "down": "2103"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": {
@@ -10305,7 +10827,9 @@
      "down": "2103"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -10358,7 +10882,9 @@
       "kind": "track",
       "t": 0.527
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -10399,7 +10925,9 @@
       "kind": "track",
       "t": 0.35
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -10422,7 +10950,9 @@
       "kind": "track",
       "t": 0.851
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -10518,7 +11048,9 @@
      "down": "2219"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": {
@@ -10526,7 +11058,9 @@
      "down": "2218"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -10545,7 +11079,9 @@
      "down": "2219"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -10578,7 +11114,9 @@
       "kind": "road",
       "t": 0.421
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
@@ -10588,7 +11126,9 @@
       "kind": "road",
       "t": 0.479
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -10620,12 +11160,16 @@
       "kind": "railroad",
       "t": 0.456
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -10642,12 +11186,16 @@
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -10663,17 +11211,23 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -10688,28 +11242,7 @@
    "blue": 0.07,
    "dark": 0.05
   },
-  "sides": {
-   "E": {
-    "feature": null,
-    "river": null,
-    "crossings": [
-     {
-      "kind": "railroad",
-      "t": 0.593
-     }
-    ]
-   },
-   "NW": {
-    "feature": null,
-    "river": null,
-    "crossings": [
-     {
-      "kind": "railroad",
-      "t": 0.674
-     }
-    ]
-   }
-  }
+  "sides": {}
  },
  "2128": {
   "terrain": "delta",
@@ -10726,12 +11259,16 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": true
    },
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": true
    }
   }
  },
@@ -10759,7 +11296,9 @@
       "kind": "railroad",
       "t": 0.58
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
@@ -10767,9 +11306,11 @@
     "crossings": [
      {
       "kind": "railroad",
-      "t": 0.846
+      "t": 0.843
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -10785,7 +11326,9 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -10808,7 +11351,9 @@
       "kind": "road",
       "t": 0.755
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
@@ -10818,12 +11363,16 @@
       "kind": "road",
       "t": 0.786
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -10848,7 +11397,9 @@
       "kind": "railroad",
       "t": 0.67
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -10862,24 +11413,13 @@
    "blue": 0.05,
    "dark": 0.08
   },
-  "sides": {
-   "E": {
-    "feature": null,
-    "river": null,
-    "crossings": [
-     {
-      "kind": "railroad",
-      "t": 0.784
-     }
-    ]
-   }
-  }
+  "sides": {}
  },
  "2134": {
   "terrain": "clear",
   "uncertain": false,
   "coastal": false,
-  "outline": 82.6,
+  "outline": 89.3,
   "mix": {
    "clear": 0.92,
    "blue": 0.05
@@ -10904,7 +11444,9 @@
      "down": "2201"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": {
@@ -10912,7 +11454,9 @@
      "down": "2201"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": {
@@ -10920,7 +11464,9 @@
      "down": "2201"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -10943,7 +11489,9 @@
      "down": "2303"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": {
@@ -10951,7 +11499,9 @@
      "down": "2302"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -10973,14 +11523,18 @@
      "down": "2203"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": {
      "type": "ridge"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -10999,7 +11553,9 @@
      "down": "2204"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -11042,7 +11598,9 @@
       "kind": "track",
       "t": 0.171
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
@@ -11052,7 +11610,9 @@
       "kind": "track",
       "t": 0.225
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -11076,7 +11636,9 @@
       "kind": "track",
       "t": 0.445
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -11158,7 +11720,9 @@
      "down": "2316"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -11177,7 +11741,9 @@
      "down": "2317"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -11196,7 +11762,9 @@
      "down": "2218"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": {
@@ -11204,7 +11772,9 @@
      "down": "2318"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -11229,7 +11799,9 @@
      "down": "2218"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -11252,7 +11824,9 @@
      "down": "2219"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": {
@@ -11260,7 +11834,9 @@
      "down": "2219"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": {
@@ -11268,7 +11844,9 @@
      "down": "2219"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -11290,7 +11868,9 @@
       "kind": "road",
       "t": 0.466
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
@@ -11300,7 +11880,9 @@
       "kind": "road",
       "t": 0.571
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -11338,7 +11920,9 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -11356,12 +11940,16 @@
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -11379,7 +11967,9 @@
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -11393,18 +11983,7 @@
    "tan": 0.03,
    "dark": 0.11
   },
-  "sides": {
-   "NW": {
-    "feature": null,
-    "river": null,
-    "crossings": [
-     {
-      "kind": "railroad",
-      "t": 0.425
-     }
-    ]
-   }
-  }
+  "sides": {}
  },
  "2227": {
   "terrain": "delta",
@@ -11418,22 +11997,16 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": true
    },
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
-   },
-   "NW": {
-    "feature": null,
-    "river": null,
-    "crossings": [
-     {
-      "kind": "railroad",
-      "t": 0.042
-     }
-    ]
+    "crossings": [],
+    "wadi": false,
+    "border": true
    }
   }
  },
@@ -11456,7 +12029,9 @@
       "kind": "railroad",
       "t": 0.648
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -11478,7 +12053,9 @@
       "kind": "railroad",
       "t": 0.503
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -11494,7 +12071,9 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -11517,12 +12096,16 @@
       "kind": "road",
       "t": 0.791
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -11538,7 +12121,9 @@
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -11556,7 +12141,7 @@
   "terrain": "clear",
   "uncertain": false,
   "coastal": false,
-  "outline": 30.3,
+  "outline": 69.5,
   "mix": {
    "clear": 0.95,
    "tan": 0.04
@@ -11567,7 +12152,7 @@
   "terrain": "rough",
   "uncertain": false,
   "coastal": false,
-  "outline": 39.8,
+  "outline": 74.4,
   "mix": {
    "clear": 0.12,
    "marsh": 0.04,
@@ -11583,7 +12168,9 @@
       "kind": "track",
       "t": 0.638
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -11643,7 +12230,9 @@
       "kind": "track",
       "t": 0.949
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
@@ -11653,7 +12242,9 @@
       "kind": "track",
       "t": 0.304
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -11675,7 +12266,9 @@
       "kind": "track",
       "t": 0.395
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -11775,7 +12368,9 @@
      "down": "2316"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -11815,7 +12410,9 @@
       "kind": "track",
       "t": 0.877
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -11838,7 +12435,9 @@
      "down": "2318"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": {
@@ -11846,7 +12445,9 @@
      "down": "2318"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -11867,7 +12468,9 @@
       "kind": "road",
       "t": 0.664
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
@@ -11877,7 +12480,9 @@
       "kind": "road",
       "t": 0.124
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -11948,22 +12553,16 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
-   },
-   "NW": {
-    "feature": null,
-    "river": null,
-    "crossings": [
-     {
-      "kind": "railroad",
-      "t": 0.026
-     }
-    ]
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -11981,17 +12580,16 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": [
-     {
-      "kind": "railroad",
-      "t": 0.277
-     }
-    ]
+    "crossings": [],
+    "wadi": false,
+    "border": true
    },
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
@@ -11999,9 +12597,11 @@
     "crossings": [
      {
       "kind": "railroad",
-      "t": 0.201
+      "t": 0.076
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -12019,12 +12619,16 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
@@ -12034,7 +12638,9 @@
       "kind": "railroad",
       "t": 0.617
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -12052,12 +12658,16 @@
    "NE": {
     "feature": null,
     "river": "minor",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -12075,12 +12685,9 @@
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": [
-     {
-      "kind": "railroad",
-      "t": 0.063
-     }
-    ]
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -12119,7 +12726,9 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
@@ -12129,7 +12738,9 @@
       "kind": "road",
       "t": 0.636
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -12145,12 +12756,16 @@
    "NE": {
     "feature": null,
     "river": "minor",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -12158,7 +12773,7 @@
   "terrain": "clear",
   "uncertain": false,
   "coastal": false,
-  "outline": 79.5,
+  "outline": 90.9,
   "mix": {
    "clear": 0.97
   },
@@ -12166,7 +12781,9 @@
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -12174,7 +12791,7 @@
   "terrain": "clear",
   "uncertain": false,
   "coastal": false,
-  "outline": 82.9,
+  "outline": 94.6,
   "mix": {
    "clear": 0.85,
    "marsh": 0.04,
@@ -12189,7 +12806,9 @@
       "kind": "track",
       "t": 0.895
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
@@ -12199,7 +12818,9 @@
       "kind": "track",
       "t": 0.365
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -12219,7 +12840,9 @@
      "down": "2402"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -12242,7 +12865,9 @@
       "kind": "track",
       "t": 0.424
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": {
@@ -12250,7 +12875,9 @@
      "down": "2403"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -12272,7 +12899,9 @@
       "kind": "road",
       "t": 0.83
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -12402,7 +13031,9 @@
      "down": "2415"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": {
@@ -12410,7 +13041,9 @@
      "down": "2415"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -12434,7 +13067,9 @@
      "down": "2416"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": {
@@ -12442,7 +13077,9 @@
      "down": "2416"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -12467,7 +13104,9 @@
      "down": "2417"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": {
@@ -12475,7 +13114,9 @@
      "down": "2417"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -12499,7 +13140,9 @@
       "kind": "railroad",
       "t": 0.309
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -12520,7 +13163,9 @@
       "kind": "railroad",
       "t": 0.666
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -12563,7 +13208,9 @@
       "kind": "railroad",
       "t": 0.214
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -12590,12 +13237,16 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -12613,17 +13264,9 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
-   },
-   "NE": {
-    "feature": null,
-    "river": null,
-    "crossings": [
-     {
-      "kind": "railroad",
-      "t": 0.39
-     }
-    ]
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
@@ -12631,9 +13274,11 @@
     "crossings": [
      {
       "kind": "railroad",
-      "t": 0.935
+      "t": 0.937
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -12652,12 +13297,16 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
@@ -12665,9 +13314,11 @@
     "crossings": [
      {
       "kind": "railroad",
-      "t": 0.659
+      "t": 0.615
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -12696,7 +13347,9 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
@@ -12705,12 +13358,10 @@
      {
       "kind": "road",
       "t": 0.365
-     },
-     {
-      "kind": "railroad",
-      "t": 0.613
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -12729,22 +13380,16 @@
      "down": "2430"
     },
     "river": null,
-    "crossings": []
-   },
-   "NE": {
-    "feature": null,
-    "river": null,
-    "crossings": [
-     {
-      "kind": "railroad",
-      "t": 0.688
-     }
-    ]
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -12787,7 +13432,9 @@
       "kind": "road",
       "t": 0.406
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -12807,7 +13454,7 @@
   "terrain": "clear",
   "uncertain": false,
   "coastal": false,
-  "outline": 35.2,
+  "outline": 70.4,
   "mix": {
    "clear": 1.0
   },
@@ -12817,7 +13464,7 @@
   "terrain": "clear",
   "uncertain": false,
   "coastal": false,
-  "outline": 73.6,
+  "outline": 81.2,
   "mix": {
    "clear": 0.91,
    "dark": 0.05
@@ -12831,7 +13478,9 @@
       "kind": "track",
       "t": 0.474
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -12850,7 +13499,9 @@
      "down": "2502"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -12871,7 +13522,9 @@
      "down": "2603"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": {
@@ -12879,7 +13532,9 @@
      "down": "2602"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -12898,7 +13553,9 @@
      "down": "2504"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -12924,7 +13581,9 @@
       "kind": "track",
       "t": 0.638
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": {
@@ -12932,7 +13591,9 @@
      "down": "2505"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -12957,7 +13618,9 @@
       "kind": "track",
       "t": 0.299
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -13082,7 +13745,9 @@
       "kind": "road",
       "t": 0.588
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
@@ -13092,7 +13757,9 @@
       "kind": "road",
       "t": 0.164
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -13172,12 +13839,16 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "minor",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -13205,17 +13876,9 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
-   },
-   "NW": {
-    "feature": null,
-    "river": null,
-    "crossings": [
-     {
-      "kind": "railroad",
-      "t": 0.627
-     }
-    ]
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -13231,7 +13894,9 @@
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -13258,7 +13923,9 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
@@ -13268,7 +13935,9 @@
       "kind": "railroad",
       "t": 0.845
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -13285,7 +13954,9 @@
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -13298,18 +13969,7 @@
    "delta": 0.91,
    "dark": 0.06
   },
-  "sides": {
-   "NE": {
-    "feature": null,
-    "river": null,
-    "crossings": [
-     {
-      "kind": "railroad",
-      "t": 0.498
-     }
-    ]
-   }
-  }
+  "sides": {}
  },
  "2532": {
   "terrain": "delta",
@@ -13345,7 +14005,7 @@
   "terrain": "clear",
   "uncertain": false,
   "coastal": false,
-  "outline": 86.0,
+  "outline": 89.8,
   "mix": {
    "clear": 0.88,
    "dark": 0.09
@@ -13359,7 +14019,9 @@
       "kind": "track",
       "t": 0.44
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
@@ -13369,7 +14031,9 @@
       "kind": "track",
       "t": 0.561
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -13398,7 +14062,9 @@
      "down": "2603"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -13420,7 +14086,9 @@
      "down": "2705"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": {
@@ -13428,7 +14096,9 @@
      "down": "2704"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -13449,7 +14119,9 @@
      "down": "2606"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": {
@@ -13462,7 +14134,9 @@
       "kind": "track",
       "t": 0.343
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": {
@@ -13470,7 +14144,9 @@
      "down": "2705"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -13491,7 +14167,9 @@
       "kind": "track",
       "t": 0.839
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -13513,7 +14191,9 @@
       "kind": "track",
       "t": 0.703
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -13535,7 +14215,9 @@
       "kind": "track",
       "t": 0.772
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -13557,7 +14239,9 @@
       "kind": "track",
       "t": 0.411
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -13639,7 +14323,9 @@
       "kind": "road",
       "t": 0.117
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -13716,7 +14402,9 @@
    "E": {
     "feature": null,
     "river": "minor",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -13731,20 +14419,19 @@
    "blue": 0.08
   },
   "sides": {
-   "E": {
+   "NE": {
     "feature": null,
     "river": null,
-    "crossings": [
-     {
-      "kind": "railroad",
-      "t": 0.643
-     }
-    ]
+    "crossings": [],
+    "wadi": true,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -13771,12 +14458,16 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -13808,12 +14499,10 @@
      {
       "kind": "road",
       "t": 0.899
-     },
-     {
-      "kind": "railroad",
-      "t": 0.557
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -13829,12 +14518,16 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": true
    },
    "NE": {
     "feature": null,
     "river": "minor",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -13878,17 +14571,9 @@
       "kind": "track",
       "t": 0.849
      }
-    ]
-   },
-   "NW": {
-    "feature": null,
-    "river": null,
-    "crossings": [
-     {
-      "kind": "railroad",
-      "t": 0.193
-     }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -13908,7 +14593,7 @@
   "terrain": "clear",
   "uncertain": false,
   "coastal": false,
-  "outline": 40.1,
+  "outline": 80.3,
   "mix": {
    "clear": 1.0
   },
@@ -13918,7 +14603,7 @@
   "terrain": "clear",
   "uncertain": false,
   "coastal": false,
-  "outline": 40.0,
+  "outline": 45.5,
   "mix": {
    "clear": 0.64,
    "marsh": 0.05,
@@ -13933,7 +14618,9 @@
      "type": "ridge"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -13958,21 +14645,27 @@
       "kind": "track",
       "t": 0.154
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": {
      "type": "ridge"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": {
      "type": "ridge"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -13994,7 +14687,9 @@
       "kind": "track",
       "t": 0.495
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -14017,7 +14712,9 @@
       "kind": "track",
       "t": 0.859
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -14040,7 +14737,9 @@
       "kind": "track",
       "t": 0.619
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -14104,7 +14803,9 @@
       "kind": "track",
       "t": 0.616
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -14176,7 +14877,9 @@
       "kind": "road",
       "t": 0.324
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -14253,7 +14956,9 @@
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -14270,17 +14975,23 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -14300,9 +15011,11 @@
     "crossings": [
      {
       "kind": "railroad",
-      "t": 0.471
+      "t": 0.456
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -14318,12 +15031,16 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "minor",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -14355,12 +15072,10 @@
      {
       "kind": "road",
       "t": 0.811
-     },
-     {
-      "kind": "railroad",
-      "t": 0.44
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -14376,7 +15091,16 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
+   },
+   "NW": {
+    "feature": null,
+    "river": null,
+    "crossings": [],
+    "wadi": true,
+    "border": false
    }
   }
  },
@@ -14392,7 +15116,9 @@
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -14432,7 +15158,7 @@
   "terrain": "delta",
   "uncertain": false,
   "coastal": false,
-  "outline": 65.6,
+  "outline": 68.9,
   "mix": {
    "delta": 0.97
   },
@@ -14442,7 +15168,7 @@
   "terrain": "clear",
   "uncertain": false,
   "coastal": false,
-  "outline": 69.6,
+  "outline": 72.8,
   "mix": {
    "clear": 0.76,
    "marsh": 0.06,
@@ -14458,7 +15184,9 @@
       "kind": "track",
       "t": 0.648
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -14511,7 +15239,9 @@
       "kind": "track",
       "t": 0.384
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
@@ -14521,7 +15251,9 @@
       "kind": "track",
       "t": 0.614
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -14545,7 +15277,9 @@
       "kind": "track",
       "t": 0.655
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -14567,7 +15301,9 @@
       "kind": "track",
       "t": 0.778
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -14590,7 +15326,9 @@
       "kind": "track",
       "t": 0.964
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -14612,7 +15350,9 @@
       "kind": "track",
       "t": 0.664
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
@@ -14622,7 +15362,9 @@
       "kind": "track",
       "t": 0.203
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -14695,7 +15437,9 @@
       "kind": "road",
       "t": 0.581
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -14761,7 +15505,9 @@
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -14777,17 +15523,23 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -14805,22 +15557,16 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
-   },
-   "NW": {
-    "feature": null,
-    "river": null,
-    "crossings": [
-     {
-      "kind": "railroad",
-      "t": 0.456
-     }
-    ]
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -14841,9 +15587,11 @@
     "crossings": [
      {
       "kind": "railroad",
-      "t": 0.536
+      "t": 0.838
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -14859,7 +15607,9 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -14878,12 +15628,16 @@
      "down": "2827"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -14907,10 +15661,12 @@
       "t": 0.522
      },
      {
-      "kind": "railroad",
-      "t": 0.295
+      "kind": "track",
+      "t": 0.27
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -14923,18 +15679,7 @@
    "delta": 0.92,
    "dark": 0.05
   },
-  "sides": {
-   "E": {
-    "feature": null,
-    "river": null,
-    "crossings": [
-     {
-      "kind": "railroad",
-      "t": 0.388
-     }
-    ]
-   }
-  }
+  "sides": {}
  },
  "2829": {
   "terrain": "delta",
@@ -14950,12 +15695,16 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -14970,16 +15719,6 @@
    "dark": 0.09
   },
   "sides": {
-   "E": {
-    "feature": null,
-    "river": null,
-    "crossings": [
-     {
-      "kind": "railroad",
-      "t": 0.271
-     }
-    ]
-   },
    "NE": {
     "feature": null,
     "river": null,
@@ -14988,7 +15727,9 @@
       "kind": "track",
       "t": 0.81
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
@@ -14998,7 +15739,9 @@
       "kind": "track",
       "t": 0.253
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -15028,7 +15771,9 @@
      "down": "2833"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -15046,7 +15791,7 @@
   "terrain": "clear",
   "uncertain": false,
   "coastal": false,
-  "outline": 33.0,
+  "outline": 66.1,
   "mix": {
    "clear": 1.0
   },
@@ -15056,7 +15801,7 @@
   "terrain": "clear",
   "uncertain": false,
   "coastal": false,
-  "outline": 56.3,
+  "outline": 69.4,
   "mix": {
    "clear": 0.82,
    "marsh": 0.03,
@@ -15071,7 +15816,9 @@
       "kind": "track",
       "t": 0.181
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -15093,7 +15840,9 @@
       "kind": "track",
       "t": 0.772
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -15176,7 +15925,9 @@
       "kind": "track",
       "t": 0.293
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -15198,7 +15949,9 @@
       "kind": "track",
       "t": 0.168
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -15249,7 +16002,9 @@
       "kind": "road",
       "t": 0.722
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
@@ -15259,7 +16014,9 @@
       "kind": "road",
       "t": 0.129
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -15316,7 +16073,9 @@
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -15332,12 +16091,16 @@
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "minor",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -15353,17 +16116,23 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "minor",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -15391,12 +16160,16 @@
    "E": {
     "feature": null,
     "river": "minor",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -15412,20 +16185,19 @@
    "dark": 0.03
   },
   "sides": {
-   "NE": {
+   "E": {
     "feature": null,
     "river": null,
-    "crossings": [
-     {
-      "kind": "railroad",
-      "t": 0.344
-     }
-    ]
+    "crossings": [],
+    "wadi": true,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -15451,7 +16223,9 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -15476,14 +16250,18 @@
      },
      {
       "kind": "railroad",
-      "t": 0.519
+      "t": 0.525
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -15509,7 +16287,9 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -15532,22 +16312,16 @@
       "kind": "track",
       "t": 0.035
      }
-    ]
-   },
-   "NE": {
-    "feature": null,
-    "river": null,
-    "crossings": [
-     {
-      "kind": "railroad",
-      "t": 0.632
-     }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -15605,12 +16379,9 @@
    "NW": {
     "feature": null,
     "river": null,
-    "crossings": [
-     {
-      "kind": "railroad",
-      "t": 0.424
-     }
-    ]
+    "crossings": [],
+    "wadi": false,
+    "border": true
    }
   }
  },
@@ -15637,7 +16408,9 @@
       "kind": "railroad",
       "t": 0.209
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
@@ -15647,7 +16420,9 @@
       "kind": "road",
       "t": 0.878
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -15677,7 +16452,9 @@
       "kind": "railroad",
       "t": 0.106
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -15703,7 +16480,9 @@
       "kind": "road",
       "t": 0.836
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -15726,7 +16505,9 @@
       "kind": "road",
       "t": 0.475
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -15749,7 +16530,9 @@
       "kind": "railroad",
       "t": 0.47
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -15771,7 +16554,9 @@
       "kind": "railroad",
       "t": 0.614
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -15793,7 +16578,9 @@
       "kind": "track",
       "t": 0.471
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -15835,7 +16622,9 @@
       "kind": "track",
       "t": 0.802
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -15856,7 +16645,9 @@
       "kind": "road",
       "t": 0.654
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -15879,7 +16670,9 @@
       "kind": "road",
       "t": 0.288
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -15915,7 +16708,9 @@
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -15933,12 +16728,16 @@
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "minor",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -15955,17 +16754,23 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "minor",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "minor",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -16013,12 +16818,16 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -16037,7 +16846,9 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
@@ -16047,7 +16858,9 @@
       "kind": "railroad",
       "t": 0.441
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
@@ -16056,8 +16869,14 @@
      {
       "kind": "road",
       "t": 0.328
+     },
+     {
+      "kind": "railroad",
+      "t": 0.294
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -16086,17 +16905,17 @@
      {
       "kind": "track",
       "t": 0.361
-     },
-     {
-      "kind": "railroad",
-      "t": 0.489
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "minor",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -16118,12 +16937,10 @@
      {
       "kind": "road",
       "t": 0.205
-     },
-     {
-      "kind": "railroad",
-      "t": 0.473
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -16146,12 +16963,16 @@
       "kind": "road",
       "t": 0.316
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "minor",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -16174,7 +16995,9 @@
       "kind": "track",
       "t": 0.38
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
@@ -16184,7 +17007,9 @@
       "kind": "road",
       "t": 0.644
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -16204,7 +17029,9 @@
      "down": "3029"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -16221,12 +17048,16 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "minor",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -16273,6 +17104,16 @@
   },
   "sides": {}
  },
+ "3034": {
+  "terrain": "clear",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 30.9,
+  "mix": {
+   "clear": 1.0
+  },
+  "sides": {}
+ },
  "3101": {
   "terrain": "clear",
   "uncertain": false,
@@ -16292,7 +17133,9 @@
       "kind": "road",
       "t": 0.183
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -16358,7 +17201,9 @@
       "kind": "road",
       "t": 0.139
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -16383,7 +17228,9 @@
       "kind": "road",
       "t": 0.801
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -16406,7 +17253,9 @@
       "kind": "track",
       "t": 0.707
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": {
@@ -16419,7 +17268,9 @@
       "kind": "road",
       "t": 0.601
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -16447,7 +17298,9 @@
       "kind": "road",
       "t": 0.369
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -16468,7 +17321,9 @@
       "kind": "track",
       "t": 0.58
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -16538,12 +17393,16 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -16603,7 +17462,9 @@
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -16619,17 +17480,23 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "minor",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -16647,7 +17514,9 @@
    "E": {
     "feature": null,
     "river": "minor",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
@@ -16656,12 +17525,10 @@
      {
       "kind": "road",
       "t": 0.667
-     },
-     {
-      "kind": "railroad",
-      "t": 0.301
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -16679,12 +17546,16 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -16700,7 +17571,9 @@
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -16717,7 +17590,9 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -16740,7 +17615,9 @@
       "kind": "road",
       "t": 0.579
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
@@ -16750,7 +17627,9 @@
       "kind": "road",
       "t": 0.192
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -16772,12 +17651,10 @@
      {
       "kind": "road",
       "t": 0.558
-     },
-     {
-      "kind": "railroad",
-      "t": 0.354
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -16793,7 +17670,9 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -16810,7 +17689,9 @@
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -16862,6 +17743,36 @@
   "outline": 40.7,
   "mix": {
    "sea": 0.98
+  },
+  "sides": {}
+ },
+ "3202": {
+  "terrain": "sea",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 23.0,
+  "mix": {
+   "sea": 1.0
+  },
+  "sides": {}
+ },
+ "3203": {
+  "terrain": "sea",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 22.2,
+  "mix": {
+   "sea": 1.0
+  },
+  "sides": {}
+ },
+ "3204": {
+  "terrain": "sea",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 23.1,
+  "mix": {
+   "sea": 1.0
   },
   "sides": {}
  },
@@ -16918,7 +17829,9 @@
       "kind": "road",
       "t": 0.686
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
@@ -16928,7 +17841,9 @@
       "kind": "track",
       "t": 0.077
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -16951,7 +17866,9 @@
       "kind": "track",
       "t": 0.494
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": {
@@ -16964,7 +17881,9 @@
       "kind": "road",
       "t": 0.706
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -16987,7 +17906,9 @@
       "kind": "railroad",
       "t": 0.163
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": {
@@ -16995,7 +17916,9 @@
      "down": "3310"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -17033,7 +17956,9 @@
       "kind": "track",
       "t": 0.036
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -17071,12 +17996,16 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -17103,7 +18032,9 @@
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -17119,12 +18050,16 @@
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "minor",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -17140,12 +18075,16 @@
    "NE": {
     "feature": null,
     "river": "minor",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -17161,17 +18100,23 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "minor",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "minor",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -17193,12 +18138,10 @@
      {
       "kind": "road",
       "t": 0.414
-     },
-     {
-      "kind": "railroad",
-      "t": 0.786
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
@@ -17210,9 +18153,11 @@
      },
      {
       "kind": "railroad",
-      "t": 0.257
+      "t": 0.256
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -17242,12 +18187,16 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -17263,12 +18212,16 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -17296,7 +18249,9 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
@@ -17306,7 +18261,9 @@
       "kind": "road",
       "t": 0.455
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -17322,7 +18279,9 @@
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -17347,9 +18306,11 @@
      },
      {
       "kind": "railroad",
-      "t": 0.251
+      "t": 0.245
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -17365,7 +18326,9 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
@@ -17375,7 +18338,9 @@
       "kind": "road",
       "t": 0.579
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
@@ -17385,7 +18350,9 @@
       "kind": "road",
       "t": 0.307
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -17399,20 +18366,12 @@
    "dark": 0.12
   },
   "sides": {
-   "NE": {
-    "feature": null,
-    "river": null,
-    "crossings": [
-     {
-      "kind": "railroad",
-      "t": 0.485
-     }
-    ]
-   },
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -17446,13 +18405,44 @@
   },
   "sides": {}
  },
+ "3234": {
+  "terrain": "clear",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 54.4,
+  "mix": {
+   "clear": 0.95,
+   "tan": 0.04
+  },
+  "sides": {}
+ },
  "3301": {
   "terrain": "sea",
   "uncertain": false,
   "coastal": false,
-  "outline": 36.2,
+  "outline": 40.7,
   "mix": {
    "sea": 0.98
+  },
+  "sides": {}
+ },
+ "3302": {
+  "terrain": "sea",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 5.5,
+  "mix": {
+   "sea": 1.0
+  },
+  "sides": {}
+ },
+ "3306": {
+  "terrain": "sea",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 19.2,
+  "mix": {
+   "sea": 1.0
   },
   "sides": {}
  },
@@ -17508,7 +18498,9 @@
      "down": "3310"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -17529,7 +18521,9 @@
      "down": "3411"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": {
@@ -17537,7 +18531,9 @@
      "down": "3410"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -17562,7 +18558,9 @@
       "kind": "track",
       "t": 0.177
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": {
@@ -17570,7 +18568,9 @@
      "down": "3411"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -17597,7 +18597,9 @@
    "NE": {
     "feature": null,
     "river": "minor",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -17614,17 +18616,23 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -17640,7 +18648,9 @@
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -17656,17 +18666,23 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "minor",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -17686,9 +18702,11 @@
     "crossings": [
      {
       "kind": "railroad",
-      "t": 0.405
+      "t": 0.406
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -17719,12 +18737,10 @@
      {
       "kind": "road",
       "t": 0.52
-     },
-     {
-      "kind": "railroad",
-      "t": 0.833
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
@@ -17733,12 +18749,10 @@
      {
       "kind": "track",
       "t": 0.499
-     },
-     {
-      "kind": "railroad",
-      "t": 0.66
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
@@ -17747,12 +18761,10 @@
      {
       "kind": "road",
       "t": 0.484
-     },
-     {
-      "kind": "railroad",
-      "t": 0.168
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -17790,12 +18802,16 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -17811,7 +18827,9 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -17832,7 +18850,9 @@
       "kind": "road",
       "t": 0.929
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
@@ -17842,7 +18862,9 @@
       "kind": "road",
       "t": 0.327
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -17870,12 +18892,16 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "minor",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -17897,17 +18923,17 @@
      {
       "kind": "road",
       "t": 0.38
-     },
-     {
-      "kind": "railroad",
-      "t": 0.844
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "minor",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
@@ -17917,7 +18943,9 @@
       "kind": "road",
       "t": 0.749
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -17935,17 +18963,23 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "minor",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -17963,7 +18997,9 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
@@ -17973,7 +19009,9 @@
       "kind": "road",
       "t": 0.3
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -17988,20 +19026,12 @@
    "dark": 0.13
   },
   "sides": {
-   "NE": {
-    "feature": null,
-    "river": null,
-    "crossings": [
-     {
-      "kind": "railroad",
-      "t": 0.452
-     }
-    ]
-   },
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -18020,7 +19050,9 @@
      "down": "3333"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -18039,7 +19071,9 @@
      "down": "3334"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -18050,6 +19084,27 @@
   "outline": 56.5,
   "mix": {
    "delta": 0.97
+  },
+  "sides": {}
+ },
+ "3401": {
+  "terrain": "sea",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 10.5,
+  "mix": {
+   "sea": 0.95,
+   "dark": 0.04
+  },
+  "sides": {}
+ },
+ "3406": {
+  "terrain": "sea",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 9.1,
+  "mix": {
+   "sea": 1.0
   },
   "sides": {}
  },
@@ -18103,7 +19158,9 @@
       "kind": "road",
       "t": 0.464
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -18125,7 +19182,9 @@
      "down": "3411"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
@@ -18135,7 +19194,9 @@
       "kind": "road",
       "t": 0.647
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -18158,7 +19219,9 @@
       "kind": "railroad",
       "t": 0.323
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": {
@@ -18166,7 +19229,9 @@
      "down": "3512"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -18186,17 +19251,23 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -18215,12 +19286,16 @@
    "NE": {
     "feature": null,
     "river": "minor",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -18237,17 +19312,23 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "minor",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -18262,15 +19343,17 @@
    "dark": 0.06
   },
   "sides": {
-   "NW": {
+   "NE": {
     "feature": null,
     "river": null,
     "crossings": [
      {
       "kind": "railroad",
-      "t": 0.711
+      "t": 0.369
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -18285,20 +19368,12 @@
    "dark": 0.11
   },
   "sides": {
-   "E": {
-    "feature": null,
-    "river": null,
-    "crossings": [
-     {
-      "kind": "railroad",
-      "t": 0.796
-     }
-    ]
-   },
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
@@ -18308,7 +19383,9 @@
       "kind": "road",
       "t": 0.392
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -18330,22 +19407,24 @@
      {
       "kind": "road",
       "t": 0.227
-     },
-     {
-      "kind": "railroad",
-      "t": 0.5
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "minor",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -18363,12 +19442,16 @@
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "minor",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -18390,17 +19473,17 @@
      {
       "kind": "road",
       "t": 0.526
-     },
-     {
-      "kind": "railroad",
-      "t": 0.798
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -18422,12 +19505,17 @@
      {
       "kind": "road",
       "t": 0.506
-     },
-     {
-      "kind": "railroad",
-      "t": 0.767
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
+   },
+   "NW": {
+    "feature": null,
+    "river": null,
+    "crossings": [],
+    "wadi": true,
+    "border": false
    }
   }
  },
@@ -18448,12 +19536,16 @@
       "kind": "railroad",
       "t": 0.601
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -18475,7 +19567,9 @@
       "kind": "road",
       "t": 0.26
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -18493,12 +19587,16 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -18531,12 +19629,16 @@
       "kind": "road",
       "t": 0.374
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
@@ -18546,7 +19648,9 @@
       "kind": "road",
       "t": 0.284
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -18564,12 +19668,16 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "minor",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -18585,12 +19693,16 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "minor",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -18623,12 +19735,16 @@
       "kind": "road",
       "t": 0.471
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "minor",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -18649,9 +19765,11 @@
     "crossings": [
      {
       "kind": "railroad",
-      "t": 0.471
+      "t": 0.442
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
@@ -18661,12 +19779,16 @@
       "kind": "road",
       "t": 0.862
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -18690,9 +19812,11 @@
     "crossings": [
      {
       "kind": "railroad",
-      "t": 0.842
+      "t": 0.841
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -18714,7 +19838,9 @@
       "kind": "road",
       "t": 0.474
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -18722,11 +19848,34 @@
   "terrain": "clear",
   "uncertain": false,
   "coastal": false,
-  "outline": 32.8,
+  "outline": 39.7,
   "mix": {
    "clear": 0.89,
    "tan": 0.03,
    "dark": 0.04
+  },
+  "sides": {
+   "NE": {
+    "feature": null,
+    "river": null,
+    "crossings": [
+     {
+      "kind": "road",
+      "t": 0.722
+     }
+    ],
+    "wadi": false,
+    "border": false
+   }
+  }
+ },
+ "3509": {
+  "terrain": "sea",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 23.9,
+  "mix": {
+   "sea": 1.0
   },
   "sides": {}
  },
@@ -18779,12 +19928,23 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
+   },
+   "NW": {
+    "feature": null,
+    "river": null,
+    "crossings": [],
+    "wadi": false,
+    "border": true
    }
   }
  },
@@ -18804,7 +19964,9 @@
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -18821,7 +19983,9 @@
    "NE": {
     "feature": null,
     "river": "minor",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -18843,17 +20007,17 @@
      {
       "kind": "road",
       "t": 0.781
-     },
-     {
-      "kind": "railroad",
-      "t": 0.51
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
@@ -18862,12 +20026,10 @@
      {
       "kind": "road",
       "t": 0.399
-     },
-     {
-      "kind": "railroad",
-      "t": 0.234
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -18885,17 +20047,23 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "minor",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "minor",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -18931,7 +20099,9 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -18947,7 +20117,9 @@
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -18965,27 +20137,16 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": [
-     {
-      "kind": "railroad",
-      "t": 0.934
-     }
-    ]
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
-   },
-   "NW": {
-    "feature": null,
-    "river": null,
-    "crossings": [
-     {
-      "kind": "railroad",
-      "t": 0.056
-     }
-    ]
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -19010,10 +20171,12 @@
       "t": 0.619
      },
      {
-      "kind": "railroad",
-      "t": 0.752
+      "kind": "track",
+      "t": 0.809
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
@@ -19023,7 +20186,9 @@
       "kind": "railroad",
       "t": 0.793
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -19039,7 +20204,9 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -19064,7 +20231,9 @@
       "kind": "track",
       "t": 0.939
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
@@ -19074,7 +20243,9 @@
       "kind": "track",
       "t": 0.123
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
@@ -19084,7 +20255,9 @@
       "kind": "road",
       "t": 0.389
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -19102,12 +20275,16 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
@@ -19117,7 +20294,9 @@
       "kind": "road",
       "t": 0.233
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -19133,17 +20312,23 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "minor",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -19159,7 +20344,9 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -19178,12 +20365,16 @@
      "down": "3530"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -19199,12 +20390,16 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "minor",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -19220,12 +20415,16 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -19248,12 +20447,16 @@
       "kind": "road",
       "t": 0.627
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -19279,7 +20482,9 @@
       "kind": "road",
       "t": 0.355
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
@@ -19289,7 +20494,9 @@
       "kind": "road",
       "t": 0.241
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -19297,9 +20504,54 @@
   "terrain": "delta",
   "uncertain": false,
   "coastal": false,
-  "outline": 47.4,
+  "outline": 52.6,
   "mix": {
    "delta": 0.95
+  },
+  "sides": {}
+ },
+ "3535": {
+  "terrain": "clear",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 34.3,
+  "mix": {
+   "clear": 0.85,
+   "blue": 0.06,
+   "dark": 0.04
+  },
+  "sides": {
+   "NW": {
+    "feature": null,
+    "river": null,
+    "crossings": [
+     {
+      "kind": "road",
+      "t": 0.697
+     }
+    ],
+    "wadi": false,
+    "border": false
+   }
+  }
+ },
+ "3609": {
+  "terrain": "sea",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 8.3,
+  "mix": {
+   "sea": 0.98
+  },
+  "sides": {}
+ },
+ "3610": {
+  "terrain": "sea",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 26.6,
+  "mix": {
+   "sea": 1.0
   },
   "sides": {}
  },
@@ -19342,7 +20594,9 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
@@ -19352,7 +20606,9 @@
       "kind": "road",
       "t": 0.269
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -19378,12 +20634,16 @@
       "kind": "track",
       "t": 0.174
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
@@ -19393,7 +20653,9 @@
       "kind": "road",
       "t": 0.584
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -19414,7 +20676,9 @@
      "down": "3616"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -19471,12 +20735,16 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -19492,17 +20760,23 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -19518,7 +20792,9 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -19543,17 +20819,17 @@
      {
       "kind": "road",
       "t": 0.212
-     },
-     {
-      "kind": "railroad",
-      "t": 0.675
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -19571,12 +20847,16 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "minor",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -19594,12 +20874,16 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "minor",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
@@ -19609,7 +20893,9 @@
       "kind": "road",
       "t": 0.46
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -19626,12 +20912,16 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -19658,12 +20948,16 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "minor",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -19680,12 +20974,16 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "minor",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -19702,7 +21000,9 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
@@ -19712,7 +21012,9 @@
       "kind": "road",
       "t": 0.243
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -19735,12 +21037,16 @@
       "kind": "road",
       "t": 0.876
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -19759,7 +21065,9 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
@@ -19769,7 +21077,9 @@
       "kind": "road",
       "t": 0.386
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -19786,14 +21096,56 @@
    "NE": {
     "feature": null,
     "river": "minor",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
+ },
+ "3634": {
+  "terrain": "clear",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 47.3,
+  "mix": {
+   "clear": 0.94
+  },
+  "sides": {
+   "NW": {
+    "feature": null,
+    "river": "major",
+    "crossings": [],
+    "wadi": false,
+    "border": false
+   }
+  }
+ },
+ "3711": {
+  "terrain": "sea",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 9.5,
+  "mix": {
+   "sea": 1.0
+  },
+  "sides": {}
+ },
+ "3712": {
+  "terrain": "sea",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 26.9,
+  "mix": {
+   "sea": 1.0
+  },
+  "sides": {}
  },
  "3713": {
   "terrain": "sea",
@@ -19825,7 +21177,9 @@
       "kind": "road",
       "t": 0.444
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -19848,7 +21202,9 @@
       "kind": "road",
       "t": 0.905
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -19871,7 +21227,9 @@
       "kind": "road",
       "t": 0.873
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -19895,7 +21253,9 @@
       "kind": "road",
       "t": 0.278
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -19934,7 +21294,9 @@
    "E": {
     "feature": null,
     "river": "minor",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -19952,12 +21314,16 @@
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -19973,7 +21339,9 @@
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -19990,12 +21358,16 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -20011,7 +21383,9 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -20029,7 +21403,9 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
@@ -20039,7 +21415,9 @@
       "kind": "road",
       "t": 0.746
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -20055,12 +21433,16 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -20076,7 +21458,9 @@
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -20092,7 +21476,9 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -20108,17 +21494,23 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "minor",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -20141,7 +21533,9 @@
       "kind": "road",
       "t": 0.357
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -20157,7 +21551,9 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -20173,12 +21569,16 @@
    "NE": {
     "feature": null,
     "river": "minor",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -20201,12 +21601,16 @@
       "kind": "road",
       "t": 0.552
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -20220,6 +21624,16 @@
    "delta": 0.83,
    "tan": 0.04,
    "dark": 0.05
+  },
+  "sides": {}
+ },
+ "3812": {
+  "terrain": "sea",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 23.2,
+  "mix": {
+   "sea": 1.0
   },
   "sides": {}
  },
@@ -20289,7 +21703,9 @@
       "kind": "road",
       "t": 0.215
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -20319,7 +21735,9 @@
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -20337,17 +21755,23 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -20368,12 +21792,16 @@
       "kind": "road",
       "t": 0.923
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
@@ -20383,7 +21811,9 @@
       "kind": "road",
       "t": 0.329
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -20407,17 +21837,23 @@
       "kind": "road",
       "t": 0.799
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "minor",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -20437,12 +21873,16 @@
    "NE": {
     "feature": null,
     "river": "minor",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -20461,17 +21901,23 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -20487,12 +21933,16 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "minor",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -20508,12 +21958,16 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -20539,12 +21993,16 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "minor",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -20567,7 +22025,9 @@
       "kind": "road",
       "t": 0.359
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -20586,7 +22046,9 @@
      "down": "3831"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -20605,7 +22067,9 @@
      "down": "3832"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -20622,12 +22086,16 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "minor",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -20638,6 +22106,26 @@
   "outline": 56.0,
   "mix": {
    "delta": 0.98
+  },
+  "sides": {}
+ },
+ "3834": {
+  "terrain": "clear",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 59.6,
+  "mix": {
+   "clear": 1.0
+  },
+  "sides": {}
+ },
+ "3913": {
+  "terrain": "sea",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 16.6,
+  "mix": {
+   "sea": 0.96
   },
   "sides": {}
  },
@@ -20670,7 +22158,9 @@
       "kind": "track",
       "t": 0.142
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -20722,12 +22212,16 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -20751,7 +22245,9 @@
       "kind": "road",
       "t": 0.472
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
@@ -20761,7 +22257,9 @@
       "kind": "road",
       "t": 0.326
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -20780,7 +22278,9 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -20800,7 +22300,9 @@
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -20845,7 +22347,9 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -20864,12 +22368,16 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -20886,7 +22394,9 @@
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -20902,12 +22412,16 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "minor",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -20930,7 +22444,9 @@
       "kind": "road",
       "t": 0.168
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -20949,7 +22465,9 @@
      "down": "3931"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -20968,7 +22486,9 @@
      "down": "3932"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -20985,7 +22505,9 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -21004,12 +22526,16 @@
      "down": "3934"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -21022,6 +22548,16 @@
    "clear": 0.04,
    "gravel": 0.04,
    "delta": 0.9
+  },
+  "sides": {}
+ },
+ "4016": {
+  "terrain": "sea",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 24.7,
+  "mix": {
+   "sea": 1.0
   },
   "sides": {}
  },
@@ -21043,7 +22579,15 @@
   "mix": {
    "sea": 0.97
   },
-  "sides": {}
+  "sides": {
+   "NE": {
+    "feature": null,
+    "river": null,
+    "crossings": [],
+    "wadi": false,
+    "border": true
+   }
+  }
  },
  "4019": {
   "terrain": "clear",
@@ -21151,12 +22695,16 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -21172,7 +22720,9 @@
    "E": {
     "feature": null,
     "river": "minor",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -21192,7 +22742,9 @@
      "type": "ridge"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
@@ -21202,12 +22754,16 @@
       "kind": "road",
       "t": 0.641
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    },
    "NW": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -21237,7 +22793,9 @@
      "down": "4031"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -21257,7 +22815,9 @@
      "down": "4032"
     },
     "river": null,
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -21277,7 +22837,16 @@
      "down": "4033"
     },
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
+   },
+   "NE": {
+    "feature": null,
+    "river": null,
+    "crossings": [],
+    "wadi": false,
+    "border": true
    }
   }
  },
@@ -21299,12 +22868,29 @@
   "terrain": "clear",
   "uncertain": false,
   "coastal": false,
-  "outline": 37.0,
+  "outline": 67.4,
   "mix": {
    "clear": 0.88,
    "dark": 0.05
   },
-  "sides": {}
+  "sides": {
+   "NE": {
+    "feature": null,
+    "river": null,
+    "crossings": [
+     {
+      "kind": "road",
+      "t": 0.671
+     },
+     {
+      "kind": "track",
+      "t": 0.23
+     }
+    ],
+    "wadi": false,
+    "border": false
+   }
+  }
  },
  "4118": {
   "terrain": "sea",
@@ -21440,12 +23026,16 @@
    "E": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    },
    "NE": {
     "feature": null,
     "river": "major",
-    "crossings": []
+    "crossings": [],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -21467,7 +23057,9 @@
       "kind": "road",
       "t": 0.78
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -21525,10 +23117,21 @@
   "terrain": "sea",
   "uncertain": false,
   "coastal": false,
-  "outline": 66.0,
+  "outline": 66.2,
   "mix": {
    "sea": 0.96,
    "blue": 0.04
+  },
+  "sides": {}
+ },
+ "4135": {
+  "terrain": "clear",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 30.3,
+  "mix": {
+   "clear": 0.88,
+   "dark": 0.09
   },
   "sides": {}
  },
@@ -21632,7 +23235,15 @@
    "sea": 0.96,
    "blue": 0.04
   },
-  "sides": {}
+  "sides": {
+   "NW": {
+    "feature": null,
+    "river": null,
+    "crossings": [],
+    "wadi": false,
+    "border": true
+   }
+  }
  },
  "4227": {
   "terrain": "clear",
@@ -21654,7 +23265,9 @@
       "kind": "road",
       "t": 0.607
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -21716,6 +23329,36 @@
   },
   "sides": {}
  },
+ "4233": {
+  "terrain": "sea",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 28.6,
+  "mix": {
+   "sea": 1.0
+  },
+  "sides": {}
+ },
+ "4234": {
+  "terrain": "sea",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 15.2,
+  "mix": {
+   "sea": 1.0
+  },
+  "sides": {}
+ },
+ "4323": {
+  "terrain": "sea",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 25.5,
+  "mix": {
+   "sea": 0.94
+  },
+  "sides": {}
+ },
  "4324": {
   "terrain": "sea",
   "uncertain": false,
@@ -21769,7 +23412,9 @@
       "kind": "track",
       "t": 0.554
      }
-    ]
+    ],
+    "wadi": false,
+    "border": false
    }
   }
  },
@@ -21816,6 +23461,46 @@
   "mix": {
    "sea": 0.96,
    "blue": 0.04
+  },
+  "sides": {}
+ },
+ "4332": {
+  "terrain": "sea",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 28.6,
+  "mix": {
+   "sea": 1.0
+  },
+  "sides": {}
+ },
+ "4423": {
+  "terrain": "sea",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 11.5,
+  "mix": {
+   "sea": 1.0
+  },
+  "sides": {}
+ },
+ "4424": {
+  "terrain": "sea",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 21.8,
+  "mix": {
+   "sea": 1.0
+  },
+  "sides": {}
+ },
+ "4425": {
+  "terrain": "sea",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 28.5,
+  "mix": {
+   "sea": 1.0
   },
   "sides": {}
  },
@@ -21867,6 +23552,68 @@
   "uncertain": false,
   "coastal": false,
   "outline": 34.3,
+  "mix": {
+   "sea": 1.0
+  },
+  "sides": {}
+ },
+ "4431": {
+  "terrain": "sea",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 10.1,
+  "mix": {
+   "sea": 1.0
+  },
+  "sides": {}
+ },
+ "4527": {
+  "terrain": "sea",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 11.0,
+  "mix": {
+   "sea": 0.95,
+   "blue": 0.03
+  },
+  "sides": {}
+ },
+ "4528": {
+  "terrain": "sea",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 14.5,
+  "mix": {
+   "sea": 0.95
+  },
+  "sides": {}
+ },
+ "4529": {
+  "terrain": "sea",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 17.7,
+  "mix": {
+   "sea": 0.94
+  },
+  "sides": {}
+ },
+ "4530": {
+  "terrain": "sea",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 8.3,
+  "mix": {
+   "clear": 0.03,
+   "sea": 0.93
+  },
+  "sides": {}
+ },
+ "4634": {
+  "terrain": "sea",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 27.4,
   "mix": {
    "sea": 1.0
   },

@@ -54,10 +54,24 @@ def build_masks(rgb):
             w = sl[1].stop - sl[1].start
             small[i] = max(h, w) < 30
         thin &= ~small[lab]
+    # Wadi: a grey-green band ~20 px wide, e.g. (135, 162, 137). The teal
+    # railroad over the delta has a similar hue but is only a 5-6 px line,
+    # which the opening removes.
+    wadi = (g - r > 15) & (g - b > 8) & (lum > 100) & (lum < 185)
+    wadi = ndimage.binary_opening(wadi, np.ones((9, 9)))
+    # Border: thick blue-grey dashes, e.g. (73, 124, 145), 10-12 px across.
+    # The railroad, (91, 137, 145), is a 5 px line with ties, which a 7 x 7
+    # opening removes. (Village dots survive too, but are no line.)
+    # Dark river channel fill, (116, 154, 175), is as blue but redder.
+    bluish = (b - r > 40) & (lum < 160) & (r < 100) & ~water
+    border = ndimage.binary_opening(bluish, np.ones((7, 7)))
     # Railroad: blue over cream, teal over the delta. River outlines share the
-    # colour but sit right next to river water.
+    # colour but sit right next to river water; wadi edges and border dashes
+    # are kept out as well.
     rail = (lum < 165) & (((b - r) > 28) | ((g - r) > 28)) & ~water & ~near_water
-    return {'water': water, 'road': thin, 'track': thick, 'railroad': rail & ~thick}
+    rail &= ~ndimage.binary_dilation(wadi | border, iterations=10)
+    return {'water': water, 'road': thin, 'track': thick, 'railroad': rail & ~thick,
+            'wadi': wadi, 'border': border}
 
 
 class SideFrame:
@@ -128,6 +142,16 @@ def line_on_side(grid, cut_core, deep=14):
         return None
     t = float(np.clip(np.median(hits), 0, len(TS) - 1))
     return float(TS[0] + t * T_STEP)
+
+
+def wadi_on_side(grid):
+    """True if a wadi runs along the side: the band near it over most of it."""
+    return bool(grid.any(1).mean() >= 0.5)  # the band wanders up to ~35 px off the side
+
+
+def border_on_side(grid):
+    """True if border dashes run along the side (dashed, so 35 % is plenty)."""
+    return bool(grid[:, np.abs(DS) <= 12].any(1).mean() >= 0.25)
 
 
 def river_on_side(water_grid, sea_a, sea_b):

@@ -4644,8 +4644,15 @@
    "border": false,
    "cross": []
   },
-  "3922|NW": {
-   "river": null,
+  "3922|NE": {
+   "river": "major",
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "3923|NW": {
+   "river": "major",
    "feature": null,
    "wadi": false,
    "border": false,
@@ -4744,6 +4751,13 @@
   },
   "4024|E": {
    "river": "minor",
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "4024|NW": {
+   "river": "major",
    "feature": null,
    "wadi": false,
    "border": false,

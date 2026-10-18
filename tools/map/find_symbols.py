@@ -71,6 +71,10 @@ def main():
             lum = (r + g + b) / 3
             # Village dot: saturated mid blue, darker than sea or river fill.
             dot = (b - r > 60) & (b > 130) & (lum < 165)
+            # The same blue printed over yellow/brown terrain mixes to a dark
+            # olive-green, about (70, 90, 45): darker than any terrain fill
+            # and greener than the grey tracks and escarpments.
+            dot |= (lum < 100) & (g - r > 8) & (g >= b)
             # Roads, tracks and the railroad often run through a dot; an
             # opening keeps the solid ~22 px disc and drops 5-10 px lines.
             dot = ndimage.binary_opening(dot, np.ones((11, 11)))

@@ -112,7 +112,7 @@ const state = {
   undo: [],
   warnings: [],
   warnIndex: -1,
-  warnTypes: { 'dead-end': true, 'river-end': true, uncertain: true },
+  warnTypes: { conflict: true, 'dead-end': true, 'river-end': true, uncertain: true },
 };
 
 const toLL = (p) => map.unproject(L.point(p[0], p[1]), state.zmax);
@@ -427,9 +427,8 @@ function renderEditor() {
     body.innerHTML = `
       <h3>Hexside ${ha} | ${hb} ${edited ? '<span class="tag-edited">edited</span>' : ''}</h3>
       <div class="muted">${DIR_NAMES[d]} side of ${owner}</div>
-      <div class="group"><div class="group-title">River <kbd>V</kbd></div><div class="choices">
-        ${choice('None', !s.river, 'river:none')}${choice('Minor', s.river === 'minor', 'river:minor')}${choice('Major', s.river === 'major', 'river:major')}
-        ${choice('Wadi', s.wadi, 'wadi', 'W')}</div></div>
+      <div class="group"><div class="group-title">River or wadi <kbd>V</kbd> <span class="muted">(one of them)</span></div><div class="choices">
+        ${choice('None', !s.river && !s.wadi, 'river:none')}${choice('Minor river', s.river === 'minor' && !s.wadi, 'river:minor')}${choice('Major river', s.river === 'major' && !s.wadi, 'river:major')}${choice('Wadi', s.wadi && !s.river, 'river:wadi', 'W')}</div></div>
       <div class="group"><div class="group-title">Hexside feature <span class="muted">(<kbd>S</kbd> slope, <kbd>E</kbd> escarpment cycle)</span></div>
         <div class="choices">${featureButtons}</div></div>
       <div class="group"><div class="group-title">Crossing the side</div><div class="choices">${crossButtons}</div></div>
@@ -475,8 +474,13 @@ function runAction(action) {
     return;
   }
   const key = sel.key;
-  if (verb === 'river') editSide(key, (s) => { s.river = arg === 'none' ? null : arg; });
-  else if (verb === 'wadi') editSide(key, (s) => { s.wadi = !s.wadi; });
+  // River and wadi are one choice: a hexside is at most one of them.
+  if (verb === 'river') {
+    editSide(key, (s) => {
+      s.wadi = arg === 'wadi';
+      s.river = arg === 'minor' || arg === 'major' ? arg : null;
+    });
+  }
   else if (verb === 'border') editSide(key, (s) => { s.border = !s.border; });
   else if (verb === 'feature') {
     editSide(key, (s) => {
@@ -632,7 +636,16 @@ function computeWarnings() {
     }
   }
 
-  const order = { 'dead-end': 0, 'river-end': 1, uncertain: 2 };
+  // A hexside is a river or a wadi, never both (Terrain Effects Chart 8.37).
+  for (const key of allSideKeys()) {
+    const s = sideOf(key);
+    if (s.river && s.wadi && sideExists(key)) {
+      const [h, n] = sideHexes(key);
+      out.push({ type: 'conflict', hex: h, side: key, text: `${h}|${n} both ${s.river} river and wadi` });
+    }
+  }
+
+  const order = { conflict: 0, 'dead-end': 1, 'river-end': 2, uncertain: 3 };
   out.sort((a, b) => order[a.type] - order[b.type] || a.hex.localeCompare(b.hex));
   state.warnings = out;
   renderWarnings();
@@ -643,9 +656,9 @@ function visibleWarnings() {
 }
 
 function renderWarnings() {
-  const counts = { 'dead-end': 0, 'river-end': 0, uncertain: 0 };
+  const counts = { conflict: 0, 'dead-end': 0, 'river-end': 0, uncertain: 0 };
   for (const w of state.warnings) counts[w.type]++;
-  const names = { 'dead-end': 'Dead ends', 'river-end': 'River ends', uncertain: 'Uncertain terrain' };
+  const names = { conflict: 'River + wadi', 'dead-end': 'Dead ends', 'river-end': 'River ends', uncertain: 'Uncertain terrain' };
   document.getElementById('warn-filters').innerHTML = Object.entries(names).map(([k, n]) =>
     `<label><input type="checkbox" data-warn="${k}" ${state.warnTypes[k] ? 'checked' : ''}> ${n} (${counts[k]})</label>`).join('');
   const vis = visibleWarnings();
@@ -752,7 +765,7 @@ function buildLegend() {
   rows.push(`<div class="legend-keys">
     <div><b>Keys</b> (with a hexside selected)</div>
     <div><kbd>R</kbd> road, <kbd>T</kbd> track, <kbd>L</kbd> railroad crossing; <kbd>Shift</kbd>+<kbd>R</kbd> / <kbd>Shift</kbd>+<kbd>L</kbd> unfinished road / railroad</div>
-    <div><kbd>V</kbd> river none/minor/major, <kbd>W</kbd> wadi, <kbd>B</kbd> border</div>
+    <div><kbd>V</kbd> none / minor river / major river / wadi, <kbd>W</kbd> wadi on/off, <kbd>B</kbd> border</div>
     <div><kbd>G</kbd> ridge, <kbd>S</kbd> slope, <kbd>E</kbd> escarpment (repeat to flip/clear)</div>
     <div><kbd>Del</kbd> clear side, <kbd>U</kbd> revert to automatic</div>
     <div><b>Keys</b> (with a hex selected)</div>
@@ -793,9 +806,14 @@ document.addEventListener('keydown', (ev) => {
     const line = Object.entries(LINES).find(([, l]) => l.key === k && !!l.shift === ev.shiftKey);
     if (line) runAction(`cross:${line[0]}`);
     else if (k === 'v') {
-      const r = sideOf(sel.key).river;
-      runAction(`river:${r === null ? 'minor' : r === 'minor' ? 'major' : 'none'}`);
-    } else if (k === 'w') runAction('wadi');
+      const s = sideOf(sel.key);
+      const cur = s.wadi && !s.river ? 'wadi' : s.river || 'none';
+      const next = { none: 'minor', minor: 'major', major: 'wadi', wadi: 'none' }[cur];
+      runAction(`river:${next}`);
+    } else if (k === 'w') {
+      const s = sideOf(sel.key);
+      runAction(`river:${s.wadi && !s.river ? 'none' : 'wadi'}`);
+    }
     else if (k === 'b') runAction('border');
     else if (k === 'g') runAction('feature:ridge');
     else if (k === 's') cycleFeature(sel.key, 'slope');
