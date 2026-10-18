@@ -7,3 +7,5 @@ __pycache__/
 # Check overlays drawn by tools/map/overlay.py (regenerate as needed)
 data/map/checks/
 data/map/E_test_overlay.png
+# Rulebook transcription (copyrighted; kept local)
+The Campaign for North Africa.md
