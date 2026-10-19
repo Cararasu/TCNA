@@ -22672,16 +22672,5 @@
    "sea": 1.0
   },
   "sides": {}
- },
- "4702": {
-  "terrain": "sea",
-  "uncertain": false,
-  "coastal": false,
-  "outline": 11.5,
-  "mix": {
-   "clear": 0.04,
-   "sea": 0.96
-  },
-  "sides": {}
  }
 }

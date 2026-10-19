@@ -344,6 +344,13 @@ def main():
     filled = sorted(hex_id(*h) for h in keep if outlines[h] < MIN_OUTLINE)
     if filled:
         print(f'kept {len(filled)} faint hexes surrounded by others: {" ".join(filled)}', flush=True)
+    # A printed hex always has another next to it. A lone position that
+    # passed the faint sea threshold is reading the lines of a chart box or
+    # the compass rose on the open sea (E4634, D4702).
+    lone = {h for h in keep if not any(neighbour(*h, d) in keep for d in DIRECTIONS)}
+    if lone:
+        keep -= lone
+        print(f'dropped {len(lone)} lone positions: {" ".join(sorted(hex_id(*h) for h in lone))}', flush=True)
 
     # Pass 2: extract the kept hexes.
     result, skipped = {}, [hex_id(*h) for h in outlines if h not in keep]

@@ -23608,15 +23608,5 @@
    "sea": 0.93
   },
   "sides": {}
- },
- "4634": {
-  "terrain": "sea",
-  "uncertain": false,
-  "coastal": false,
-  "outline": 27.4,
-  "mix": {
-   "sea": 1.0
-  },
-  "sides": {}
  }
 }

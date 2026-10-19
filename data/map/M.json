@@ -1,0 +1,802 @@
+{
+ "0101": {
+  "terrain": "sea",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 66.6,
+  "mix": {
+   "sea": 0.96,
+   "blue": 0.04
+  },
+  "sides": {}
+ },
+ "0102": {
+  "terrain": "sea",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 63.6,
+  "mix": {
+   "sea": 0.98
+  },
+  "sides": {}
+ },
+ "0103": {
+  "terrain": "sea",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 62.4,
+  "mix": {
+   "sea": 0.95,
+   "blue": 0.05
+  },
+  "sides": {}
+ },
+ "0104": {
+  "terrain": "sea",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 60.9,
+  "mix": {
+   "sea": 0.98
+  },
+  "sides": {}
+ },
+ "0105": {
+  "terrain": "clear",
+  "uncertain": false,
+  "coastal": true,
+  "outline": 70.0,
+  "mix": {
+   "clear": 0.19,
+   "sea": 0.74,
+   "blue": 0.07
+  },
+  "sides": {}
+ },
+ "0106": {
+  "terrain": "clear",
+  "uncertain": false,
+  "coastal": true,
+  "outline": 67.8,
+  "mix": {
+   "clear": 0.49,
+   "sea": 0.33,
+   "blue": 0.18
+  },
+  "sides": {}
+ },
+ "0107": {
+  "terrain": "clear",
+  "uncertain": false,
+  "coastal": true,
+  "outline": 67.6,
+  "mix": {
+   "clear": 0.2,
+   "sea": 0.44,
+   "blue": 0.16,
+   "dark": 0.2
+  },
+  "sides": {}
+ },
+ "0108": {
+  "terrain": "sea",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 62.6,
+  "mix": {
+   "sea": 0.98
+  },
+  "sides": {}
+ },
+ "0201": {
+  "terrain": "sea",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 67.6,
+  "mix": {
+   "sea": 0.96,
+   "blue": 0.04
+  },
+  "sides": {}
+ },
+ "0202": {
+  "terrain": "sea",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 66.6,
+  "mix": {
+   "sea": 0.96,
+   "blue": 0.04
+  },
+  "sides": {}
+ },
+ "0203": {
+  "terrain": "rough",
+  "uncertain": false,
+  "coastal": true,
+  "outline": 66.0,
+  "mix": {
+   "sea": 0.23,
+   "delta": 0.17,
+   "tan": 0.41,
+   "brown": 0.1,
+   "blue": 0.06
+  },
+  "sides": {}
+ },
+ "0204": {
+  "terrain": "clear",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 87.3,
+  "mix": {
+   "clear": 1.0
+  },
+  "sides": {}
+ },
+ "0205": {
+  "terrain": "clear",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 88.9,
+  "mix": {
+   "clear": 0.8,
+   "sea": 0.04,
+   "blue": 0.13,
+   "dark": 0.04
+  },
+  "sides": {}
+ },
+ "0206": {
+  "terrain": "clear",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 79.4,
+  "mix": {
+   "clear": 0.97
+  },
+  "sides": {}
+ },
+ "0207": {
+  "terrain": "clear",
+  "uncertain": false,
+  "coastal": true,
+  "outline": 72.5,
+  "mix": {
+   "clear": 0.53,
+   "sea": 0.33,
+   "blue": 0.14
+  },
+  "sides": {}
+ },
+ "0208": {
+  "terrain": "sea",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 33.0,
+  "mix": {
+   "sea": 0.98
+  },
+  "sides": {}
+ },
+ "0301": {
+  "terrain": "sea",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 64.5,
+  "mix": {
+   "sea": 0.98
+  },
+  "sides": {}
+ },
+ "0302": {
+  "terrain": "rough",
+  "uncertain": false,
+  "coastal": true,
+  "outline": 63.3,
+  "mix": {
+   "sea": 0.48,
+   "delta": 0.06,
+   "tan": 0.26,
+   "brown": 0.07,
+   "blue": 0.09
+  },
+  "sides": {}
+ },
+ "0303": {
+  "terrain": "rough",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 62.7,
+  "mix": {
+   "clear": 0.12,
+   "delta": 0.18,
+   "tan": 0.55,
+   "brown": 0.13
+  },
+  "sides": {}
+ },
+ "0304": {
+  "terrain": "clear",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 89.9,
+  "mix": {
+   "clear": 1.0
+  },
+  "sides": {}
+ },
+ "0305": {
+  "terrain": "clear",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 93.4,
+  "mix": {
+   "clear": 0.79,
+   "sea": 0.04,
+   "blue": 0.12,
+   "dark": 0.03
+  },
+  "sides": {}
+ },
+ "0306": {
+  "terrain": "clear",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 89.7,
+  "mix": {
+   "clear": 0.96,
+   "blue": 0.03
+  },
+  "sides": {}
+ },
+ "0307": {
+  "terrain": "clear",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 91.0,
+  "mix": {
+   "clear": 0.88,
+   "blue": 0.1
+  },
+  "sides": {}
+ },
+ "0308": {
+  "terrain": "clear",
+  "uncertain": false,
+  "coastal": true,
+  "outline": 72.4,
+  "mix": {
+   "clear": 0.31,
+   "sea": 0.54,
+   "blue": 0.15
+  },
+  "sides": {}
+ },
+ "0401": {
+  "terrain": "rough",
+  "uncertain": false,
+  "coastal": true,
+  "outline": 66.6,
+  "mix": {
+   "clear": 0.04,
+   "sea": 0.11,
+   "delta": 0.12,
+   "tan": 0.55,
+   "brown": 0.11,
+   "blue": 0.06
+  },
+  "sides": {}
+ },
+ "0402": {
+  "terrain": "rough",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 63.2,
+  "mix": {
+   "clear": 0.08,
+   "delta": 0.14,
+   "tan": 0.64,
+   "brown": 0.13
+  },
+  "sides": {}
+ },
+ "0403": {
+  "terrain": "clear",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 94.3,
+  "mix": {
+   "clear": 0.81,
+   "blue": 0.11
+  },
+  "sides": {}
+ },
+ "0404": {
+  "terrain": "clear",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 97.7,
+  "mix": {
+   "clear": 1.0
+  },
+  "sides": {}
+ },
+ "0405": {
+  "terrain": "clear",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 98.5,
+  "mix": {
+   "clear": 0.97
+  },
+  "sides": {}
+ },
+ "0406": {
+  "terrain": "clear",
+  "uncertain": false,
+  "coastal": true,
+  "outline": 84.8,
+  "mix": {
+   "clear": 0.25,
+   "sea": 0.52,
+   "blue": 0.13,
+   "dark": 0.09
+  },
+  "sides": {}
+ },
+ "0407": {
+  "terrain": "clear",
+  "uncertain": false,
+  "coastal": true,
+  "outline": 76.3,
+  "mix": {
+   "clear": 0.31,
+   "sea": 0.63,
+   "blue": 0.06
+  },
+  "sides": {}
+ },
+ "0408": {
+  "terrain": "sea",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 29.4,
+  "mix": {
+   "sea": 0.97
+  },
+  "sides": {}
+ },
+ "0501": {
+  "terrain": "sea",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 76.4,
+  "mix": {
+   "clear": 0.03,
+   "sea": 0.89,
+   "blue": 0.08
+  },
+  "sides": {}
+ },
+ "0502": {
+  "terrain": "rough",
+  "uncertain": true,
+  "coastal": false,
+  "outline": 81.2,
+  "mix": {
+   "clear": 0.24,
+   "delta": 0.14,
+   "tan": 0.48,
+   "brown": 0.12
+  },
+  "sides": {}
+ },
+ "0503": {
+  "terrain": "clear",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 92.2,
+  "mix": {
+   "clear": 1.0
+  },
+  "sides": {}
+ },
+ "0504": {
+  "terrain": "clear",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 91.3,
+  "mix": {
+   "clear": 0.97
+  },
+  "sides": {}
+ },
+ "0505": {
+  "terrain": "clear",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 95.8,
+  "mix": {
+   "clear": 1.0
+  },
+  "sides": {}
+ },
+ "0506": {
+  "terrain": "clear",
+  "uncertain": false,
+  "coastal": true,
+  "outline": 82.1,
+  "mix": {
+   "clear": 0.4,
+   "sea": 0.47,
+   "blue": 0.13
+  },
+  "sides": {}
+ },
+ "0507": {
+  "terrain": "sea",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 63.8,
+  "mix": {
+   "sea": 0.94,
+   "blue": 0.06
+  },
+  "sides": {}
+ },
+ "0508": {
+  "terrain": "sea",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 61.0,
+  "mix": {
+   "sea": 0.98
+  },
+  "sides": {}
+ },
+ "0601": {
+  "terrain": "clear",
+  "uncertain": false,
+  "coastal": true,
+  "outline": 100.8,
+  "mix": {
+   "clear": 0.52,
+   "sea": 0.4,
+   "blue": 0.08
+  },
+  "sides": {}
+ },
+ "0602": {
+  "terrain": "clear",
+  "uncertain": true,
+  "coastal": false,
+  "outline": 91.6,
+  "mix": {
+   "clear": 0.41,
+   "delta": 0.09,
+   "tan": 0.35,
+   "brown": 0.13
+  },
+  "sides": {}
+ },
+ "0603": {
+  "terrain": "clear",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 90.6,
+  "mix": {
+   "clear": 1.0
+  },
+  "sides": {}
+ },
+ "0604": {
+  "terrain": "clear",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 93.4,
+  "mix": {
+   "clear": 0.96
+  },
+  "sides": {}
+ },
+ "0605": {
+  "terrain": "clear",
+  "uncertain": false,
+  "coastal": true,
+  "outline": 79.2,
+  "mix": {
+   "clear": 0.28,
+   "sea": 0.64,
+   "blue": 0.09
+  },
+  "sides": {}
+ },
+ "0606": {
+  "terrain": "sea",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 60.9,
+  "mix": {
+   "sea": 0.98
+  },
+  "sides": {}
+ },
+ "0607": {
+  "terrain": "sea",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 65.4,
+  "mix": {
+   "sea": 0.98
+  },
+  "sides": {}
+ },
+ "0608": {
+  "terrain": "sea",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 34.1,
+  "mix": {
+   "sea": 0.99
+  },
+  "sides": {}
+ },
+ "0701": {
+  "terrain": "clear",
+  "uncertain": false,
+  "coastal": true,
+  "outline": 72.5,
+  "mix": {
+   "clear": 0.1,
+   "sea": 0.84,
+   "blue": 0.06
+  },
+  "sides": {}
+ },
+ "0702": {
+  "terrain": "clear",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 85.1,
+  "mix": {
+   "clear": 0.92,
+   "sea": 0.05
+  },
+  "sides": {}
+ },
+ "0703": {
+  "terrain": "clear",
+  "uncertain": false,
+  "coastal": true,
+  "outline": 74.0,
+  "mix": {
+   "clear": 0.21,
+   "sea": 0.71,
+   "blue": 0.08
+  },
+  "sides": {}
+ },
+ "0704": {
+  "terrain": "sea",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 76.3,
+  "mix": {
+   "clear": 0.06,
+   "sea": 0.88,
+   "blue": 0.06
+  },
+  "sides": {}
+ },
+ "0705": {
+  "terrain": "sea",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 65.3,
+  "mix": {
+   "sea": 1.0
+  },
+  "sides": {}
+ },
+ "0706": {
+  "terrain": "clear",
+  "uncertain": false,
+  "coastal": true,
+  "outline": 59.8,
+  "mix": {
+   "sea": 0.62,
+   "blue": 0.06,
+   "dark": 0.31
+  },
+  "sides": {}
+ },
+ "0707": {
+  "terrain": "sea",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 62.8,
+  "mix": {
+   "sea": 0.99
+  },
+  "sides": {}
+ },
+ "0708": {
+  "terrain": "sea",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 62.4,
+  "mix": {
+   "sea": 0.99
+  },
+  "sides": {}
+ },
+ "0801": {
+  "terrain": "clear",
+  "uncertain": false,
+  "coastal": true,
+  "outline": 71.7,
+  "mix": {
+   "clear": 0.59,
+   "sea": 0.32,
+   "blue": 0.1
+  },
+  "sides": {}
+ },
+ "0802": {
+  "terrain": "sea",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 70.0,
+  "mix": {
+   "clear": 0.04,
+   "sea": 0.93,
+   "blue": 0.04
+  },
+  "sides": {}
+ },
+ "0803": {
+  "terrain": "sea",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 69.5,
+  "mix": {
+   "sea": 0.99
+  },
+  "sides": {}
+ },
+ "0804": {
+  "terrain": "sea",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 66.1,
+  "mix": {
+   "sea": 0.97,
+   "blue": 0.03
+  },
+  "sides": {}
+ },
+ "0805": {
+  "terrain": "sea",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 59.1,
+  "mix": {
+   "sea": 0.99
+  },
+  "sides": {}
+ },
+ "0806": {
+  "terrain": "clear",
+  "uncertain": false,
+  "coastal": true,
+  "outline": 64.2,
+  "mix": {
+   "sea": 0.7,
+   "blue": 0.05,
+   "dark": 0.25
+  },
+  "sides": {}
+ },
+ "0807": {
+  "terrain": "sea",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 66.4,
+  "mix": {
+   "sea": 0.99
+  },
+  "sides": {}
+ },
+ "0808": {
+  "terrain": "sea",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 29.3,
+  "mix": {
+   "sea": 0.99
+  },
+  "sides": {}
+ },
+ "0901": {
+  "terrain": "sea",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 70.0,
+  "mix": {
+   "sea": 1.0
+  },
+  "sides": {}
+ },
+ "0902": {
+  "terrain": "sea",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 69.7,
+  "mix": {
+   "sea": 1.0
+  },
+  "sides": {}
+ },
+ "0903": {
+  "terrain": "sea",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 64.5,
+  "mix": {
+   "sea": 0.98
+  },
+  "sides": {}
+ },
+ "0904": {
+  "terrain": "sea",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 70.0,
+  "mix": {
+   "sea": 0.99
+  },
+  "sides": {}
+ },
+ "0905": {
+  "terrain": "sea",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 70.5,
+  "mix": {
+   "sea": 0.99
+  },
+  "sides": {}
+ },
+ "0906": {
+  "terrain": "sea",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 60.2,
+  "mix": {
+   "sea": 0.94,
+   "dark": 0.05
+  },
+  "sides": {}
+ },
+ "0907": {
+  "terrain": "sea",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 66.1,
+  "mix": {
+   "sea": 1.0
+  },
+  "sides": {}
+ },
+ "0908": {
+  "terrain": "sea",
+  "uncertain": false,
+  "coastal": false,
+  "outline": 68.7,
+  "mix": {
+   "sea": 0.99
+  },
+  "sides": {}
+ }
+}

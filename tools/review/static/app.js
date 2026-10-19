@@ -64,6 +64,13 @@ const NEIGHBOURS = {
 const pad2 = (n) => String(n).padStart(2, '0');
 const parseId = (id) => [+id.slice(0, 2), +id.slice(2)];
 const hexId = (r, c) => pad2(r) + pad2(c);
+// On the joined map (ALL) ids are RR plus the column counted from Map A's west
+// edge; each hex carries its section number(s) as label (and also).
+const label = (id) => state.hexes.get(id)?.label || `${state.mapId}${id}`;
+const alsoText = (id) => {
+  const also = state.hexes.get(id)?.also;
+  return also && also.length ? ` <span class="muted">= ${also.join(' = ')}</span>` : '';
+};
 
 function neighbourId(id, d) {
   const [r, c] = parseId(id);
@@ -398,7 +405,7 @@ function renderEditor() {
       .map(([k, d]) => `<button type="button" data-action="lm-add:${k}">+ ${d.label}</button>`).join('');
     const autoT = TERRAIN[h.t] ? TERRAIN[h.t].label : h.t;
     body.innerHTML = `
-      <h3>Hex ${state.mapId}${id} ${e.edited ? '<span class="tag-edited">edited</span>' : ''}</h3>
+      <h3>Hex ${label(id)}${alsoText(id)} ${e.edited ? '<span class="tag-edited">edited</span>' : ''}</h3>
       <div class="muted">Automatic: ${autoT}${h.u ? ' (uncertain)' : ''}</div>
       <div class="group"><div class="group-title">Terrain</div><div class="choices">${terrainButtons}</div></div>
       <div class="group"><div class="group-title">Landmarks</div>${lms || '<div class="muted">none</div>'}
@@ -416,17 +423,17 @@ function renderEditor() {
     const featureButtons = [
       choice('None', !f, 'feature:none'),
       choice('Ridge', f && f.type === 'ridge', 'feature:ridge', 'G'),
-      choice(`Slope ↓${ha}`, f && f.type === 'slope' && f.down === ha, `feature:slope:${ha}`),
-      choice(`Slope ↓${hb}`, f && f.type === 'slope' && f.down === hb, `feature:slope:${hb}`),
-      choice(`Escarpment ↓${ha}`, f && f.type === 'escarpment' && f.down === ha, `feature:escarpment:${ha}`),
-      choice(`Escarpment ↓${hb}`, f && f.type === 'escarpment' && f.down === hb, `feature:escarpment:${hb}`),
+      choice(`Slope ↓${label(ha)}`, f && f.type === 'slope' && f.down === ha, `feature:slope:${ha}`),
+      choice(`Slope ↓${label(hb)}`, f && f.type === 'slope' && f.down === hb, `feature:slope:${hb}`),
+      choice(`Escarpment ↓${label(ha)}`, f && f.type === 'escarpment' && f.down === ha, `feature:escarpment:${ha}`),
+      choice(`Escarpment ↓${label(hb)}`, f && f.type === 'escarpment' && f.down === hb, `feature:escarpment:${hb}`),
     ].join('');
     const has = (k) => s.cross.some((x) => x.k === k);
     const crossButtons = Object.entries(LINES).map(([k, l]) => choice(l.label, has(k), `cross:${k}`, l.key && (l.shift ? '⇧' : '') + l.key.toUpperCase())).join('');
     const edited = !!state.corr.sides[key];
     body.innerHTML = `
-      <h3>Hexside ${ha} | ${hb} ${edited ? '<span class="tag-edited">edited</span>' : ''}</h3>
-      <div class="muted">${DIR_NAMES[d]} side of ${owner}</div>
+      <h3>Hexside ${label(ha)} | ${label(hb)} ${edited ? '<span class="tag-edited">edited</span>' : ''}</h3>
+      <div class="muted">${DIR_NAMES[d]} side of ${label(owner)}</div>
       <div class="group"><div class="group-title">River or wadi <kbd>V</kbd> <span class="muted">(one of them)</span></div><div class="choices">
         ${choice('None', !s.river && !s.wadi, 'river:none')}${choice('Minor river', s.river === 'minor' && !s.wadi, 'river:minor')}${choice('Major river', s.river === 'major' && !s.wadi, 'river:major')}${choice('Wadi', s.wadi && !s.river, 'river:wadi', 'W')}</div></div>
       <div class="group"><div class="group-title">Hexside feature <span class="muted">(<kbd>S</kbd> slope, <kbd>E</kbd> escarpment cycle)</span></div>
@@ -596,7 +603,7 @@ function computeWarnings() {
 
   for (const id of hexes.keys()) {
     const e = hexOf(id);
-    if (e.uncertain) out.push({ type: 'uncertain', hex: id, text: `${id} uncertain terrain (${TERRAIN[e.terrain]?.label || e.terrain})` });
+    if (e.uncertain) out.push({ type: 'uncertain', hex: id, text: `${label(id)} uncertain terrain (${TERRAIN[e.terrain]?.label || e.terrain})` });
   }
 
   // Dead ends: a line family crossing exactly one side of a hex that has no
@@ -612,7 +619,7 @@ function computeWarnings() {
     }
     for (const fam of ['road', 'track', 'railroad']) {
       if (counts[fam] === 1) {
-        out.push({ type: 'dead-end', hex: id, text: `${id} ${fam} dead end` });
+        out.push({ type: 'dead-end', hex: id, text: `${label(id)} ${fam} dead end` });
       }
     }
   }
@@ -631,7 +638,7 @@ function computeWarnings() {
       if (!hexes.has(x) || isSea(h) || isSea(n) || isSea(x)) continue;
       const s1 = sideOf(sideKeyBetween(h, x)), s2 = sideOf(sideKeyBetween(n, x));
       if (!s1.river && !s2.river) {
-        out.push({ type: 'river-end', hex: h, side: key, text: `${h}|${n} river ends (corner ${x})` });
+        out.push({ type: 'river-end', hex: h, side: key, text: `${label(h)}|${label(n)} river ends (corner ${label(x)})` });
       }
     }
   }
@@ -641,7 +648,7 @@ function computeWarnings() {
     const s = sideOf(key);
     if (s.river && s.wadi && sideExists(key)) {
       const [h, n] = sideHexes(key);
-      out.push({ type: 'conflict', hex: h, side: key, text: `${h}|${n} both ${s.river} river and wadi` });
+      out.push({ type: 'conflict', hex: h, side: key, text: `${label(h)}|${label(n)} both ${s.river} river and wadi` });
     }
   }
 
@@ -730,7 +737,7 @@ function showInfo(id, nearKey) {
   }).join('');
   const lm = e.landmarks.map((l) => `${LANDMARKS[l.type]?.label || l.type}${l.name ? ` “${escapeHtml(l.name)}”` : ''}`).join(', ');
   document.getElementById('info-body').innerHTML = `
-    <div class="hexid">${state.mapId}${id}${e.reviewed ? ' <span style="color:#1b8a3a">✓</span>' : ''}</div>
+    <div class="hexid">${label(id)}${alsoText(id)}${e.reviewed ? ' <span style="color:#1b8a3a">✓</span>' : ''}</div>
     <table>
       <tr><td>Terrain</td><td>${t}${e.uncertain ? ' <b style="color:#d97700">(uncertain)</b>' : ''}${h.coastal ? ', coastal' : ''}</td></tr>
       ${lm ? `<tr><td>Landmarks</td><td>${lm}</td></tr>` : ''}
@@ -827,6 +834,75 @@ document.addEventListener('keydown', (ev) => {
 
 // ---------- map loading and navigation ----------
 
+// The joined map's scan: each section's own tiles drawn at its place, west to
+// east, so each section lies over the one before it as on the table. Each is
+// clipped to its scan, since edge tiles are padded out to the full tile size.
+function loadImage(src) {
+  return new Promise((resolve) => {
+    const img = new Image();
+    img.onload = () => resolve(img);
+    img.onerror = () => resolve(null);
+    img.src = src;
+  });
+}
+
+const JoinedLayer = L.GridLayer.extend({
+  createTile(coords, done) {
+    const tile = document.createElement('canvas');
+    tile.width = tile.height = 256;
+    const s = 2 ** (coords.z - state.zmax);
+    const x0 = coords.x * 256, y0 = coords.y * 256;  // tile origin, zoom-z pixels
+    const parts = [];
+    for (const sec of this.options.sections) {
+      const sx = Math.round(sec.x * s), sy = Math.round(sec.y * s);
+      const sw = Math.floor(sec.width * s), sh = Math.floor(sec.height * s);
+      const ax = Math.max(x0, sx), ay = Math.max(y0, sy);
+      const bx = Math.min(x0 + 256, sx + sw), by = Math.min(y0 + 256, sy + sh);
+      if (ax >= bx || ay >= by) continue;
+      const imgs = [];
+      for (let ty = Math.floor((ay - sy) / 256); ty * 256 < by - sy; ty++) {
+        for (let tx = Math.floor((ax - sx) / 256); tx * 256 < bx - sx; tx++) {
+          imgs.push({ x: sx + tx * 256 - x0, y: sy + ty * 256 - y0,
+                      img: loadImage(`/tiles/${sec.id}/${coords.z}/${tx}/${ty}.jpg?v=${sec.v}`) });
+        }
+      }
+      // Hexes of the section to the west that this section's paper covers.
+      const cut = sec.cut.map((poly) => poly.map(([px, py]) => [px * s - x0, py * s - y0]))
+        .filter((poly) => poly.some(([px]) => px > 0) && poly.some(([px]) => px < 256)
+                          && poly.some(([, py]) => py > 0) && poly.some(([, py]) => py < 256));
+      parts.push({ clip: [ax - x0, ay - y0, bx - ax, by - ay], cut, imgs });
+    }
+    Promise.all(parts.flatMap((p) => p.imgs.map((i) => i.img))).then((loaded) => {
+      const ctx = tile.getContext('2d');
+      let k = 0;
+      for (const p of parts) {
+        ctx.save();
+        ctx.beginPath();
+        ctx.rect(...p.clip);
+        ctx.clip();
+        if (p.cut.length) {
+          // Rectangle minus the hexes: each hex adds one more crossing.
+          ctx.beginPath();
+          ctx.rect(0, 0, 256, 256);
+          for (const poly of p.cut) {
+            ctx.moveTo(...poly[0]);
+            for (const pt of poly.slice(1)) ctx.lineTo(...pt);
+            ctx.closePath();
+          }
+          ctx.clip('evenodd');
+        }
+        for (const i of p.imgs) {
+          const img = loaded[k++];
+          if (img) ctx.drawImage(img, i.x, i.y);
+        }
+        ctx.restore();
+      }
+      done(null, tile);
+    });
+    return tile;
+  },
+});
+
 async function loadMap(id, view) {
   const res = await fetch(`/api/map/${id}`);
   if (!res.ok) { alert(`Could not load map ${id}: ${res.status}`); return; }
@@ -846,11 +922,16 @@ async function loadMap(id, view) {
   state.hover = null;
   state.warnIndex = -1;
 
+  state.byLabel = new Map();
+  for (const h of data.hexes) {
+    for (const l of [h.label, ...(h.also || [])]) if (l) state.byLabel.set(l, h.id);
+  }
+
   const bounds = L.latLngBounds(toLL([0, data.height]), toLL([data.width, 0]));
-  state.tiles = L.tileLayer(`/tiles/${id}/{z}/{x}/{y}.jpg`, {
-    tileSize: 256, minZoom: 0, maxNativeZoom: data.zmax, maxZoom: data.zmax + 2,
-    noWrap: true, bounds, keepBuffer: 4,
-  }).addTo(map);
+  const tileOpts = { tileSize: 256, minZoom: 0, maxNativeZoom: data.zmax, maxZoom: data.zmax + 2,
+                     noWrap: true, bounds, keepBuffer: 4 };
+  state.tiles = (data.sections ? new JoinedLayer({ ...tileOpts, sections: data.sections })
+    : L.tileLayer(`/tiles/${data.image}/{z}/{x}/{y}.jpg?v=${data.v}`, tileOpts)).addTo(map);
   map.setMaxZoom(data.zmax + 2);
   map.setMaxBounds(bounds.pad(0.15));
   buildStaticLayers();
@@ -860,9 +941,15 @@ async function loadMap(id, view) {
   renderProgress();
   renderEditor();
   document.getElementById('save-status').textContent = '';
+  if (data.unsynced) {
+    // Copies of border hexes and sides that differ get the joined value.
+    scheduleSave();
+    document.getElementById('save-status').textContent = `Synchronizing ${data.unsynced} border corrections…`;
+  }
 
   document.getElementById('map-select').value = id;
   if (view && view.x != null) map.setView(toLL([view.x, view.y]), view.z);
+  else if (data.focus) map.fitBounds(L.latLngBounds(toLL(data.focus.slice(0, 2)), toLL(data.focus.slice(2))));
   else map.fitBounds(bounds);
   if (view && view.sel) {
     const ok = view.sel.kind === 'hex' ? state.hexes.has(view.sel.id) : sideExists(view.sel.key);
@@ -873,16 +960,18 @@ async function loadMap(id, view) {
 function gotoHex(text) {
   const msg = document.getElementById('goto-msg');
   msg.textContent = '';
-  const m = text.trim().toUpperCase().match(/^([A-E])?\s*(\d{4})$/);
+  const m = text.trim().toUpperCase().match(/^([A-EM])?\s*(\d{4})$/);
   if (!m) { msg.textContent = 'Use a 4-digit hex number, optionally with the map letter (E3002).'; return; }
+  const joinedMap = state.mapId === 'ALL';
+  if (joinedMap && !m[1]) { msg.textContent = 'On all maps, add the map letter (E3002).'; return; }
   const go = () => {
-    const h = state.hexes.get(m[2]);
-    if (!h) { msg.textContent = `Hex ${m[2]} is not on map ${state.mapId}.`; return; }
+    const h = state.hexes.get(joinedMap ? state.byLabel.get(m[1] + m[2]) : m[2]);
+    if (!h) { msg.textContent = `Hex ${m[1] || state.mapId}${m[2]} is not on the map.`; return; }
     map.flyTo(toLL(h.c), Math.max(map.getZoom(), state.zmax - 1), { duration: 0.6 });
     select({ kind: 'hex', id: h.id });
     showInfo(h.id, null);
   };
-  if (m[1] && m[1] !== state.mapId) loadMap(m[1]).then(go); else go();
+  if (m[1] && m[1] !== state.mapId && !joinedMap) loadMap(m[1]).then(go); else go();
 }
 
 // Position and selection in the URL: #E/x/y/zoom[/3002 or /3002.E] (scan
@@ -896,7 +985,7 @@ function writeHash() {
 }
 
 function readHash() {
-  const m = location.hash.match(/^#([A-E])(?:\/(\d+)\/(\d+)\/([\d.]+)(?:\/(\d{4})(?:\.(E|NE|NW))?)?)?/);
+  const m = location.hash.match(/^#(ALL|[A-EM])(?:\/(\d+)\/(\d+)\/([\d.]+)(?:\/(\d{4,5})(?:\.(E|NE|NW))?)?)?/);
   if (!m) return null;
   const view = m[2] ? { id: m[1], x: +m[2], y: +m[3], z: +m[4] } : { id: m[1] };
   if (m[5]) view.sel = m[6] ? { kind: 'side', key: `${m[5]}|${m[6]}` } : { kind: 'hex', id: m[5] };
@@ -916,7 +1005,8 @@ async function start() {
   for (const m of maps) {
     const o = document.createElement('option');
     o.value = m.id;
-    o.textContent = m.hasData ? `Map ${m.id}` : `Map ${m.id} (no data yet)`;
+    const name = { ALL: 'All maps', M: 'Malta' }[m.id] || `Map ${m.id}`;
+    o.textContent = m.hasData ? name : `${name} (no data yet)`;
     o.disabled = !m.hasData;
     sel.appendChild(o);
   }
