@@ -2141,6 +2141,16 @@
    "border": false,
    "cross": []
   },
+  "2003|E": {
+   "river": null,
+   "feature": {
+    "type": "slope",
+    "down": "2003"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
   "2027|NE": {
    "river": "major",
    "feature": null,
@@ -2337,11 +2347,28 @@
     }
    ]
   },
-  "2203|NW": {
+  "2202|NE": {
    "river": null,
    "feature": {
-    "type": "slope",
-    "down": "2203"
+    "type": "ridge"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "2202|NW": {
+   "river": null,
+   "feature": {
+    "type": "ridge"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "2203|NE": {
+   "river": null,
+   "feature": {
+    "type": "ridge"
    },
    "wadi": false,
    "border": false,

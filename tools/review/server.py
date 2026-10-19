@@ -1,18 +1,23 @@
-"""Local review server for the extracted CNA map data.
+"""Local server for the CNA game and its map editor.
 
 Usage:
   python tools/review/server.py [--port 8765]
 
-then open http://127.0.0.1:8765/ in a browser.
+then open http://127.0.0.1:8765/ for the game (title screen, scenarios, the
+board) or http://127.0.0.1:8765/editor.html for the map editor.
 
 Serves the scanned map sections as image tiles (extracted from the rulebook
 scan on first use and cached under .cache/review/) and the extracted map data
 (data/map/<MAP>.json with its fitted grid data/map/tiles<MAP>.json) as an
-overlay with all geometry in map pixels. Edits made in the browser are saved
+overlay with all geometry in map pixels. Edits made in the editor are saved
 to data/map/corrections/<MAP>.json, which holds only the hexes and hexsides
 changed by hand, so the automatic data can be regenerated without losing
 them. Map ALL is the five sections joined (see joined.py); a hex or hexside
 on two sections is kept the same on both, whichever map it is edited on.
+
+The game gets the joined map with the corrections applied, the printed
+off-map boxes (data/map/offmap.json), the scenarios (data/scenarios.json) and
+the text of rulebook cases, read from the local transcription when present.
 Only listens on localhost.
 """
 import argparse
@@ -29,14 +34,14 @@ from http import HTTPStatus
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 
-from PIL import Image
+from PIL import Image, ImageDraw
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / 'tools' / 'map'))
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from hexgrid import TiledGrid, parse_id  # noqa: E402
 from joined import (MALTA, MAPS, SECTIONS, all_corrections, auto_side, joined,  # noqa: E402
-                    load_corrections, save_joined, save_section, unsynced)
+                    load_corrections, norm_side, save_joined, save_section, unsynced)
 
 Image.MAX_IMAGE_PIXELS = None
 
@@ -64,9 +69,12 @@ LOADED = []  # MapImages holding their large levels, least recently used first
 LOADED_LOCK = threading.Lock()
 DECODE_LOCK = threading.Lock()
 DATA = ROOT / 'data' / 'map'
+SCENARIOS = ROOT / 'data' / 'scenarios.json'
+RULEBOOK = ROOT / 'The Campaign for North Africa.md'  # local only, not in version control
 CACHE = ROOT / '.cache' / 'review'
 STATIC = Path(__file__).resolve().parent / 'static'
 TILE = 256
+TITLE_ZOOM = 3  # the title screen's board: each scan at 1/8 scale
 
 
 def fetch_scans():
@@ -278,6 +286,127 @@ def joined_overlay():
             'corrections': j.merged(corr), 'unsynced': unsynced(j, corr)}
 
 
+def offmap_zones(sections):
+    """The printed off-map boxes, outlined in joined map pixels."""
+    with open(DATA / 'offmap.json', encoding='utf-8') as f:
+        zones = json.load(f)['zones']
+    place = {s['id']: (s['x'], s['y']) for s in sections}
+    out = []
+    for z in zones:
+        x0, y0 = place[z['section']]
+        if 'rect' in z:
+            x, y, w, h = z['rect']
+            poly = [[x, y], [x + w, y], [x + w, y + h], [x, y + h]]
+        else:
+            poly = z['poly']
+        zone = {k: v for k, v in z.items() if k not in ('rect', 'poly')}
+        zone['p'] = [[px + x0, py + y0] for px, py in poly]
+        out.append(zone)
+    return out
+
+
+_GAME_MAP = (None, None)
+_GAME_MAP_LOCK = threading.Lock()
+
+
+def game_map():
+    """The joined map as the game shows it: corrections applied, off-map boxes added.
+
+    Each hex has its terrain and landmarks; only hexsides with something on
+    them are sent. Rebuilt when the map data, corrections or boxes change.
+    """
+    global _GAME_MAP
+    files = [DATA / f'{m}.json' for m in MAPS] + [DATA / 'corrections' / f'{m}.json' for m in MAPS]
+    files.append(DATA / 'offmap.json')
+    key = tuple(p.stat().st_mtime_ns if p.exists() else 0 for p in files)
+    with _GAME_MAP_LOCK:
+        if _GAME_MAP[0] == key:
+            return _GAME_MAP[1]
+        base = joined_overlay()
+        corr = base['corrections']
+        hexes = []
+        for h in base['hexes']:
+            c = corr['hexes'].get(h['id']) or {}
+            hexes.append({'id': h['id'], 'label': h['label'], 'also': h['also'], 'c': h['c'], 'p': h['p'],
+                          't': c.get('terrain') or h['t'], 'lm': c.get('landmarks') or [], 'coastal': h['coastal']})
+        sides = {}
+        for k in set(base['sides']) | set(corr['sides']):
+            s = norm_side(corr['sides'].get(k) or base['sides'].get(k))
+            if s['river'] or s['feature'] or s['wadi'] or s['border'] or s['cross']:
+                sides[k] = s
+        out = {'width': base['width'], 'height': base['height'], 'zmax': base['zmax'],
+               'sections': base['sections'], 'hexes': hexes, 'sides': sides,
+               'zones': offmap_zones(base['sections'])}
+        _GAME_MAP = (key, out)
+        return out
+
+
+def scenarios():
+    with open(SCENARIOS, encoding='utf-8') as f:
+        out = json.load(f)
+    out['rulebook'] = RULEBOOK.exists()
+    return out
+
+
+_RULEBOOK = (None, None)
+
+
+def rule_text(case):
+    """The text of a rulebook section or case (e.g. 60.8 or 60.81) as Markdown, or None.
+
+    A section (### [60.8]) runs to the next heading of its level or above; a
+    case (**[60.81]**) to the next case or heading.
+    """
+    global _RULEBOOK
+    if not RULEBOOK.exists():
+        return None
+    mtime = RULEBOOK.stat().st_mtime_ns
+    if _RULEBOOK[0] != mtime:
+        _RULEBOOK = (mtime, RULEBOOK.read_text(encoding='utf-8').split('\n'))
+    lines = _RULEBOOK[1]
+    tag = f'[{case}]'
+    for i, line in enumerate(lines):
+        head = re.match(r'(#+) \[', line)
+        if head and line[len(head.group(1)) + 1:].startswith(tag):
+            level = len(head.group(1))
+            stop = lambda s: (m := re.match(r'(#+) ', s)) and len(m.group(1)) <= level  # noqa: E731
+            break
+        if line.startswith(f'**{tag}'):
+            stop = lambda s: s.startswith('**[') or s.startswith('#')  # noqa: E731
+            break
+    else:
+        return None
+    end = next((k for k in range(i + 1, len(lines)) if stop(lines[k])), len(lines))
+    body = [s for s in lines[i:end] if not s.startswith('<!--')]
+    return '\n'.join(body).strip()
+
+
+def title_image():
+    """The joined board at 1/8 scale for the title screen, built once and cached."""
+    path = CACHE / 'title.jpg'
+    versions = [IMAGES[m].version() for m in SECTIONS]
+    if path.exists() and path.stat().st_mtime_ns >= max(versions):
+        return path.read_bytes()
+    data = joined_overlay()
+    scale = 2 ** (TITLE_ZOOM - data['zmax'])
+    board = Image.new('RGB', (math.ceil(data['width'] * scale), math.ceil(data['height'] * scale)), (58, 58, 58))
+    for sec in data['sections']:
+        im = IMAGES[sec['id']].level(TITLE_ZOOM)
+        x, y = round(sec['x'] * scale), round(sec['y'] * scale)
+        # As on the joined map: the paper over the western section's last hexes is cut away.
+        mask = Image.new('L', im.size, 255)
+        draw = ImageDraw.Draw(mask)
+        for poly in sec['cut']:
+            draw.polygon([(px * scale - x, py * scale - y) for px, py in poly], fill=0)
+        board.paste(im, (x, y), mask)
+    buf = io.BytesIO()
+    board.save(buf, 'JPEG', quality=85)
+    body = buf.getvalue()
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_bytes(body)
+    return body
+
+
 class Handler(SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, directory=str(STATIC), **kwargs)
@@ -317,6 +446,23 @@ class Handler(SimpleHTTPRequestHandler):
             return
         if path == '/api/map/ALL':
             self.send_json(joined_overlay())
+            return
+        if path == '/api/game/map':
+            self.send_json(game_map())
+            return
+        if path == '/api/scenarios':
+            self.send_json(scenarios())
+            return
+        m = re.fullmatch(r'/api/rules/(\d{1,2}\.\d{1,3})', path)
+        if m:
+            text = rule_text(m.group(1))
+            if text is None:
+                self.send_error(HTTPStatus.NOT_FOUND, f'case {m.group(1)} is not in the local rulebook transcription')
+            else:
+                self.send_json({'case': m.group(1), 'text': text})
+            return
+        if path == '/title.jpg':
+            self.send_bytes(title_image(), 'image/jpeg', cache=True)
             return
         m = re.fullmatch(r'/api/map/([A-EM])', path)
         if m:
@@ -364,7 +510,8 @@ def main():
     a = ap.parse_args()
     srv = ThreadingHTTPServer(('127.0.0.1', a.port), Handler)
     threading.Thread(target=lambda: [IMAGES[m].warm() for m in SCANS], daemon=True).start()
-    print(f'CNA map review: http://127.0.0.1:{a.port}/  (Ctrl+C to stop)', flush=True)
+    print(f'CNA game: http://127.0.0.1:{a.port}/   map editor: http://127.0.0.1:{a.port}/editor.html'
+          '  (Ctrl+C to stop)', flush=True)
     try:
         srv.serve_forever()
     except KeyboardInterrupt:

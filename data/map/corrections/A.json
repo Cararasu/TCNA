@@ -1304,6 +1304,26 @@
     }
    ]
   },
+  "0623|NE": {
+   "river": null,
+   "feature": {
+    "type": "slope",
+    "down": "0724"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "0624|NW": {
+   "river": null,
+   "feature": {
+    "type": "slope",
+    "down": "0724"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
   "0625|E": {
    "river": null,
    "feature": null,
@@ -1506,6 +1526,46 @@
     }
    ]
   },
+  "0723|E": {
+   "river": null,
+   "feature": {
+    "type": "slope",
+    "down": "0724"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "0723|NE": {
+   "river": null,
+   "feature": {
+    "type": "slope",
+    "down": "0823"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "0724|E": {
+   "river": null,
+   "feature": {
+    "type": "slope",
+    "down": "0724"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "0725|NW": {
+   "river": null,
+   "feature": {
+    "type": "slope",
+    "down": "0824"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
   "0727|E": {
    "river": null,
    "feature": null,
@@ -1657,6 +1717,36 @@
      "k": "track"
     }
    ]
+  },
+  "0822|E": {
+   "river": null,
+   "feature": {
+    "type": "slope",
+    "down": "0823"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "0822|NE": {
+   "river": null,
+   "feature": {
+    "type": "slope",
+    "down": "0923"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "0824|E": {
+   "river": null,
+   "feature": {
+    "type": "slope",
+    "down": "0824"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
   },
   "0826|E": {
    "river": null,
@@ -2155,6 +2245,16 @@
     }
    ]
   },
+  "1224|E": {
+   "river": null,
+   "feature": {
+    "type": "slope",
+    "down": "1224"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
   "1227|E": {
    "river": null,
    "feature": null,
@@ -2215,6 +2315,16 @@
   "1232|E": {
    "river": null,
    "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "1233|E": {
+   "river": null,
+   "feature": {
+    "type": "slope",
+    "down": "1234"
+   },
    "wadi": false,
    "border": false,
    "cross": []
@@ -2449,6 +2559,16 @@
      "k": "track"
     }
    ]
+  },
+  "1433|E": {
+   "river": null,
+   "feature": {
+    "type": "slope",
+    "down": "1434"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
   },
   "1508|E": {
    "river": null,
@@ -2701,6 +2821,16 @@
      "k": "track"
     }
    ]
+  },
+  "1633|E": {
+   "river": null,
+   "feature": {
+    "type": "slope",
+    "down": "1634"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
   },
   "1634|NW": {
    "river": null,
@@ -3681,7 +3811,10 @@
   },
   "4431|E": {
    "river": null,
-   "feature": null,
+   "feature": {
+    "type": "escarpment",
+    "down": "4431"
+   },
    "wadi": false,
    "border": false,
    "cross": [
@@ -3888,6 +4021,16 @@
      "k": "track"
     }
    ]
+  },
+  "4930|E": {
+   "river": null,
+   "feature": {
+    "type": "escarpment",
+    "down": "4930"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
   },
   "4931|E": {
    "river": null,

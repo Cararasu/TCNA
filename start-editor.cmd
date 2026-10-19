@@ -1,5 +1,6 @@
 @echo off
-rem Start the CNA map review editor (tools/review/server.py) and open it in the browser.
+rem Start the CNA server (tools/review/server.py) and open the map editor in the browser.
+rem The game itself is at http://127.0.0.1:PORT/ (see start-game.cmd).
 rem Usage: start-editor.cmd [port]     (default port 8765; Ctrl+C to stop)
 setlocal
 cd /d "%~dp0"
@@ -17,7 +18,7 @@ python -c "import PIL" 2>nul || (
 )
 
 rem Open the browser once the server has had a moment to start listening.
-start "" /b cmd /c "timeout /t 2 /nobreak >nul & start http://127.0.0.1:%PORT%/"
+start "" /b cmd /c "timeout /t 2 /nobreak >nul & start http://127.0.0.1:%PORT%/editor.html"
 
 python tools\review\server.py --port %PORT%
 exit /b %errorlevel%

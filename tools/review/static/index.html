@@ -2,65 +2,88 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>CNA Map Review</title>
+  <title>Campaign for North Africa</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="vendor/leaflet.css">
-  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="game.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Cpath d=%22M16 2l12 7v14l-12 7-12-7V9z%22 fill=%22%23d9b45a%22 stroke=%22%233b3220%22 stroke-width=%222%22/%3E%3C/svg%3E">
 </head>
 <body>
-  <div id="map"></div>
-
-  <div id="toolbar" class="panel">
-    <label>Map <select id="map-select"></select></label>
-    <form id="goto">
-      <input id="goto-hex" placeholder="Go to hex, e.g. 3002" maxlength="5" autocomplete="off">
-      <button type="submit">Go</button>
-    </form>
-    <button id="undo" type="button" title="Undo (Ctrl+Z)" disabled>Undo</button>
-    <span id="save-status" class="muted"></span>
-    <span id="goto-msg"></span>
-  </div>
-
-  <div id="warnings" class="panel">
-    <div class="panel-title row">
-      <span>Warnings <span id="warn-count" class="muted"></span></span>
-      <button id="warn-next" type="button" title="Next warning (N)">Next</button>
+  <!-- ---------- title screen ---------- -->
+  <section id="title" class="screen">
+    <div class="board" style="background-image:url('/title.jpg')"></div>
+    <div class="shade"></div>
+    <div class="title-block">
+      <div class="kicker">The Desert War 1940–43</div>
+      <h1>The Campaign<br>for North Africa</h1>
+      <nav class="menu">
+        <a class="primary" href="#scenarios">Play a scenario</a>
+        <a href="editor.html" class="debug">Map editor <span>debug</span></a>
+      </nav>
     </div>
-    <div id="warn-filters"></div>
-    <ol id="warn-list"></ol>
-  </div>
+    <footer>Board and rules: Simulations Publications, Inc., 1979</footer>
+  </section>
 
-  <div id="layers" class="panel">
-    <div class="panel-title">Layers</div>
-    <label><input type="checkbox" data-layer="terrain" checked> Terrain tint</label>
-    <label><input type="checkbox" data-layer="uncertain" checked> Uncertain terrain</label>
-    <label><input type="checkbox" data-layer="rivers" checked> Rivers and wadis</label>
-    <label><input type="checkbox" data-layer="features" checked> Ridges, slopes, escarpments</label>
-    <label><input type="checkbox" data-layer="crossings" checked> Crossings</label>
-    <label><input type="checkbox" data-layer="landmarks" checked> Landmarks</label>
-    <label><input type="checkbox" data-layer="reviewed" checked> Reviewed marks</label>
-    <label><input type="checkbox" data-layer="edited" checked> Edited marks</label>
-    <label><input type="checkbox" data-layer="outlines"> Hex outlines</label>
-    <label class="opacity">Overlay opacity <input type="range" id="opacity" min="0" max="100" value="100"></label>
-    <div id="progress" class="muted"></div>
-  </div>
-
-  <div id="editor" class="panel">
-    <div id="editor-body" class="muted">
-      Click inside a hex to edit it, or near a hexside to edit that side.
+  <!-- ---------- scenario selection ---------- -->
+  <section id="scenarios" class="screen" hidden>
+    <div class="board blurred" style="background-image:url('/title.jpg')"></div>
+    <div class="shade"></div>
+    <header class="screen-head">
+      <a href="#" class="back">‹ Title</a>
+      <h2>Choose a scenario</h2>
+    </header>
+    <div class="scenario-layout">
+      <ol id="scenario-list"></ol>
+      <article id="scenario-detail" class="sheet"></article>
     </div>
-  </div>
+  </section>
 
-  <div id="info" class="panel">
-    <div id="info-body" class="muted">Move the mouse over the map.</div>
-  </div>
+  <!-- ---------- the game ---------- -->
+  <section id="game" class="screen" hidden>
+    <div id="map"></div>
 
-  <details id="legend" class="panel">
-    <summary class="panel-title">Legend and keys</summary>
-    <div id="legend-body"></div>
-  </details>
+    <header id="topbar" class="panel">
+      <a href="#scenarios" class="back" title="Back to the scenarios">‹</a>
+      <div class="scen">
+        <div id="game-name"></div>
+        <div id="game-turn" class="muted"></div>
+      </div>
+      <button type="button" id="open-briefing">Briefing</button>
+    </header>
+
+    <div id="layers" class="panel">
+      <div class="panel-title">Map layers</div>
+      <label><input type="checkbox" data-layer="terrain" checked> Terrain</label>
+      <label><input type="checkbox" data-layer="rivers" checked> Rivers/Wadis</label>
+      <label><input type="checkbox" data-layer="features" checked> Ridges/Slopes/Escarpments</label>
+      <label><input type="checkbox" data-layer="crossings" checked> Crossings</label>
+      <label><input type="checkbox" data-layer="landmarks" checked> Landmarks</label>
+    </div>
+
+    <aside id="forces" class="panel">
+      <div class="tabs">
+        <button type="button" data-side="axis" class="on">Axis</button>
+        <button type="button" data-side="cw">Commonwealth</button>
+      </div>
+      <div id="forces-body"></div>
+    </aside>
+
+    <aside id="selection" class="panel" hidden>
+      <button type="button" class="close" title="Close (Esc)">✕</button>
+      <div id="selection-body"></div>
+    </aside>
+
+    <div id="hover" class="panel muted">Move the mouse over the map.</div>
+    <div id="loading" class="panel" hidden>Loading the map…</div>
+  </section>
+
+  <dialog id="briefing">
+    <form method="dialog"><button class="close" title="Close">✕</button></form>
+    <div id="briefing-body"></div>
+  </dialog>
 
   <script src="vendor/leaflet.js"></script>
-  <script src="app.js"></script>
+  <script src="common.js"></script>
+  <script src="game.js"></script>
 </body>
 </html>
