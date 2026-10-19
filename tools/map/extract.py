@@ -20,7 +20,8 @@ import numpy as np
 from PIL import Image
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from hexgrid import DIRECTIONS, Grid, TiledGrid, _gridline_score, hex_id, neighbour, parse_id  # noqa: E402
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..'))  # the project, for cna
+from cna.hexgrid import DIRECTIONS, Grid, TiledGrid, _gridline_score, hex_id, neighbour, parse_id  # noqa: E402
 from lines import SideFrame, border_on_side, build_masks, line_on_side, river_on_side, wadi_on_side  # noqa: E402
 
 Image.MAX_IMAGE_PIXELS = None

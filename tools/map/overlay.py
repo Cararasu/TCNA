@@ -21,8 +21,9 @@ import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..'))  # the project, for cna
 from extract import load_grid  # noqa: E402
-from hexgrid import DIRECTIONS, OPPOSITE, hex_id, neighbour, parse_id  # noqa: E402
+from cna.hexgrid import DIRECTIONS, OPPOSITE, hex_id, neighbour, parse_id  # noqa: E402
 
 Image.MAX_IMAGE_PIXELS = None
 

@@ -13,19 +13,14 @@ of a hex or hexside comes first: it lies on top, and the western section's
 copy of its last column is extracted from blank paper.
 """
 import json
-import os
-import re
 import statistics
-import sys
 import threading
-from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[2]
-sys.path.insert(0, str(ROOT / 'tools' / 'map'))
-from hexgrid import TiledGrid, hex_id, neighbour, parse_id  # noqa: E402
+from .corrections import (auto_side, hex_correction, hex_effective, load_corrections, norm_side, normalize,
+                          write_corrections, check_corrections)
+from .hexgrid import TiledGrid, hex_id, neighbour, parse_id
+from .paths import map_corrections, map_data, map_tiles
 
-DATA = ROOT / 'data' / 'map'
-CORRECTIONS = DATA / 'corrections'
 SECTIONS = 'ABCDE'
 SHIFT = 33  # columns between a hex and the same number on the next section east
 # Malta (M) is an inset on Map A's sheet with its own grid, not in scale or in
@@ -33,81 +28,12 @@ SHIFT = 33  # columns between a hex and the same number on the next section east
 # from MALTA_ROWS up, beyond any section's, so no hex there touches Africa.
 MALTA = 'M'
 MALTA_ROWS = 80
+# Neighbours depend on whether a row is odd or even, so moving Malta's rows
+# must keep each row's parity.
+assert MALTA_ROWS % 2 == 0
 MAPS = SECTIONS + MALTA  # everything with its own data and corrections
 OWNED = ('E', 'NE', 'NW')
-LINE_ORDER = ('road', 'track', 'railroad', 'unfinished_road', 'unfinished_railroad')
 SAVE_LOCK = threading.Lock()
-
-
-def load_corrections(map_id):
-    path = CORRECTIONS / f'{map_id}.json'
-    if not path.exists():
-        return {'hexes': {}, 'sides': {}}
-    with open(path, encoding='utf-8') as f:
-        return json.load(f)
-
-
-def write_corrections(map_id, obj):
-    """Write a section's corrections atomically (temp file, then rename)."""
-    CORRECTIONS.mkdir(parents=True, exist_ok=True)
-    path = CORRECTIONS / f'{map_id}.json'
-    tmp = path.with_suffix('.json.tmp')
-    out = {'hexes': dict(sorted(obj['hexes'].items())), 'sides': dict(sorted(obj['sides'].items()))}
-    with open(tmp, 'w', encoding='utf-8', newline='\n') as f:
-        json.dump(out, f, indent=1, ensure_ascii=False)
-        f.write('\n')
-    os.replace(tmp, path)
-
-
-def check_corrections(obj, id_digits='4'):
-    if not (isinstance(obj, dict) and isinstance(obj.get('hexes'), dict) and isinstance(obj.get('sides'), dict)):
-        raise ValueError('corrections must be {"hexes": {...}, "sides": {...}}')
-    for key in obj['hexes']:
-        if not re.fullmatch(rf'\d{{{id_digits}}}', key):
-            raise ValueError(f'bad hex id {key!r}')
-    for key in obj['sides']:
-        if not re.fullmatch(rf'\d{{{id_digits}}}\|(E|NE|NW)', key):
-            raise ValueError(f'bad side key {key!r}')
-
-
-def auto_side(s):
-    """An extracted hexside as the editor shows it."""
-    # A side is a river or a wadi, not both; blue water decides for the river.
-    side = {'river': s.get('river'), 'wadi': bool(s.get('wadi')) and not s.get('river'),
-            'border': bool(s.get('border')),
-            'cross': [{'k': x['kind'], 't': x['t']} for x in s['crossings']]}
-    if s.get('feature'):
-        side['feature'] = s['feature']
-    return side
-
-
-def norm_side(s):
-    """A hexside's value as corrections store it (normSide in app.js)."""
-    s = s or {}
-    kinds = {x['k'] for x in s.get('cross') or []}
-    return {'river': s.get('river') or None, 'feature': dict(s['feature']) if s.get('feature') else None,
-            'wadi': bool(s.get('wadi')), 'border': bool(s.get('border')),
-            'cross': [{'k': k} for k in LINE_ORDER if k in kinds]}
-
-
-def hex_effective(auto, corr):
-    """A hex's value: its automatic data with its correction laid over it (hexOf in app.js)."""
-    corr = corr or {}
-    return {'terrain': corr.get('terrain') or auto['terrain'],
-            'uncertain': not corr.get('terrain') and bool(auto.get('uncertain')),
-            'landmarks': corr.get('landmarks') or [], 'reviewed': bool(corr.get('reviewed'))}
-
-
-def hex_correction(auto, eff):
-    """The correction that gives a hex with this automatic data the value eff."""
-    c = {}
-    if eff['terrain'] != auto['terrain'] or (auto.get('uncertain') and not eff['uncertain']):
-        c['terrain'] = eff['terrain']
-    if eff['landmarks']:
-        c['landmarks'] = eff['landmarks']
-    if eff['reviewed']:
-        c['reviewed'] = True
-    return c
 
 
 def _set(d, key, value):
@@ -123,7 +49,7 @@ class Joined:
     def __init__(self):
         self.data = {}
         for m in MAPS:
-            with open(DATA / f'{m}.json', encoding='utf-8') as f:
+            with open(map_data(m), encoding='utf-8') as f:
                 self.data[m] = json.load(f)
         self.hexes = {}  # global id -> [(section, id)], eastern section first
         self.where = {}  # (section, id) -> global id
@@ -294,7 +220,7 @@ class Joined:
         Each section is placed so that its copies of shared hexes fall on the
         western section's copies (the median over the shared hexes).
         """
-        grids = {m: TiledGrid.load(DATA / f'tiles{m}.json') for m in MAPS}
+        grids = {m: TiledGrid.load(map_tiles(m)) for m in MAPS}
         off = {SECTIONS[0]: (0.0, 0.0), MALTA: (0.0, 0.0)}  # Malta is printed on Map A's sheet
         for west, east in zip(SECTIONS, SECTIONS[1:]):
             dx, dy = [], []
@@ -317,7 +243,7 @@ _JOINED_LOCK = threading.Lock()
 def joined():
     """The Joined index, rebuilt when a section's data file changes."""
     global _JOINED, _JOINED_KEY
-    key = tuple((DATA / f'{m}.json').stat().st_mtime_ns for m in MAPS)
+    key = tuple(map_data(m).stat().st_mtime_ns for m in MAPS)
     with _JOINED_LOCK:
         if _JOINED_KEY != key:
             _JOINED, _JOINED_KEY = Joined(), key
@@ -328,15 +254,19 @@ def all_corrections():
     return {m: load_corrections(m) for m in MAPS}
 
 
+def _write_changed(out, corr, always=()):
+    for s in MAPS:
+        out[s] = normalize(out[s])
+        if out[s] != corr[s] or s in always:
+            write_corrections(s, out[s])
+
+
 def save_section(m, obj):
     """Save one section's corrections, copying changes to shared hexes and sides."""
     check_corrections(obj)
     with SAVE_LOCK:
         corr = all_corrections()
-        out = joined().propagate(m, obj, corr)
-        for s in MAPS:
-            if out[s] != corr[s] or s == m:
-                write_corrections(s, out[s])
+        _write_changed(joined().propagate(m, normalize(obj), corr), corr, always=m)
 
 
 def save_joined(obj):
@@ -344,18 +274,34 @@ def save_joined(obj):
     check_corrections(obj, '4,5')
     with SAVE_LOCK:
         corr = all_corrections()
-        out = joined().split(obj, corr)
-        for s in MAPS:
-            if out[s] != corr[s]:
-                write_corrections(s, out[s])
+        _write_changed(joined().split(normalize(obj), corr), corr)
+
+
+def _differences(a, b):
+    return sum(1 for m in MAPS for kind in ('hexes', 'sides')
+               for k in set(a[m][kind]) | set(b[m][kind]) if a[m][kind].get(k) != b[m][kind].get(k))
 
 
 def unsynced(j, corr):
-    """How many section corrections a joined save would change."""
-    out = j.split(j.merged(corr), corr)
-    n = 0
-    for m in MAPS:
-        for kind in ('hexes', 'sides'):
-            a, b = corr[m][kind], out[m][kind]
-            n += sum(1 for k in set(a) | set(b) if a.get(k) != b.get(k))
-    return n
+    """How many section corrections differ from their copies on other sections."""
+    return _differences(corr, {m: normalize(c) for m, c in j.split(j.merged(corr), corr).items()})
+
+
+def sync_all():
+    """Give every copy of a shared hex or hexside the joined value, and rewrite
+    any corrections file not in stored form.
+
+    Returns (how many corrections changed, the maps whose files were rewritten).
+    """
+    with SAVE_LOCK:
+        j = joined()
+        corr = all_corrections()
+        out = {m: normalize(c) for m, c in j.split(j.merged(corr), corr).items()}
+        written = []
+        for m in MAPS:
+            path = map_corrections(m)
+            stale = path.exists() and json.loads(path.read_text(encoding='utf-8')) != corr[m]
+            if out[m] != corr[m] or stale:
+                write_corrections(m, out[m])
+                written.append(m)
+        return _differences(corr, out), written

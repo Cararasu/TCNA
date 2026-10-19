@@ -21,7 +21,8 @@ import numpy as np
 from PIL import Image, ImageDraw
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from hexgrid import Grid, TiledGrid, _gridline_score, fit_grid  # noqa: E402
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..'))  # the project, for cna
+from cna.hexgrid import Grid, TiledGrid, _gridline_score, fit_grid  # noqa: E402
 
 Image.MAX_IMAGE_PIXELS = None
 

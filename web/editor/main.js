@@ -8,7 +8,11 @@
 //
 // Leaflet's CRS.Simple maps scan pixels to lat/lng at the scan's native zoom.
 
-// The vocabulary and hex helpers are in common.js.
+import { BORDER, FEATURES, LANDMARKS, LINES, LINE_ORDER, RIVER, TERRAIN, WADI } from '../shared/vocab.js';
+import { DIRS, DIR_NAMES, SIDE_CORNERS, hexOf as layHex, normSide, sameSide, sideHexes, sideKey, sideSummary } from '../shared/hex.js';
+import { escapeHtml } from '../shared/util.js';
+import { JoinedLayer, drawLandmarks, drawSideFeatures, drawTerrain } from '../shared/draw.js';
+import { WARNING_TYPES, computeWarnings } from './warnings.js';
 
 // ---------- hex helpers ----------
 
@@ -36,6 +40,8 @@ const map = L.map('map', {
 });
 const renderer = L.canvas({ padding: 0.5, tolerance: 3 });
 
+const UNDO_LIMIT = 1000;
+
 const state = {
   mapId: null, data: null, zmax: 6, tiles: null,
   hexes: new Map(),        // id -> {id, c, p, t, u, coastal, mix}
@@ -45,13 +51,12 @@ const state = {
   hexLayers: new Map(),    // hex id -> [layers]
   sideLayers: new Map(),   // side key -> [layers]
   selection: null,         // {kind: 'hex', id} | {kind: 'side', key}
-  selectionLayers: [],
   hover: null,
   opacity: 1,
-  undo: [],
+  undo: [],                // [{kind: 'hexes'|'sides', key, before}], the correction before each edit
   warnings: [],
   warnIndex: -1,
-  warnTypes: { conflict: true, 'dead-end': true, 'river-end': true, uncertain: true },
+  warnTypes: Object.fromEntries(Object.keys(WARNING_TYPES).map((k) => [k, true])),
 };
 
 const toLL = (p) => map.unproject(L.point(p[0], p[1]), state.zmax);
@@ -61,26 +66,11 @@ const fromLL = (ll) => map.project(ll, state.zmax);
 
 const sideOf = (key) => normSide(state.corr.sides[key] || state.auto.get(key));
 
-function sameSide(a, b) {
-  const canon = (s) => JSON.stringify({
-    river: s.river, feature: s.feature, wadi: s.wadi, border: s.border,
-    cross: s.cross.map((x) => x.k).sort(),
-  });
-  return canon(a) === canon(b);
-}
-
 function hexOf(id) {
   const h = state.hexes.get(id);
-  const c = state.corr.hexes[id] || {};
-  return {
-    terrain: c.terrain || h.t,
-    uncertain: c.terrain ? false : h.u,
-    landmarks: c.landmarks || [],
-    reviewed: !!c.reviewed,
-    edited: !!(c.terrain || (c.landmarks && c.landmarks.length)),
-  };
+  const c = state.corr.hexes[id];
+  return { ...layHex({ terrain: h.t, uncertain: h.u }, c), edited: !!(c && (c.terrain || (c.landmarks && c.landmarks.length))) };
 }
-const isSea = (id) => state.hexes.has(id) && hexOf(id).terrain === 'sea';
 
 // ---------- drawing ----------
 
@@ -247,9 +237,9 @@ function drawSelection() {
   }
 }
 
-function choice(label, on, action, key) {
+function choice(text, on, action, key) {
   const k = key ? ` <kbd>${key}</kbd>` : '';
-  return `<button type="button" class="${on ? 'on' : ''}" data-action="${action}">${label}${k}</button>`;
+  return `<button type="button" class="${on ? 'on' : ''}" data-action="${action}">${text}${k}</button>`;
 }
 
 function renderEditor() {
@@ -376,7 +366,7 @@ function runAction(action) {
   } else if (verb === 'clear') {
     editSide(key, (s) => { Object.assign(s, normSide({})); });
   } else if (verb === 'revert') {
-    pushUndo();
+    pushUndo('sides', key);
     delete state.corr.sides[key];
     afterEdit([], [key]);
   }
@@ -384,32 +374,34 @@ function runAction(action) {
 
 // ---------- editing ----------
 
-function pushUndo() {
-  state.undo.push(JSON.stringify(state.corr));
-  if (state.undo.length > 300) state.undo.shift();
+// Each edit changes one hex's or one side's correction; undo puts back what it was.
+function pushUndo(kind, key) {
+  const before = state.corr[kind][key];
+  state.undo.push({ kind, key, before: before === undefined ? undefined : structuredClone(before) });
+  if (state.undo.length > UNDO_LIMIT) state.undo.shift();
   document.getElementById('undo').disabled = false;
 }
 
 function undo() {
-  if (!state.undo.length) return;
-  state.corr = JSON.parse(state.undo.pop());
+  const step = state.undo.pop();
+  if (!step) return;
+  const { kind, key, before } = step;
+  if (before === undefined) delete state.corr[kind][key]; else state.corr[kind][key] = before;
   document.getElementById('undo').disabled = !state.undo.length;
-  drawAll();
-  refreshAfterChange();
+  afterEdit(kind === 'hexes' ? [key] : [], kind === 'sides' ? [key] : []);
 }
 
 function editSide(key, fn) {
-  pushUndo();
+  pushUndo('sides', key);
   const s = sideOf(key);
   fn(s);
-  const auto = normSide(state.auto.get(key));
-  if (sameSide(s, auto)) delete state.corr.sides[key];
-  else state.corr.sides[key] = s;
+  if (sameSide(s, state.auto.get(key))) delete state.corr.sides[key];
+  else state.corr.sides[key] = normSide(s);
   afterEdit([], [key]);
 }
 
 function editHex(id, fn, opts = {}) {
-  pushUndo();
+  pushUndo('hexes', id);
   const c = { ...(state.corr.hexes[id] || {}) };
   fn(c, hexOf(id));
   if (c.terrain === state.hexes.get(id).t && !state.hexes.get(id).u) delete c.terrain;
@@ -423,12 +415,8 @@ function afterEdit(hexIds, sideKeys, opts = {}) {
   for (const id of hexIds) drawHex(id);
   for (const key of sideKeys) drawSide(key);
   drawSelection();
-  refreshAfterChange(opts);
-}
-
-function refreshAfterChange(opts = {}) {
   if (!opts.keepEditor) renderEditor();
-  computeWarnings();
+  refreshWarnings();
   renderProgress();
   scheduleSave();
   if (state.hover) showInfo(state.hover.id, state.hover.key);
@@ -436,33 +424,52 @@ function refreshAfterChange(opts = {}) {
 
 // ---------- saving ----------
 
-let saveTimer = null;
-function scheduleSave() {
+// Every edit bumps seq; a save sends the corrections as they are then. Saves
+// go one at a time, in order, so an older one never lands after a newer one.
+const saving = { seq: 0, sent: 0, saved: 0, timer: null, chain: Promise.resolve() };
+const unsaved = () => saving.saved !== saving.seq;
+
+function setStatus(text, error = false) {
   const status = document.getElementById('save-status');
-  status.className = 'muted';
-  status.textContent = 'Unsaved changes…';
-  clearTimeout(saveTimer);
-  saveTimer = setTimeout(save, 400);
+  status.className = error ? 'error' : 'muted';
+  status.textContent = text;
 }
 
-async function save() {
-  const status = document.getElementById('save-status');
-  const mapId = state.mapId;
+function scheduleSave() {
+  saving.seq++;
+  setStatus('Unsaved changes…');
+  clearTimeout(saving.timer);
+  saving.timer = setTimeout(saveNow, 400);
+}
+
+// Send anything not yet sent; resolves once the server has it (or refused it).
+function saveNow() {
+  clearTimeout(saving.timer);
+  saving.timer = null;
+  if (saving.sent !== saving.seq) {
+    const seq = saving.seq, mapId = state.mapId, body = JSON.stringify(state.corr);
+    saving.sent = seq;
+    saving.chain = saving.chain.then(() => put(seq, mapId, body));
+  }
+  return saving.chain;
+}
+
+async function put(seq, mapId, body) {
   try {
-    const res = await fetch(`/api/corrections/${mapId}`, {
-      method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(state.corr),
-    });
+    const res = await fetch(`/api/corrections/${mapId}`, { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body });
     if (!res.ok) throw new Error(`${res.status} ${await res.text()}`);
-    status.className = 'muted';
-    status.textContent = `Saved ${new Date().toLocaleTimeString()}`;
+    saving.saved = Math.max(saving.saved, seq);
+    if (!unsaved()) setStatus(`Saved ${new Date().toLocaleTimeString()}`);
   } catch (err) {
-    status.className = 'error';
-    status.textContent = `Save failed: ${err.message}`;
+    // Still unsaved: leaving the page warns, and the next edit sends it again.
+    if (saving.sent === seq) saving.sent = saving.saved;
+    setStatus(`Save failed: ${err.message}`, true);
   }
 }
 
 window.addEventListener('beforeunload', (ev) => {
-  if (saveTimer && document.getElementById('save-status').textContent.startsWith('Unsaved')) {
+  if (unsaved()) {
+    saveNow();
     ev.preventDefault();
     ev.returnValue = '';
   }
@@ -470,64 +477,8 @@ window.addEventListener('beforeunload', (ev) => {
 
 // ---------- warnings ----------
 
-function computeWarnings() {
-  const out = [];
-  const hexes = state.hexes;
-
-  for (const id of hexes.keys()) {
-    const e = hexOf(id);
-    if (e.uncertain) out.push({ type: 'uncertain', hex: id, text: `${label(id)} uncertain terrain (${TERRAIN[e.terrain]?.label || e.terrain})` });
-  }
-
-  // Dead ends: a line family crossing exactly one side of a hex that has no
-  // landmark and isn't on the map edge.
-  for (const id of hexes.keys()) {
-    const e = hexOf(id);
-    if (e.landmarks.length) continue;
-    if (DIRS.some((d) => !hexes.has(neighbourId(id, d)))) continue;
-    const counts = {};
-    for (const d of DIRS) {
-      const s = sideOf(sideKey(id, d));
-      for (const x of s.cross) counts[LINE_FAMILY[x.k]] = (counts[LINE_FAMILY[x.k]] || 0) + 1;
-    }
-    for (const fam of ['road', 'track', 'railroad']) {
-      if (counts[fam] === 1) {
-        out.push({ type: 'dead-end', hex: id, text: `${label(id)} ${fam} dead end` });
-      }
-    }
-  }
-
-  // River ends: at each end of a river side, another river side should meet
-  // it, unless the corner touches the sea or the map edge.
-  const seen = new Set();
-  for (const key of allSideKeys()) {
-    if (!sideOf(key).river || !sideExists(key)) continue;
-    const [h, n] = sideHexes(key);
-    const common = DIRS.map((d) => neighbourId(h, d)).filter((x) => DIRS.some((d) => neighbourId(n, d) === x));
-    for (const x of common) {
-      const corner = [h, n, x].sort().join('-');
-      if (seen.has(corner)) continue;
-      seen.add(corner);
-      if (!hexes.has(x) || isSea(h) || isSea(n) || isSea(x)) continue;
-      const s1 = sideOf(sideKeyBetween(h, x)), s2 = sideOf(sideKeyBetween(n, x));
-      if (!s1.river && !s2.river) {
-        out.push({ type: 'river-end', hex: h, side: key, text: `${label(h)}|${label(n)} river ends (corner ${label(x)})` });
-      }
-    }
-  }
-
-  // A hexside is a river or a wadi, never both (Terrain Effects Chart 8.37).
-  for (const key of allSideKeys()) {
-    const s = sideOf(key);
-    if (s.river && s.wadi && sideExists(key)) {
-      const [h, n] = sideHexes(key);
-      out.push({ type: 'conflict', hex: h, side: key, text: `${label(h)}|${label(n)} both ${s.river} river and wadi` });
-    }
-  }
-
-  const order = { conflict: 0, 'dead-end': 1, 'river-end': 2, uncertain: 3 };
-  out.sort((a, b) => order[a.type] - order[b.type] || a.hex.localeCompare(b.hex));
-  state.warnings = out;
+function refreshWarnings() {
+  state.warnings = computeWarnings({ hexes: state.hexes, hexOf, sideOf, sideExists, allSideKeys, label });
   renderWarnings();
 }
 
@@ -536,10 +487,9 @@ function visibleWarnings() {
 }
 
 function renderWarnings() {
-  const counts = { conflict: 0, 'dead-end': 0, 'river-end': 0, uncertain: 0 };
+  const counts = Object.fromEntries(Object.keys(WARNING_TYPES).map((k) => [k, 0]));
   for (const w of state.warnings) counts[w.type]++;
-  const names = { conflict: 'River + wadi', 'dead-end': 'Dead ends', 'river-end': 'River ends', uncertain: 'Uncertain terrain' };
-  document.getElementById('warn-filters').innerHTML = Object.entries(names).map(([k, n]) =>
+  document.getElementById('warn-filters').innerHTML = Object.entries(WARNING_TYPES).map(([k, n]) =>
     `<label><input type="checkbox" data-warn="${k}" ${state.warnTypes[k] ? 'checked' : ''}> ${n} (${counts[k]})</label>`).join('');
   const vis = visibleWarnings();
   document.getElementById('warn-count').textContent = `${vis.length}`;
@@ -620,8 +570,8 @@ function buildLegend() {
   rows.push(`<div class="legend-row"><span class="swatch line" style="background:${RIVER};height:6px"></span>Major river</div>`);
   rows.push(`<div class="legend-row"><span class="swatch line" style="background:${RIVER};height:2px"></span>Minor river</div>`);
   rows.push(`<div class="legend-row"><span class="swatch dashed" style="border-color:${WADI}"></span>Wadi</div>`);
-  for (const [k, c] of Object.entries(FEATURE)) {
-    rows.push(`<div class="legend-row"><span class="swatch line" style="background:${c}"></span>${k[0].toUpperCase() + k.slice(1)} (tick = down side)</div>`);
+  for (const f of Object.values(FEATURES)) {
+    rows.push(`<div class="legend-row"><span class="swatch line" style="background:${f.color}"></span>${f.label}${f.downhill ? ' (tick = down side)' : ''}</div>`);
   }
   rows.push(`<div class="legend-row"><span class="swatch dashed" style="border-color:${BORDER}"></span>Border</div>`);
   for (const l of Object.values(LINES)) {
@@ -698,6 +648,8 @@ document.addEventListener('keydown', (ev) => {
 // ---------- map loading and navigation ----------
 
 async function loadMap(id, view) {
+  // Finish saving this map's edits before its corrections are replaced.
+  await saveNow();
   const res = await fetch(`/api/map/${id}`);
   if (!res.ok) { alert(`Could not load map ${id}: ${res.status}`); return; }
   const data = await res.json();
@@ -731,15 +683,13 @@ async function loadMap(id, view) {
   buildStaticLayers();
   drawAll();
   applyLayerToggles();
-  computeWarnings();
+  refreshWarnings();
   renderProgress();
   renderEditor();
-  document.getElementById('save-status').textContent = '';
-  if (data.unsynced) {
-    // Copies of border hexes and sides that differ get the joined value.
-    scheduleSave();
-    document.getElementById('save-status').textContent = `Synchronizing ${data.unsynced} border corrections…`;
-  }
+  // The server keeps the copies of shared hexes in sync on start and on
+  // every save; a difference here means a corrections file changed since.
+  setStatus(data.unsynced ? `${data.unsynced} corrections differ between the sections' copies of shared hexes; `
+    + 'the next edit here, a server restart or python -m cna.sync makes them agree.' : '');
 
   document.getElementById('map-select').value = id;
   if (view && view.x != null) map.setView(toLL([view.x, view.y]), view.z);

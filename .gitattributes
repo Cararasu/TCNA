@@ -1,0 +1,7 @@
+# Text is stored with LF; Windows batch files are checked out with CRLF,
+# since cmd.exe can misread labels and goto in LF-only files.
+* text=auto eol=lf
+*.cmd text eol=crlf
+*.bat text eol=crlf
+*.png binary
+*.jpg binary

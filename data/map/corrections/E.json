@@ -401,12 +401,10 @@
    "border": false,
    "cross": [
     {
-     "k": "road",
-     "t": 0.472
+     "k": "road"
     },
     {
-     "k": "railroad",
-     "t": 0.6
+     "k": "railroad"
     }
    ]
   },
@@ -435,8 +433,7 @@
    "border": false,
    "cross": [
     {
-     "k": "road",
-     "t": 0.221
+     "k": "road"
     }
    ]
   },
@@ -458,8 +455,7 @@
    "border": false,
    "cross": [
     {
-     "k": "track",
-     "t": 0.5
+     "k": "track"
     }
    ]
   },
@@ -477,8 +473,7 @@
    "border": false,
    "cross": [
     {
-     "k": "track",
-     "t": 0.5
+     "k": "track"
     }
    ]
   },
@@ -516,12 +511,10 @@
    "border": false,
    "cross": [
     {
-     "k": "road",
-     "t": 0.439
+     "k": "road"
     },
     {
-     "k": "railroad",
-     "t": 0.6
+     "k": "railroad"
     }
    ]
   },
@@ -627,12 +620,10 @@
    "border": false,
    "cross": [
     {
-     "k": "road",
-     "t": 0.307
+     "k": "road"
     },
     {
-     "k": "railroad",
-     "t": 0.6
+     "k": "railroad"
     }
    ]
   },
@@ -783,8 +774,7 @@
    "border": false,
    "cross": [
     {
-     "k": "track",
-     "t": 0.5
+     "k": "track"
     }
    ]
   },
@@ -795,8 +785,7 @@
    "border": false,
    "cross": [
     {
-     "k": "track",
-     "t": 0.5
+     "k": "track"
     }
    ]
   },
@@ -807,8 +796,7 @@
    "border": false,
    "cross": [
     {
-     "k": "track",
-     "t": 0.5
+     "k": "track"
     }
    ]
   },
@@ -819,8 +807,7 @@
    "border": false,
    "cross": [
     {
-     "k": "track",
-     "t": 0.5
+     "k": "track"
     }
    ]
   },
@@ -831,8 +818,7 @@
    "border": false,
    "cross": [
     {
-     "k": "track",
-     "t": 0.5
+     "k": "track"
     }
    ]
   },
@@ -868,8 +854,7 @@
    "border": false,
    "cross": [
     {
-     "k": "track",
-     "t": 0.5
+     "k": "track"
     }
    ]
   },
@@ -880,8 +865,7 @@
    "border": false,
    "cross": [
     {
-     "k": "track",
-     "t": 0.5
+     "k": "track"
     }
    ]
   },
@@ -892,8 +876,7 @@
    "border": false,
    "cross": [
     {
-     "k": "track",
-     "t": 0.5
+     "k": "track"
     }
    ]
   },
@@ -913,8 +896,7 @@
    "border": false,
    "cross": [
     {
-     "k": "track",
-     "t": 0.5
+     "k": "track"
     }
    ]
   },
@@ -925,8 +907,7 @@
    "border": false,
    "cross": [
     {
-     "k": "track",
-     "t": 0.5
+     "k": "track"
     }
    ]
   },
@@ -974,8 +955,7 @@
    "border": false,
    "cross": [
     {
-     "k": "track",
-     "t": 0.5
+     "k": "track"
     }
    ]
   },
@@ -1052,12 +1032,10 @@
    "border": false,
    "cross": [
     {
-     "k": "road",
-     "t": 0.618
+     "k": "road"
     },
     {
-     "k": "railroad",
-     "t": 0.6
+     "k": "railroad"
     }
    ]
   },
@@ -1068,8 +1046,7 @@
    "border": false,
    "cross": [
     {
-     "k": "road",
-     "t": 0.54
+     "k": "road"
     }
    ]
   },
@@ -1102,8 +1079,7 @@
    "border": false,
    "cross": [
     {
-     "k": "track",
-     "t": 0.5
+     "k": "track"
     }
    ]
   },
@@ -1141,8 +1117,7 @@
    "border": false,
    "cross": [
     {
-     "k": "track",
-     "t": 0.5
+     "k": "track"
     }
    ]
   },
@@ -1155,8 +1130,7 @@
    "border": false,
    "cross": [
     {
-     "k": "track",
-     "t": 0.5
+     "k": "track"
     }
    ]
   },
@@ -1176,8 +1150,7 @@
    "border": false,
    "cross": [
     {
-     "k": "track",
-     "t": 0.5
+     "k": "track"
     }
    ]
   },
@@ -1197,8 +1170,7 @@
    "border": false,
    "cross": [
     {
-     "k": "track",
-     "t": 0.5
+     "k": "track"
     }
    ]
   },
@@ -1282,8 +1254,7 @@
    "border": false,
    "cross": [
     {
-     "k": "track",
-     "t": 0.5
+     "k": "track"
     }
    ]
   },
@@ -1294,8 +1265,7 @@
    "border": false,
    "cross": [
     {
-     "k": "track",
-     "t": 0.5
+     "k": "track"
     }
    ]
   },
@@ -1306,8 +1276,7 @@
    "border": false,
    "cross": [
     {
-     "k": "track",
-     "t": 0.5
+     "k": "track"
     }
    ]
   },
@@ -1387,8 +1356,7 @@
    "border": false,
    "cross": [
     {
-     "k": "track",
-     "t": 0.5
+     "k": "track"
     }
    ]
   },
@@ -1566,8 +1534,7 @@
    "border": false,
    "cross": [
     {
-     "k": "track",
-     "t": 0.5
+     "k": "track"
     }
    ]
   },
@@ -1578,8 +1545,7 @@
    "border": false,
    "cross": [
     {
-     "k": "track",
-     "t": 0.5
+     "k": "track"
     }
    ]
   },
@@ -1590,8 +1556,7 @@
    "border": false,
    "cross": [
     {
-     "k": "track",
-     "t": 0.5
+     "k": "track"
     }
    ]
   },
@@ -1692,8 +1657,7 @@
    "border": false,
    "cross": [
     {
-     "k": "track",
-     "t": 0.5
+     "k": "track"
     }
    ]
   },
@@ -1704,8 +1668,7 @@
    "border": false,
    "cross": [
     {
-     "k": "track",
-     "t": 0.5
+     "k": "track"
     }
    ]
   },
@@ -1723,8 +1686,7 @@
    "border": false,
    "cross": [
     {
-     "k": "railroad",
-     "t": 0.6
+     "k": "railroad"
     }
    ]
   },
@@ -1735,8 +1697,7 @@
    "border": false,
    "cross": [
     {
-     "k": "track",
-     "t": 0.5
+     "k": "track"
     }
    ]
   },
@@ -1747,8 +1708,7 @@
    "border": false,
    "cross": [
     {
-     "k": "track",
-     "t": 0.5
+     "k": "track"
     }
    ]
   },
@@ -1766,8 +1726,7 @@
    "border": false,
    "cross": [
     {
-     "k": "track",
-     "t": 0.5
+     "k": "track"
     }
    ]
   },
@@ -1778,8 +1737,7 @@
    "border": false,
    "cross": [
     {
-     "k": "track",
-     "t": 0.5
+     "k": "track"
     }
    ]
   },
@@ -1804,8 +1762,7 @@
    "border": false,
    "cross": [
     {
-     "k": "track",
-     "t": 0.5
+     "k": "track"
     }
    ]
   },
@@ -1823,8 +1780,7 @@
    "border": false,
    "cross": [
     {
-     "k": "track",
-     "t": 0.5
+     "k": "track"
     }
    ]
   },
@@ -1835,8 +1791,7 @@
    "border": false,
    "cross": [
     {
-     "k": "track",
-     "t": 0.5
+     "k": "track"
     }
    ]
   },
@@ -1857,8 +1812,7 @@
    "border": false,
    "cross": [
     {
-     "k": "track",
-     "t": 0.5
+     "k": "track"
     }
    ]
   },
@@ -1904,8 +1858,7 @@
    "border": false,
    "cross": [
     {
-     "k": "track",
-     "t": 0.5
+     "k": "track"
     }
    ]
   },
@@ -2015,8 +1968,7 @@
    "border": false,
    "cross": [
     {
-     "k": "track",
-     "t": 0.5
+     "k": "track"
     }
    ]
   },
@@ -2218,8 +2170,7 @@
    "border": false,
    "cross": [
     {
-     "k": "track",
-     "t": 0.5
+     "k": "track"
     }
    ]
   },
@@ -2230,8 +2181,7 @@
    "border": false,
    "cross": [
     {
-     "k": "track",
-     "t": 0.5
+     "k": "track"
     }
    ]
   },
@@ -2242,8 +2192,7 @@
    "border": false,
    "cross": [
     {
-     "k": "track",
-     "t": 0.5
+     "k": "track"
     }
    ]
   },
@@ -2604,8 +2553,7 @@
    "border": false,
    "cross": [
     {
-     "k": "track",
-     "t": 0.5
+     "k": "track"
     }
    ]
   },
@@ -2616,8 +2564,7 @@
    "border": false,
    "cross": [
     {
-     "k": "track",
-     "t": 0.5
+     "k": "track"
     }
    ]
   },
@@ -2628,8 +2575,7 @@
    "border": false,
    "cross": [
     {
-     "k": "track",
-     "t": 0.5
+     "k": "track"
     }
    ]
   },
@@ -2640,8 +2586,7 @@
    "border": false,
    "cross": [
     {
-     "k": "track",
-     "t": 0.5
+     "k": "track"
     }
    ]
   },
@@ -2911,8 +2856,7 @@
    "border": false,
    "cross": [
     {
-     "k": "railroad",
-     "t": 0.6
+     "k": "railroad"
     }
    ]
   },
@@ -2941,8 +2885,7 @@
    "border": false,
    "cross": [
     {
-     "k": "track",
-     "t": 0.5
+     "k": "track"
     }
    ]
   },
@@ -3028,8 +2971,7 @@
    "border": false,
    "cross": [
     {
-     "k": "railroad",
-     "t": 0.6
+     "k": "railroad"
     }
    ]
   },
@@ -3040,8 +2982,7 @@
    "border": false,
    "cross": [
     {
-     "k": "railroad",
-     "t": 0.6
+     "k": "railroad"
     }
    ]
   },
@@ -3087,8 +3028,7 @@
    "border": false,
    "cross": [
     {
-     "k": "track",
-     "t": 0.5
+     "k": "track"
     }
    ]
   },
@@ -3124,8 +3064,7 @@
    "border": false,
    "cross": [
     {
-     "k": "railroad",
-     "t": 0.6
+     "k": "railroad"
     }
    ]
   },
@@ -3164,8 +3103,7 @@
    "border": false,
    "cross": [
     {
-     "k": "railroad",
-     "t": 0.6
+     "k": "railroad"
     }
    ]
   },
@@ -3436,12 +3374,10 @@
    "border": false,
    "cross": [
     {
-     "k": "railroad",
-     "t": 0.6
+     "k": "track"
     },
     {
-     "k": "track",
-     "t": 0.5
+     "k": "railroad"
     }
    ]
   },
@@ -3463,12 +3399,10 @@
    "border": false,
    "cross": [
     {
-     "k": "road",
-     "t": 0.835
+     "k": "road"
     },
     {
-     "k": "railroad",
-     "t": 0.6
+     "k": "railroad"
     }
    ]
   },
@@ -3479,8 +3413,7 @@
    "border": false,
    "cross": [
     {
-     "k": "railroad",
-     "t": 0.6
+     "k": "railroad"
     }
    ]
   },
@@ -3491,8 +3424,7 @@
    "border": false,
    "cross": [
     {
-     "k": "railroad",
-     "t": 0.6
+     "k": "railroad"
     }
    ]
   },
@@ -3521,8 +3453,7 @@
    "border": false,
    "cross": [
     {
-     "k": "track",
-     "t": 0.5
+     "k": "track"
     }
    ]
   },
@@ -3533,8 +3464,7 @@
    "border": false,
    "cross": [
     {
-     "k": "track",
-     "t": 0.5
+     "k": "track"
     }
    ]
   },
@@ -3545,8 +3475,7 @@
    "border": false,
    "cross": [
     {
-     "k": "track",
-     "t": 0.5
+     "k": "track"
     }
    ]
   },
@@ -3704,8 +3633,7 @@
    "border": false,
    "cross": [
     {
-     "k": "railroad",
-     "t": 0.6
+     "k": "railroad"
     }
    ]
   },
@@ -3716,8 +3644,7 @@
    "border": false,
    "cross": [
     {
-     "k": "railroad",
-     "t": 0.6
+     "k": "railroad"
     }
    ]
   },
@@ -3738,8 +3665,7 @@
    "border": false,
    "cross": [
     {
-     "k": "railroad",
-     "t": 0.6
+     "k": "railroad"
     }
    ]
   },
@@ -3750,8 +3676,7 @@
    "border": false,
    "cross": [
     {
-     "k": "track",
-     "t": 0.5
+     "k": "track"
     }
    ]
   },
@@ -3762,11 +3687,9 @@
    "border": false,
    "cross": [
     {
-     "k": "road",
-     "t": 0.4
+     "k": "road"
     }
-   ],
-   "along": []
+   ]
   },
   "3116|E": {
    "river": "minor",
@@ -3895,8 +3818,7 @@
    "border": false,
    "cross": [
     {
-     "k": "railroad",
-     "t": 0.6
+     "k": "railroad"
     }
    ]
   },
@@ -3935,8 +3857,7 @@
    "border": false,
    "cross": [
     {
-     "k": "railroad",
-     "t": 0.6
+     "k": "railroad"
     }
    ]
   },
@@ -3975,8 +3896,7 @@
    "border": false,
    "cross": [
     {
-     "k": "railroad",
-     "t": 0.6
+     "k": "railroad"
     }
    ]
   },
@@ -4122,11 +4042,9 @@
    "border": false,
    "cross": [
     {
-     "k": "road",
-     "t": 0.4
+     "k": "road"
     }
-   ],
-   "along": []
+   ]
   },
   "3312|E": {
    "river": null,
@@ -4142,8 +4060,7 @@
    "border": false,
    "cross": [
     {
-     "k": "railroad",
-     "t": 0.6
+     "k": "railroad"
     }
    ]
   },
@@ -4157,11 +4074,9 @@
    "border": false,
    "cross": [
     {
-     "k": "road",
-     "t": 0.4
+     "k": "road"
     }
-   ],
-   "along": []
+   ]
   },
   "3315|E": {
    "river": "minor",
@@ -4226,12 +4141,10 @@
    "border": false,
    "cross": [
     {
-     "k": "railroad",
-     "t": 0.663
+     "k": "road"
     },
     {
-     "k": "road",
-     "t": 0.4
+     "k": "railroad"
     }
    ]
   },
@@ -4281,12 +4194,10 @@
    "border": false,
    "cross": [
     {
-     "k": "road",
-     "t": 0.381
+     "k": "road"
     },
     {
-     "k": "railroad",
-     "t": 0.6
+     "k": "railroad"
     }
    ]
   },
@@ -4372,8 +4283,7 @@
    "border": false,
    "cross": [
     {
-     "k": "railroad",
-     "t": 0.6
+     "k": "railroad"
     }
    ]
   },
@@ -4402,8 +4312,7 @@
    "border": false,
    "cross": [
     {
-     "k": "railroad",
-     "t": 0.6
+     "k": "railroad"
     }
    ]
   },
@@ -4428,8 +4337,7 @@
    "border": false,
    "cross": [
     {
-     "k": "railroad",
-     "t": 0.6
+     "k": "railroad"
     }
    ]
   },
@@ -4461,12 +4369,10 @@
    "border": false,
    "cross": [
     {
-     "k": "railroad",
-     "t": 0.793
+     "k": "road"
     },
     {
-     "k": "road",
-     "t": 0.4
+     "k": "railroad"
     }
    ]
   },
@@ -4484,12 +4390,10 @@
    "border": false,
    "cross": [
     {
-     "k": "road",
-     "t": 0.392
+     "k": "road"
     },
     {
-     "k": "railroad",
-     "t": 0.6
+     "k": "railroad"
     }
    ]
   },
@@ -4616,12 +4520,10 @@
    "border": false,
    "cross": [
     {
-     "k": "road",
-     "t": 0.285
+     "k": "road"
     },
     {
-     "k": "railroad",
-     "t": 0.6
+     "k": "railroad"
     }
    ]
   },
@@ -4816,12 +4718,10 @@
    "border": false,
    "cross": [
     {
-     "k": "road",
-     "t": 0.619
+     "k": "road"
     },
     {
-     "k": "railroad",
-     "t": 0.6
+     "k": "railroad"
     }
    ]
   },
@@ -4846,12 +4746,10 @@
    "border": false,
    "cross": [
     {
-     "k": "road",
-     "t": 0.767
+     "k": "road"
     },
     {
-     "k": "railroad",
-     "t": 0.6
+     "k": "railroad"
     }
    ]
   },
@@ -4869,12 +4767,10 @@
    "border": false,
    "cross": [
     {
-     "k": "road",
-     "t": 0.388
+     "k": "road"
     },
     {
-     "k": "railroad",
-     "t": 0.6
+     "k": "railroad"
     }
    ]
   },
@@ -5037,8 +4933,7 @@
    "border": false,
    "cross": [
     {
-     "k": "railroad",
-     "t": 0.6
+     "k": "railroad"
     }
    ]
   },
@@ -5172,12 +5067,10 @@
    "border": false,
    "cross": [
     {
-     "k": "road",
-     "t": 0.444
+     "k": "road"
     },
     {
-     "k": "railroad",
-     "t": 0.6
+     "k": "railroad"
     }
    ]
   },
@@ -5188,8 +5081,7 @@
    "border": false,
    "cross": [
     {
-     "k": "road",
-     "t": 0.4
+     "k": "road"
     }
    ]
   },

@@ -1,96 +1,9 @@
-// Shared by the map editor (app.js) and the game (game.js): the map
-// vocabulary, hex and hexside helpers, and the joined map's tile layer.
-//
-// Hex ids are RRCC (row counting north, column counting east; even rows sit
-// half a column east). Hexsides are keyed "HHHH|D" by the hex owning them as
-// its E, NE or NW side. Hex corners run counter-clockwise from east-south-east.
+// Drawing the map with Leaflet, for both pages: hex terrain, landmarks,
+// hexside features, and the joined map's scan tiles. Leaflet is loaded as a
+// classic script before the modules and is the global L.
 
-// ---------- vocabulary ----------
-
-const TERRAIN = {
-  clear: { label: 'Clear', color: null, key: '1' },
-  gravel: { label: 'Rock/Gravel', color: '#8d8d8d', key: '2' },
-  rough: { label: 'Rough', color: '#9a6b2f', key: '3' },
-  mountain: { label: 'Mountain', color: '#5c3b12', key: '4' },
-  desert: { label: 'Desert', color: '#e8a400', key: '5' },
-  delta: { label: 'Delta', color: '#4f8f1f', key: '6' },
-  saltmarsh: { label: 'Salt Marsh', color: '#c8d400', key: '7' },
-  heavyveg: { label: 'Heavy Vegetation', color: '#2e7d32', key: '8' },
-  swamp: { label: 'Swamp', color: '#6a9fb5', key: '9' },
-  sea: { label: 'Sea', color: '#1f6fd1', key: '0' },
-};
-const LANDMARKS = {
-  majorcity: { label: 'Major City', letter: 'C', color: '#7a1fa2' },
-  village: { label: 'Village/Bir', letter: 'V', color: '#1565c0' },
-  oasis: { label: 'Oasis', letter: 'O', color: '#2e7d32' },
-  port: { label: 'Port', letter: 'P', color: '#00838f' },
-  airfield: { label: 'Airfield', letter: 'A', color: '#37474f' },
-  fbbasin: { label: 'Flying Boat Basin', letter: 'FB', color: '#455a64' },
-  fbalight: { label: 'Flying Boat Alighting Area', letter: 'FA', color: '#607d8b' },
-  training: { label: 'Training Area', letter: 'T', color: '#6d4c41' },
-};
-const LINES = {
-  road: { label: 'Road', color: '#e600a0', key: 'r' },
-  track: { label: 'Track', color: '#00a000', key: 't' },
-  railroad: { label: 'Railroad', color: '#0078ff', key: 'l' },
-  unfinished_road: { label: 'Unfinished road', color: '#ff7ad0', key: 'r', shift: true },
-  unfinished_railroad: { label: 'Unfinished railroad', color: '#7ab8ff', key: 'l', shift: true },
-};
-const LINE_ORDER = Object.keys(LINES);
-// For continuity checks an unfinished road continues a road, and so on.
-const LINE_FAMILY = { road: 'road', unfinished_road: 'road', track: 'track',
-                      railroad: 'railroad', unfinished_railroad: 'railroad' };
-const FEATURE = { ridge: '#c800c8', slope: '#e66e00', escarpment: '#dc0000' };
-const RIVER = '#00e0ff';
-const WADI = '#2f9e8f';
-const BORDER = '#111111';
-
-const DIRS = ['E', 'NE', 'NW', 'W', 'SW', 'SE'];
-const OWNED = new Set(['E', 'NE', 'NW']);
-const OPPOSITE = { E: 'W', NE: 'SW', NW: 'SE', W: 'E', SW: 'NE', SE: 'NW' };
-const DIR_NAMES = { E: 'east', NE: 'north-east', NW: 'north-west', W: 'west', SW: 'south-west', SE: 'south-east' };
-const SIDE_CORNERS = { E: [0, 1], NE: [1, 2], NW: [2, 3], W: [3, 4], SW: [4, 5], SE: [5, 0] };
-// Neighbour offsets (d_row, d_col); even rows sit half a column east.
-const NEIGHBOURS = {
-  1: { E: [0, 1], NE: [1, 0], NW: [1, -1], W: [0, -1], SW: [-1, -1], SE: [-1, 0] },
-  0: { E: [0, 1], NE: [1, 1], NW: [1, 0], W: [0, -1], SW: [-1, 0], SE: [-1, 1] },
-};
-
-// ---------- hex helpers ----------
-
-const pad2 = (n) => String(n).padStart(2, '0');
-const parseId = (id) => [+id.slice(0, 2), +id.slice(2)];
-const hexId = (r, c) => pad2(r) + pad2(c);
-
-function neighbourId(id, d) {
-  const [r, c] = parseId(id);
-  const [dr, dc] = NEIGHBOURS[r % 2][d];
-  return hexId(r + dr, c + dc);
-}
-function sideKey(id, d) {
-  return OWNED.has(d) ? `${id}|${d}` : `${neighbourId(id, d)}|${OPPOSITE[d]}`;
-}
-function sideHexes(key) {
-  const [id, d] = key.split('|');
-  return [id, neighbourId(id, d)];
-}
-function sideKeyBetween(a, b) {
-  for (const d of DIRS) if (neighbourId(a, d) === b) return sideKey(a, d);
-  return null;
-}
-
-// A hexside's value as the editor shows and the corrections store it.
-function normSide(s) {
-  s = s || {};
-  return {
-    river: s.river || null,
-    feature: s.feature ? { ...s.feature } : null,
-    wadi: !!s.wadi,
-    border: !!s.border,
-    // Which lines cross the side; where along it doesn't matter (Case 8.33).
-    cross: LINE_ORDER.filter((k) => (s.cross || []).some((x) => x.k === k)).map((k) => ({ k })),
-  };
-}
+import { BORDER, FEATURES, LANDMARKS, LINES, RIVER, TERRAIN, WADI } from './vocab.js';
+import { escapeHtml } from './util.js';
 
 // ---------- drawing ----------
 
@@ -100,7 +13,7 @@ function normSide(s) {
 // terrain, landmarks, rivers, features (ridges, slopes, escarpments and
 // borders) and crossings.
 
-function drawTerrain(ctx, ring, terrain) {
+export function drawTerrain(ctx, ring, terrain) {
   const t = TERRAIN[terrain];
   if (t && t.color) {
     ctx.add(L.polygon(ring, { renderer: ctx.renderer, stroke: false, fillColor: t.color,
@@ -108,7 +21,7 @@ function drawTerrain(ctx, ring, terrain) {
   }
 }
 
-function drawLandmarks(ctx, center, landmarks) {
+export function drawLandmarks(ctx, center, landmarks) {
   landmarks.forEach((lm, i) => {
     const def = LANDMARKS[lm.type] || { letter: '?', color: '#000' };
     const w = def.letter.length > 1 ? 24 : 18;
@@ -125,7 +38,7 @@ function drawLandmarks(ctx, center, landmarks) {
 
 // One hexside from scan point pa to pb; down is the centre of the hex a
 // slope or escarpment falls towards, if known.
-function drawSideFeatures(ctx, s, pa, pb, down) {
+export function drawSideFeatures(ctx, s, pa, pb, down) {
   const { renderer, op } = ctx;
   const a = ctx.toLL(pa), b = ctx.toLL(pb);
   const along = (f) => [pa[0] + (pb[0] - pa[0]) * f, pa[1] + (pb[1] - pa[1]) * f];
@@ -142,7 +55,7 @@ function drawSideFeatures(ctx, s, pa, pb, down) {
                                  interactive: false }), 'features');
   }
   if (s.feature) {
-    const col = FEATURE[s.feature.type];
+    const col = FEATURES[s.feature.type].color;
     ctx.add(L.polyline([a, b], { renderer, color: col, weight: 5, opacity: 0.95 * op, interactive: false }), 'features');
     if (down) {
       const m = along(0.5);
@@ -165,21 +78,6 @@ function drawSideFeatures(ctx, s, pa, pb, down) {
   });
 }
 
-// A hexside in words; name gives a hex's name for the downhill side.
-function sideSummary(s, name = (id) => id) {
-  const parts = [];
-  if (s.river) parts.push(`${s.river} river`);
-  if (s.wadi) parts.push('wadi');
-  if (s.feature) parts.push(s.feature.down ? `${s.feature.type} (down to ${name(s.feature.down)})` : s.feature.type);
-  for (const x of s.cross) parts.push(`${LINES[x.k].label.toLowerCase()} crossing`);
-  if (s.border) parts.push('border');
-  return parts.join(', ');
-}
-
-function escapeHtml(s) {
-  return String(s).replace(/[&<>"']/g, (ch) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch]));
-}
-
 // ---------- the joined map's tiles ----------
 
 // The joined map's scan: each section's own tiles drawn at its place, west to
@@ -195,7 +93,7 @@ function loadImage(src) {
   });
 }
 
-const JoinedLayer = L.GridLayer.extend({
+export const JoinedLayer = L.GridLayer.extend({
   createTile(coords, done) {
     const tile = document.createElement('canvas');
     tile.width = tile.height = 256;

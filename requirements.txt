@@ -1,0 +1,6 @@
+# The server and the game (python -m cna.server)
+Pillow>=10.0
+numpy>=1.24
+# The map extraction pipeline (tools/map) also needs
+scipy>=1.10
+# Not on PyPI: pdfimages (Poppler or Xpdf) on PATH, to extract the map scans once.

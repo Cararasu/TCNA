@@ -1,0 +1,59 @@
+{
+ "about": "The map's vocabulary: every terrain, landmark, line, hexside feature and river kind the map data may use, with its name. The server checks corrections against it and sends it to the browser (/api/vocab), which adds colours and keys (web/shared/vocab.js). Lines are listed in the order a hexside's crossings are stored; a line's family is what it continues for continuity checks.",
+ "terrain": {
+  "clear": "Clear",
+  "gravel": "Rock/Gravel",
+  "rough": "Rough",
+  "mountain": "Mountain",
+  "desert": "Desert",
+  "delta": "Delta",
+  "saltmarsh": "Salt Marsh",
+  "heavyveg": "Heavy Vegetation",
+  "swamp": "Swamp",
+  "sea": "Sea"
+ },
+ "landmarks": {
+  "majorcity": "Major City",
+  "village": "Village/Bir",
+  "oasis": "Oasis",
+  "port": "Port",
+  "airfield": "Airfield",
+  "fbbasin": "Flying Boat Basin",
+  "fbalight": "Flying Boat Alighting Area",
+  "training": "Training Area"
+ },
+ "lines": {
+  "road": {"label": "Road", "family": "road"},
+  "track": {"label": "Track", "family": "track"},
+  "railroad": {"label": "Railroad", "family": "railroad"},
+  "unfinished_road": {"label": "Unfinished road", "family": "road"},
+  "unfinished_railroad": {"label": "Unfinished railroad", "family": "railroad"}
+ },
+ "features": {
+  "ridge": {"label": "Ridge", "downhill": false},
+  "slope": {"label": "Slope", "downhill": true},
+  "escarpment": {"label": "Escarpment", "downhill": true}
+ },
+ "rivers": {
+  "minor": "Minor river",
+  "major": "Major river"
+ },
+ "unit_types": {
+  "I": "Infantry",
+  "T": "Tank",
+  "R": "Reconnaissance",
+  "Ar": "Artillery",
+  "AT": "Anti-tank",
+  "AA": "Anti-aircraft",
+  "E": "Engineer",
+  "HQ": "Headquarters",
+  "TR": "Recovery"
+ },
+ "unit_sizes": {
+  "XX": "Division",
+  "X": "Brigade",
+  "III": "Regiment",
+  "II": "Battalion",
+  "I": "Company"
+ }
+}

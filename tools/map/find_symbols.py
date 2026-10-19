@@ -10,13 +10,15 @@ carry no landmark tag yet. Finds are candidates for review, not facts.
 """
 import json
 import math
+import os
 import sys
 
 import numpy as np
 from PIL import Image
 from scipy import ndimage
 
-from hexgrid import TiledGrid, hex_id
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..'))  # the project, for cna
+from cna.hexgrid import TiledGrid, hex_id  # noqa: E402
 
 Image.MAX_IMAGE_PIXELS = None
 
