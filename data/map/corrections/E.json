@@ -37,7 +37,8 @@
      "name": "Helwan"
     },
     {
-     "type": "training"
+     "type": "training",
+     "name": "Commonwealth"
     }
    ]
   },
@@ -51,7 +52,8 @@
      "name": "Cairo"
     },
     {
-     "type": "training"
+     "type": "training",
+     "name": "Commonwealth"
     }
    ]
   },
@@ -62,7 +64,8 @@
      "name": "Cairo"
     },
     {
-     "type": "training"
+     "type": "training",
+     "name": "Commonwealth"
     }
    ]
   },
@@ -73,7 +76,8 @@
      "name": "Cairo"
     },
     {
-     "type": "training"
+     "type": "training",
+     "name": "Commonwealth"
     }
    ]
   },
@@ -87,7 +91,8 @@
      "name": "Cairo"
     },
     {
-     "type": "training"
+     "type": "training",
+     "name": "Commonwealth"
     }
    ]
   },
@@ -98,7 +103,8 @@
      "name": "Cairo"
     },
     {
-     "type": "training"
+     "type": "training",
+     "name": "Commonwealth"
     }
    ]
   },
@@ -111,6 +117,9 @@
    ]
   },
   "2032": {
+   "terrain": "desert"
+  },
+  "2101": {
    "terrain": "desert"
   },
   "2218": {
@@ -182,7 +191,8 @@
   "3212": {
    "landmarks": [
     {
-     "type": "training"
+     "type": "training",
+     "name": "Commonwealth"
     }
    ]
   },
@@ -204,23 +214,29 @@
   "3512": {
    "landmarks": [
     {
-     "type": "training"
+     "type": "training",
+     "name": "Commonwealth"
     }
    ]
   },
   "3514": {
    "terrain": "delta"
   },
+  "3612": {
+   "terrain": "sea"
+  },
   "3613": {
    "landmarks": [
     {
-     "type": "majorcity"
+     "type": "majorcity",
+     "name": "Alexandria"
     },
     {
      "type": "port"
     },
     {
-     "type": "training"
+     "type": "training",
+     "name": "Commonwealth"
     }
    ]
   },
@@ -233,10 +249,12 @@
   "3714": {
    "landmarks": [
     {
-     "type": "majorcity"
+     "type": "majorcity",
+     "name": "Alexandria"
     },
     {
-     "type": "training"
+     "type": "training",
+     "name": "Commonwealth"
     }
    ]
   },
@@ -249,9 +267,13 @@
      "type": "port"
     },
     {
-     "type": "training"
+     "type": "training",
+     "name": "Commonwealth"
     }
    ]
+  },
+  "3916": {
+   "terrain": "sea"
   },
   "3921": {
    "terrain": "swamp"
@@ -270,6 +292,9 @@
   },
   "3926": {
    "terrain": "swamp"
+  },
+  "4018": {
+   "terrain": "clear"
   },
   "4019": {
    "terrain": "swamp",
@@ -293,6 +318,9 @@
   },
   "4119": {
    "terrain": "swamp"
+  },
+  "4120": {
+   "terrain": "sea"
   },
   "4122": {
    "terrain": "swamp"
@@ -356,6 +384,16 @@
    "border": false,
    "cross": []
   },
+  "0121|NW": {
+   "river": null,
+   "feature": {
+    "type": "slope",
+    "down": "0220"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
   "0127|NE": {
    "river": null,
    "feature": null,
@@ -409,8 +447,7 @@
    "border": false,
    "cross": [
     {
-     "k": "track",
-     "t": 0.5
+     "k": "track"
     }
    ]
   },
@@ -465,6 +502,13 @@
    "border": false,
    "cross": []
   },
+  "0328|E": {
+   "river": "major",
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
   "0328|NE": {
    "river": null,
    "feature": null,
@@ -501,6 +545,20 @@
    "wadi": false,
    "border": false,
    "cross": []
+  },
+  "0428|NE": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "road"
+    },
+    {
+     "k": "railroad"
+    }
+   ]
   },
   "0433|NE": {
    "river": null,
@@ -548,6 +606,13 @@
    "border": false,
    "cross": []
   },
+  "0529|E": {
+   "river": "major",
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
   "0529|NE": {
    "river": "major",
    "feature": null,
@@ -581,6 +646,24 @@
    "cross": []
   },
   "0533|E": {
+   "river": null,
+   "feature": {
+    "type": "ridge"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "0533|NE": {
+   "river": null,
+   "feature": {
+    "type": "ridge"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "0533|NW": {
    "river": null,
    "feature": {
     "type": "ridge"
@@ -758,6 +841,13 @@
    "feature": {
     "type": "ridge"
    },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "0729|NE": {
+   "river": "major",
+   "feature": null,
    "wadi": false,
    "border": false,
    "cross": []
@@ -942,6 +1032,13 @@
    "cross": []
   },
   "0824|NW": {
+   "river": "major",
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "0828|E": {
    "river": "major",
    "feature": null,
    "wadi": false,
@@ -1224,6 +1321,20 @@
    "border": false,
    "cross": []
   },
+  "1029|NE": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "road"
+    },
+    {
+     "k": "railroad"
+    }
+   ]
+  },
   "1030|NE": {
    "river": null,
    "feature": null,
@@ -1280,6 +1391,22 @@
      "t": 0.5
     }
    ]
+  },
+  "1123|NW": {
+   "river": null,
+   "feature": {
+    "type": "ridge"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "1130|E": {
+   "river": "major",
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
   },
   "1130|NE": {
    "river": "major",
@@ -1372,6 +1499,13 @@
     "type": "slope",
     "down": "1312"
    },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "1229|E": {
+   "river": "major",
+   "feature": null,
    "wadi": false,
    "border": false,
    "cross": []
@@ -1575,6 +1709,13 @@
     }
    ]
   },
+  "1422|NE": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
   "1429|NE": {
    "river": null,
    "feature": null,
@@ -1768,6 +1909,17 @@
     }
    ]
   },
+  "1828|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "railroad"
+    }
+   ]
+  },
   "1828|NE": {
    "river": "major",
    "feature": null,
@@ -1814,6 +1966,17 @@
    "border": false,
    "cross": []
   },
+  "1833|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "road"
+    }
+   ]
+  },
   "1902|NW": {
    "river": null,
    "feature": null,
@@ -1824,6 +1987,16 @@
      "k": "track"
     }
    ]
+  },
+  "1903|NE": {
+   "river": null,
+   "feature": {
+    "type": "slope",
+    "down": "2003"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
   },
   "1909|NW": {
    "river": null,
@@ -1922,8 +2095,68 @@
     }
    ]
   },
+  "1933|NE": {
+   "river": null,
+   "feature": {
+    "type": "ridge"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "1933|NW": {
+   "river": null,
+   "feature": {
+    "type": "ridge"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "1934|NE": {
+   "river": null,
+   "feature": {
+    "type": "ridge"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "1934|NW": {
+   "river": null,
+   "feature": {
+    "type": "ridge"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "2001|E": {
+   "river": null,
+   "feature": {
+    "type": "slope",
+    "down": "2002"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "2027|NE": {
+   "river": "major",
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
   "2028|NE": {
    "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "2028|NW": {
+   "river": "major",
    "feature": null,
    "wadi": false,
    "border": false,
@@ -2025,6 +2258,28 @@
     }
    ]
   },
+  "2127|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "railroad"
+    }
+   ]
+  },
+  "2127|NW": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "railroad"
+    }
+   ]
+  },
   "2128|E": {
    "river": "major",
    "feature": null,
@@ -2035,6 +2290,13 @@
      "k": "railroad"
     }
    ]
+  },
+  "2128|NE": {
+   "river": "major",
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
   },
   "2129|NW": {
    "river": null,
@@ -2063,6 +2325,17 @@
    "wadi": false,
    "border": false,
    "cross": []
+  },
+  "2133|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "railroad"
+    }
+   ]
   },
   "2203|NW": {
    "river": null,
@@ -2131,6 +2404,31 @@
      "k": "railroad"
     }
    ]
+  },
+  "2226|NW": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "railroad"
+    }
+   ]
+  },
+  "2227|E": {
+   "river": "major",
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "2227|NE": {
+   "river": "major",
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
   },
   "2227|NW": {
    "river": null,
@@ -2384,6 +2682,17 @@
     }
    ]
   },
+  "2425|NE": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "railroad"
+    }
+   ]
+  },
   "2425|NW": {
    "river": null,
    "feature": null,
@@ -2423,6 +2732,20 @@
     }
    ]
   },
+  "2428|NE": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "road"
+    },
+    {
+     "k": "railroad"
+    }
+   ]
+  },
   "2429|E": {
    "river": null,
    "feature": null,
@@ -2430,12 +2753,34 @@
    "border": false,
    "cross": []
   },
+  "2429|NE": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "railroad"
+    }
+   ]
+  },
   "2429|NW": {
    "river": "minor",
    "feature": null,
    "wadi": false,
    "border": false,
    "cross": []
+  },
+  "2433|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "road"
+    }
+   ]
   },
   "2503|E": {
    "river": null,
@@ -2493,6 +2838,17 @@
    "border": false,
    "cross": []
   },
+  "2526|NW": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "railroad"
+    }
+   ]
+  },
   "2527|NW": {
    "river": "minor",
    "feature": null,
@@ -2540,6 +2896,17 @@
    "border": false,
    "cross": []
   },
+  "2531|NE": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "railroad"
+    }
+   ]
+  },
   "2606|NW": {
    "river": null,
    "feature": null,
@@ -2560,6 +2927,17 @@
    "cross": []
   },
   "2623|NW": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "railroad"
+    }
+   ]
+  },
+  "2624|E": {
    "river": null,
    "feature": null,
    "wadi": false,
@@ -2595,6 +2973,20 @@
    "border": false,
    "cross": []
   },
+  "2628|NW": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "road"
+    },
+    {
+     "k": "railroad"
+    }
+   ]
+  },
   "2629|E": {
    "river": "minor",
    "feature": null,
@@ -2626,6 +3018,28 @@
     }
    ]
   },
+  "2632|NW": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "railroad"
+    }
+   ]
+  },
+  "2633|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "railroad"
+    }
+   ]
+  },
   "2701|NE": {
    "river": null,
    "feature": {
@@ -2635,8 +3049,7 @@
    "border": false,
    "cross": [
     {
-     "k": "track",
-     "t": 0.5
+     "k": "track"
     }
    ]
   },
@@ -2686,6 +3099,20 @@
     {
      "k": "railroad",
      "t": 0.6
+    }
+   ]
+  },
+  "2728|NW": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "road"
+    },
+    {
+     "k": "railroad"
     }
    ]
   },
@@ -2743,6 +3170,17 @@
    "border": false,
    "cross": []
   },
+  "2823|NW": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "railroad"
+    }
+   ]
+  },
   "2825|E": {
    "river": "minor",
    "feature": null,
@@ -2763,6 +3201,31 @@
    "wadi": false,
    "border": false,
    "cross": []
+  },
+  "2827|NW": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "road"
+    },
+    {
+     "k": "railroad"
+    }
+   ]
+  },
+  "2828|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "railroad"
+    }
+   ]
   },
   "2829|E": {
    "river": "minor",
@@ -2785,6 +3248,31 @@
      "k": "railroad"
     }
    ]
+  },
+  "2830|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "railroad"
+    }
+   ]
+  },
+  "2830|NE": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "2830|NW": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
   },
   "2832|E": {
    "river": null,
@@ -2850,6 +3338,24 @@
     }
    ]
   },
+  "2924|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "2924|NE": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "railroad"
+    }
+   ]
+  },
   "2926|E": {
    "river": "minor",
    "feature": null,
@@ -2871,6 +3377,24 @@
    "border": false,
    "cross": []
   },
+  "2930|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "2930|NE": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "railroad"
+    }
+   ]
+  },
   "2930|NW": {
    "river": "minor",
    "feature": null,
@@ -2891,6 +3415,17 @@
     {
      "k": "track",
      "t": 0.5
+    }
+   ]
+  },
+  "3001|NW": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": true,
+   "cross": [
+    {
+     "k": "railroad"
     }
    ]
   },
@@ -3072,6 +3607,20 @@
     }
    ]
   },
+  "3025|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "road"
+    },
+    {
+     "k": "railroad"
+    }
+   ]
+  },
   "3026|E": {
    "river": "minor",
    "feature": null,
@@ -3144,6 +3693,16 @@
      "t": 0.6
     }
    ]
+  },
+  "3108|NW": {
+   "river": null,
+   "feature": {
+    "type": "slope",
+    "down": "3207"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
   },
   "3109|NE": {
    "river": null,
@@ -3235,6 +3794,20 @@
    "border": false,
    "cross": []
   },
+  "3123|NW": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "road"
+    },
+    {
+     "k": "railroad"
+    }
+   ]
+  },
   "3124|E": {
    "river": "minor",
    "feature": null,
@@ -3267,6 +3840,20 @@
     }
    ]
   },
+  "3128|NE": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "road"
+    },
+    {
+     "k": "railroad"
+    }
+   ]
+  },
   "3129|E": {
    "river": "minor",
    "feature": null,
@@ -3293,6 +3880,20 @@
    "border": false,
    "cross": []
   },
+  "3208|E": {
+   "river": null,
+   "feature": {
+    "type": "slope",
+    "down": "3208"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "road"
+    }
+   ]
+  },
   "3208|NE": {
    "river": null,
    "feature": null,
@@ -3311,6 +3912,16 @@
      "t": 0.6
     }
    ]
+  },
+  "3209|NW": {
+   "river": null,
+   "feature": {
+    "type": "slope",
+    "down": "3309"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
   },
   "3210|E": {
    "river": null,
@@ -3399,6 +4010,20 @@
    "border": false,
    "cross": []
   },
+  "3221|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "road"
+    },
+    {
+     "k": "railroad"
+    }
+   ]
+  },
   "3224|E": {
    "river": "minor",
    "feature": null,
@@ -3442,6 +4067,17 @@
    "cross": [
     {
      "k": "road"
+    }
+   ]
+  },
+  "3230|NE": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "railroad"
     }
    ]
   },
@@ -3542,6 +4178,20 @@
    "border": false,
    "cross": []
   },
+  "3320|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "road"
+    },
+    {
+     "k": "railroad"
+    }
+   ]
+  },
   "3320|NE": {
    "river": null,
    "feature": null,
@@ -3555,6 +4205,20 @@
     {
      "k": "road",
      "t": 0.4
+    }
+   ]
+  },
+  "3320|NW": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "road"
+    },
+    {
+     "k": "railroad"
     }
    ]
   },
@@ -3633,6 +4297,17 @@
   },
   "3330|E": {
    "river": "minor",
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "railroad"
+    }
+   ]
+  },
+  "3331|NE": {
+   "river": null,
    "feature": null,
    "wadi": false,
    "border": false,
@@ -3738,6 +4413,13 @@
    "border": false,
    "cross": []
   },
+  "3416|NE": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
   "3416|NW": {
    "river": null,
    "feature": null,
@@ -3784,6 +4466,20 @@
     }
    ]
   },
+  "3418|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "road"
+    },
+    {
+     "k": "railroad"
+    }
+   ]
+  },
   "3418|NE": {
    "river": "minor",
    "feature": null,
@@ -3798,12 +4494,40 @@
    "border": false,
    "cross": []
   },
+  "3420|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "road"
+    },
+    {
+     "k": "railroad"
+    }
+   ]
+  },
   "3420|NW": {
    "river": "minor",
    "feature": null,
    "wadi": false,
    "border": false,
    "cross": []
+  },
+  "3421|NE": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "road"
+    },
+    {
+     "k": "railroad"
+    }
+   ]
   },
   "3422|E": {
    "river": "major",
@@ -3942,6 +4666,13 @@
     }
    ]
   },
+  "3434|NE": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
   "3512|E": {
    "river": null,
    "feature": null,
@@ -3967,12 +4698,47 @@
     }
    ]
   },
+  "3513|NW": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "3516|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "road"
+    },
+    {
+     "k": "railroad"
+    }
+   ]
+  },
   "3516|NE": {
    "river": "minor",
    "feature": null,
    "wadi": false,
    "border": false,
    "cross": []
+  },
+  "3516|NW": {
+   "river": "minor",
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "road"
+    },
+    {
+     "k": "railroad"
+    }
+   ]
   },
   "3517|E": {
    "river": "minor",
@@ -4184,6 +4950,13 @@
     }
    ]
   },
+  "3535|NW": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
   "3613|E": {
    "river": "minor",
    "feature": null,
@@ -4218,6 +4991,13 @@
   },
   "3614|NE": {
    "river": "minor",
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "3615|E": {
+   "river": null,
    "feature": null,
    "wadi": false,
    "border": false,
@@ -4262,6 +5042,20 @@
    "wadi": false,
    "border": false,
    "cross": []
+  },
+  "3623|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "road"
+    },
+    {
+     "k": "railroad"
+    }
+   ]
   },
   "3623|NW": {
    "river": "minor",
@@ -4637,6 +5431,13 @@
    "border": false,
    "cross": []
   },
+  "3915|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
   "3921|E": {
    "river": "minor",
    "feature": null,
@@ -4749,6 +5550,13 @@
    "border": false,
    "cross": []
   },
+  "4018|NE": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
   "4024|E": {
    "river": "minor",
    "feature": null,
@@ -4819,6 +5627,27 @@
    "border": false,
    "cross": []
   },
+  "4032|NE": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "4034|NE": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "4127|NE": {
+   "river": "major",
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
   "4128|E": {
    "river": "minor",
    "feature": null,
@@ -4828,6 +5657,20 @@
   },
   "4128|NE": {
    "river": "minor",
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "4128|NW": {
+   "river": "major",
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "4226|NW": {
+   "river": null,
    "feature": null,
    "wadi": false,
    "border": false,

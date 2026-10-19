@@ -1,0 +1,75 @@
+{
+ "hexes": {
+  "0106": {
+   "landmarks": [
+    {
+     "type": "airfield",
+     "name": "Hal Far"
+    }
+   ]
+  },
+  "0107": {
+   "landmarks": [
+    {
+     "type": "fbbasin",
+     "name": "Kalafrana"
+    }
+   ]
+  },
+  "0205": {
+   "landmarks": [
+    {
+     "type": "airfield",
+     "name": "Safi"
+    }
+   ]
+  },
+  "0305": {
+   "landmarks": [
+    {
+     "type": "airfield",
+     "name": "Luqa"
+    }
+   ]
+  },
+  "0403": {
+   "landmarks": [
+    {
+     "type": "airfield",
+     "name": "Takali"
+    }
+   ]
+  },
+  "0406": {
+   "landmarks": [
+    {
+     "type": "port",
+     "name": "Valetta"
+    },
+    {
+     "type": "fbbasin",
+     "name": "Valetta"
+    }
+   ]
+  },
+  "0501": {
+   "terrain": "clear"
+  },
+  "0502": {
+   "terrain": "rough"
+  },
+  "0602": {
+   "terrain": "rough"
+  },
+  "0704": {
+   "terrain": "clear"
+  },
+  "0706": {
+   "terrain": "sea"
+  },
+  "0806": {
+   "terrain": "sea"
+  }
+ },
+ "sides": {}
+}

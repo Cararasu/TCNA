@@ -1,9 +1,15 @@
 {
  "hexes": {
+  "0234": {
+   "terrain": "desert"
+  },
   "0306": {
    "terrain": "desert"
   },
   "0406": {
+   "terrain": "desert"
+  },
+  "0434": {
    "terrain": "desert"
   },
   "0513": {
@@ -14,6 +20,9 @@
      "name": "Jalo"
     }
    ]
+  },
+  "0634": {
+   "terrain": "desert"
   },
   "0707": {
    "terrain": "desert",
@@ -76,6 +85,9 @@
   },
   "0928": {
    "terrain": "desert"
+  },
+  "1135": {
+   "terrain": "rough"
   },
   "1403": {
    "terrain": "saltmarsh"
@@ -267,6 +279,9 @@
   "3726": {
    "terrain": "saltmarsh"
   },
+  "3735": {
+   "terrain": "rough"
+  },
   "3804": {
    "terrain": "saltmarsh"
   },
@@ -279,11 +294,22 @@
   "3901": {
    "terrain": "rough"
   },
+  "3935": {
+   "terrain": "saltmarsh"
+  },
   "4004": {
    "landmarks": [
     {
      "type": "village",
      "name": "Msus"
+    }
+   ]
+  },
+  "4135": {
+   "landmarks": [
+    {
+     "type": "village",
+     "name": "Bir Hacheim"
     }
    ]
   },
@@ -319,6 +345,12 @@
    "terrain": "gravel"
   },
   "4523": {
+   "terrain": "gravel"
+  },
+  "4534": {
+   "terrain": "gravel"
+  },
+  "4535": {
    "terrain": "gravel"
   },
   "4614": {
@@ -377,6 +409,9 @@
   },
   "4734": {
    "terrain": "gravel"
+  },
+  "4735": {
+   "terrain": "rough"
   },
   "4801": {
    "terrain": "rough"
@@ -467,6 +502,12 @@
   "5031": {
    "terrain": "gravel"
   },
+  "5032": {
+   "terrain": "clear"
+  },
+  "5033": {
+   "terrain": "saltmarsh"
+  },
   "5113": {
    "terrain": "gravel"
   },
@@ -493,6 +534,9 @@
   },
   "5125": {
    "terrain": "gravel"
+  },
+  "5132": {
+   "terrain": "clear"
   },
   "5216": {
    "terrain": "rough"
@@ -522,6 +566,9 @@
      "name": "Timimi"
     }
    ]
+  },
+  "5230": {
+   "terrain": "swamp"
   },
   "5316": {
    "terrain": "rough"
@@ -715,6 +762,9 @@
   "5824": {
    "terrain": "rough"
   },
+  "5827": {
+   "terrain": "rough"
+  },
   "5916": {
    "landmarks": [
     {
@@ -770,6 +820,9 @@
     }
    ]
   },
+  "6112": {
+   "terrain": "rough"
+  },
   "6117": {
    "terrain": "rough",
    "landmarks": [
@@ -778,6 +831,9 @@
      "name": "Apolloria"
     }
    ]
+  },
+  "6120": {
+   "terrain": "rough"
   }
  },
  "sides": {
@@ -1840,6 +1896,17 @@
     }
    ]
   },
+  "1134|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
   "1211|NE": {
    "river": null,
    "feature": null,
@@ -1860,6 +1927,17 @@
    "wadi": true,
    "border": false,
    "cross": []
+  },
+  "1233|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
   },
   "1311|E": {
    "river": null,
@@ -2072,7 +2150,21 @@
    "border": false,
    "cross": []
   },
+  "1534|NE": {
+   "river": null,
+   "feature": null,
+   "wadi": true,
+   "border": false,
+   "cross": []
+  },
   "1534|NW": {
+   "river": null,
+   "feature": null,
+   "wadi": true,
+   "border": false,
+   "cross": []
+  },
+  "1535|NW": {
    "river": null,
    "feature": null,
    "wadi": true,
@@ -2766,6 +2858,31 @@
      "k": "track"
     }
    ]
+  },
+  "2201|NE": {
+   "river": null,
+   "feature": null,
+   "wadi": true,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
+  "2201|NW": {
+   "river": null,
+   "feature": null,
+   "wadi": true,
+   "border": false,
+   "cross": []
+  },
+  "2202|NW": {
+   "river": null,
+   "feature": null,
+   "wadi": true,
+   "border": false,
+   "cross": []
   },
   "2206|NW": {
    "river": null,
@@ -3821,6 +3938,17 @@
    "border": false,
    "cross": []
   },
+  "3934|NE": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
   "4001|E": {
    "river": null,
    "feature": null,
@@ -3866,6 +3994,17 @@
    "wadi": true,
    "border": false,
    "cross": []
+  },
+  "4034|NE": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
   },
   "4101|E": {
    "river": null,
@@ -3915,6 +4054,17 @@
    ]
   },
   "4123|NE": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
+  "4135|NW": {
    "river": null,
    "feature": null,
    "wadi": false,
@@ -3980,6 +4130,17 @@
    "wadi": false,
    "border": false,
    "cross": []
+  },
+  "4234|NW": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
   },
   "4302|E": {
    "river": null,
@@ -4066,6 +4227,17 @@
    "border": false,
    "cross": []
   },
+  "4434|NW": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
+  },
   "4501|E": {
    "river": null,
    "feature": null,
@@ -4086,6 +4258,17 @@
    "wadi": true,
    "border": false,
    "cross": []
+  },
+  "4534|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "track"
+    }
+   ]
   },
   "4601|E": {
    "river": null,
@@ -4133,6 +4316,23 @@
    "border": false,
    "cross": []
   },
+  "4734|NE": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "4734|NW": {
+   "river": null,
+   "feature": {
+    "type": "escarpment",
+    "down": "4833"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
   "4805|NW": {
    "river": null,
    "feature": null,
@@ -4154,6 +4354,26 @@
      "k": "road"
     }
    ]
+  },
+  "4833|E": {
+   "river": null,
+   "feature": {
+    "type": "escarpment",
+    "down": "4833"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "4834|NE": {
+   "river": null,
+   "feature": {
+    "type": "escarpment",
+    "down": "4935"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
   },
   "4901|E": {
    "river": null,
@@ -4257,6 +4477,17 @@
    "cross": [
     {
      "k": "track"
+    }
+   ]
+  },
+  "4934|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "road"
     }
    ]
   },
@@ -4418,6 +4649,13 @@
      "k": "railroad"
     }
    ]
+  },
+  "5304|NW": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
   },
   "5310|NE": {
    "river": null,
@@ -4895,6 +5133,13 @@
     }
    ]
   },
+  "5529|NE": {
+   "river": null,
+   "feature": null,
+   "wadi": true,
+   "border": false,
+   "cross": []
+  },
   "5602|NE": {
    "river": null,
    "feature": null,
@@ -4905,6 +5150,26 @@
      "k": "track"
     }
    ]
+  },
+  "5604|E": {
+   "river": null,
+   "feature": {
+    "type": "slope",
+    "down": "5604"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "5605|NW": {
+   "river": null,
+   "feature": {
+    "type": "slope",
+    "down": "5705"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
   },
   "5608|E": {
    "river": null,
@@ -5042,6 +5307,33 @@
      "k": "track"
     }
    ]
+  },
+  "5628|NE": {
+   "river": null,
+   "feature": {
+    "type": "slope",
+    "down": "5729"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "5629|NW": {
+   "river": null,
+   "feature": {
+    "type": "slope",
+    "down": "5729"
+   },
+   "wadi": false,
+   "border": false,
+   "cross": []
+  },
+  "5630|NW": {
+   "river": null,
+   "feature": null,
+   "wadi": true,
+   "border": false,
+   "cross": []
   },
   "5704|NE": {
    "river": null,
@@ -5205,6 +5497,13 @@
      "k": "track"
     }
    ]
+  },
+  "5723|NW": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
   },
   "5724|NE": {
    "river": null,
@@ -5386,6 +5685,17 @@
    "border": false,
    "cross": []
   },
+  "5825|NW": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": [
+    {
+     "k": "road"
+    }
+   ]
+  },
   "5908|E": {
    "river": null,
    "feature": null,
@@ -5484,6 +5794,13 @@
      "k": "road"
     }
    ]
+  },
+  "6011|E": {
+   "river": null,
+   "feature": null,
+   "wadi": false,
+   "border": false,
+   "cross": []
   },
   "6011|NE": {
    "river": null,
