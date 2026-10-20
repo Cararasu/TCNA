@@ -21,12 +21,12 @@
    "terrain": "saltmarsh"
   },
   "0130": {
+   "terrain": "saltmarsh",
    "landmarks": [
     {
      "type": "oasis"
     }
-   ],
-   "terrain": "saltmarsh"
+   ]
   },
   "0223": {
    "terrain": "desert"
@@ -236,6 +236,14 @@
   "1622": {
    "terrain": "rough"
   },
+  "1715": {
+   "landmarks": [
+    {
+     "type": "village",
+     "name": "El Grein"
+    }
+   ]
+  },
   "1722": {
    "terrain": "rough"
   },
@@ -279,6 +287,14 @@
     {
      "type": "village",
      "name": "Bir el esc Scegga"
+    }
+   ]
+  },
+  "3111": {
+   "landmarks": [
+    {
+     "type": "village",
+     "name": "El Cuasc"
     }
    ]
   },
@@ -371,6 +387,14 @@
     }
    ]
   },
+  "4108": {
+   "landmarks": [
+    {
+     "type": "village",
+     "name": "Bir el Gubi"
+    }
+   ]
+  },
   "4122": {
    "landmarks": [
     {
@@ -424,11 +448,35 @@
   "4322": {
    "terrain": "sea"
   },
+  "4409": {
+   "landmarks": [
+    {
+     "type": "village",
+     "name": "Sidi Rezegh"
+    }
+   ]
+  },
   "4501": {
    "terrain": "gravel"
   },
+  "4507": {
+   "landmarks": [
+    {
+     "type": "village",
+     "name": "El Adem"
+    }
+   ]
+  },
   "4620": {
    "terrain": "rough"
+  },
+  "4704": {
+   "landmarks": [
+    {
+     "type": "village",
+     "name": "Actoma"
+    }
+   ]
   },
   "4710": {
    "terrain": "rough"
