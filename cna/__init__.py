@@ -10,6 +10,7 @@
   rulebook     rule text from the local rulebook transcription
   engine       the game engine: state, events, commands, dice, the sequence of play
   rules        rule coverage marks: implements(...) and not_needed(...)
+  coverage     the rule coverage report (python -m cna.coverage)
   server       the HTTP server (python -m cna.server)
   sync         copy each shared hex's corrections to all its copies (python -m cna.sync)
 """
