@@ -9,3 +9,5 @@ data/map/checks/
 data/map/E_test_overlay.png
 # Rulebook transcription (copyrighted; kept local)
 The Campaign for North Africa.md
+# Saved games (cna/engine/store.py)
+saves/

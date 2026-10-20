@@ -10,6 +10,7 @@ SCENARIOS = DATA / 'scenarios.json'
 VOCAB = DATA / 'vocab.json'
 RULEBOOK = ROOT / 'The Campaign for North Africa.md'  # local only, not in version control
 CACHE = ROOT / '.cache' / 'server'
+SAVES = ROOT / 'saves'  # saved games, one folder each; not in version control
 WEB = ROOT / 'web'
 
 
