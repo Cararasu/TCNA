@@ -17,11 +17,12 @@
       <div class="kicker">The Desert War 1940–43</div>
       <h1>The Campaign<br>for North Africa</h1>
       <nav class="menu">
-        <a class="primary" href="#scenarios">Play a scenario</a>
+        <a class="primary" href="#scenarios">New game</a>
+        <a href="#games">Continue a game</a>
         <a href="editor.html" class="debug">Map editor <span>debug</span></a>
       </nav>
     </div>
-    <footer>Board and rules: Simulations Publications, Inc., 1979</footer>
+    <footer>Unofficial adaptation of <em>The Campaign for North Africa</em> (Simulations Publications, Inc., 1979). Not affiliated with or endorsed by the rights holders.</footer>
   </section>
 
   <!-- ---------- scenario selection ---------- -->
@@ -38,16 +39,49 @@
     </div>
   </section>
 
+  <!-- ---------- saved games ---------- -->
+  <section id="games" class="screen" hidden>
+    <div class="board blurred" style="background-image:url('/title.jpg')"></div>
+    <div class="shade"></div>
+    <header class="screen-head">
+      <a href="#" class="back">‹ Title</a>
+      <h2>Continue a game</h2>
+    </header>
+    <div class="single-layout">
+      <article id="games-body" class="sheet"></article>
+    </div>
+  </section>
+
+  <!-- ---------- joining a game ---------- -->
+  <section id="join" class="screen" hidden>
+    <div class="board blurred" style="background-image:url('/title.jpg')"></div>
+    <div class="shade"></div>
+    <header class="screen-head">
+      <a href="#games" class="back">‹ Games</a>
+      <h2>Join a game</h2>
+    </header>
+    <div class="single-layout">
+      <article id="join-body" class="sheet"></article>
+    </div>
+  </section>
+
   <!-- ---------- the game ---------- -->
   <section id="game" class="screen" hidden>
     <div id="map"></div>
 
     <header id="topbar" class="panel">
-      <a href="#scenarios" class="back" title="Back to the scenarios">‹</a>
+      <a href="#games" class="back" title="Back to the games">‹</a>
       <div class="scen">
         <div id="game-name"></div>
         <div id="game-turn" class="muted"></div>
       </div>
+      <div id="step">
+        <div id="step-name"></div>
+        <div id="step-wait" class="muted"></div>
+      </div>
+      <div id="actions"></div>
+      <label id="seat-switch" hidden>Playing <select></select></label>
+      <button type="button" id="invite" hidden>Invite</button>
       <button type="button" id="open-briefing">Briefing</button>
     </header>
 
@@ -64,6 +98,7 @@
       <div class="tabs">
         <button type="button" data-side="axis" class="on">Axis</button>
         <button type="button" data-side="cw">Commonwealth</button>
+        <button type="button" data-side="log">Log</button>
       </div>
       <div id="forces-body"></div>
     </aside>
@@ -74,6 +109,8 @@
     </aside>
 
     <div id="hover" class="panel muted">Move the mouse over the map.</div>
+    <div id="mode" class="panel" hidden></div>
+    <div id="toast" class="panel" hidden role="status"></div>
     <div id="loading" class="panel" hidden>Loading the map…</div>
   </section>
 

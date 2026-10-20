@@ -7,8 +7,9 @@ export function escapeHtml(s) {
 }
 
 // Per-browser preferences (shown layers, last scenario). Storage may be
-// missing or refuse writes; then the defaults are used.
+// missing or refuse writes; then the defaults are used. set says whether it
+// was kept.
 export const store = {
   get(k, d) { try { const v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); } catch { return d; } },
-  set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch { /* storage unavailable */ } },
+  set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); return true; } catch { return false; } },
 };

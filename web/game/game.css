@@ -122,7 +122,7 @@ button:hover { background: rgba(217, 180, 90, 0.18); }
   padding: 0 4px;
   margin-left: 6px;
 }
-#title footer { position: absolute; right: 16px; bottom: 10px; font-size: 12px; color: var(--muted); }
+#title footer { position: absolute; left: 16px; right: 16px; bottom: 10px; font-size: 12px; color: var(--muted); text-align: right; }
 
 /* ---------- scenarios ---------- */
 
@@ -224,6 +224,41 @@ button:hover { background: rgba(217, 180, 90, 0.18); }
 .md th { background: rgba(0, 0, 0, 0.06); }
 .md h5 { margin: 10px 0 4px; font-size: 14px; }
 
+.single-layout {
+  position: absolute;
+  top: 70px;
+  left: max(16px, 4vw);
+  right: max(16px, 4vw);
+  bottom: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.single-layout .sheet { width: min(860px, 100%); max-height: 100%; }
+.new-game { margin: 8px 0 16px; padding: 12px 14px; background: rgba(0, 0, 0, 0.05); border-radius: 4px; }
+.new-game .row { display: flex; flex-wrap: wrap; gap: 6px 16px; align-items: baseline; margin-bottom: 8px; }
+.new-game .lbl { color: var(--sheet-muted); }
+.new-game input[type=text], .new-game input:not([type]), .new-game select {
+  font: inherit; padding: 2px 6px; border: 1px solid rgba(0, 0, 0, 0.25); border-radius: 3px; background: #fffaf0; color: var(--sheet-ink);
+}
+.new-game i { font-size: 11px; }
+.sheet .start:disabled { opacity: 0.5; cursor: default; }
+.game-list { list-style: none; margin: 0; padding: 0; }
+.game-list li { padding: 10px 0; border-top: 1px solid rgba(0, 0, 0, 0.12); }
+.game-list li:first-child { border-top: none; }
+.game-list .name { font-weight: 700; font-size: 16px; }
+.game-list .muted { color: var(--sheet-muted); }
+.game-list .actions { margin-top: 6px; }
+a.button {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--sheet-ink);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  padding: 3px 12px;
+}
+a.button.primary { background: #3b3220; color: var(--sand); border-color: #3b3220; }
+
 @media (max-width: 760px) {
   .scenario-layout { grid-template-columns: 1fr; grid-template-rows: 40% 1fr; }
   .sheet { padding: 16px; }
@@ -249,7 +284,16 @@ button:hover { background: rgba(217, 180, 90, 0.18); }
   color: var(--sand);
   margin-bottom: 4px;
 }
-#topbar { top: 10px; left: 10px; display: flex; align-items: center; gap: 12px; max-width: calc(100vw - 280px); }
+#topbar { top: 10px; left: 10px; display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; max-width: calc(100vw - 280px); }
+#step { border-left: 1px solid var(--panel-line); padding-left: 12px; min-width: 160px; }
+#step-name { font-weight: 600; }
+#step-wait { font-size: 12px; }
+#step-wait.yours { color: var(--select); }
+#actions { display: flex; gap: 6px; }
+button.primary { background: var(--sand); color: #241d0f; border-color: var(--sand); font-weight: 600; }
+button.primary:hover { background: #e6c46e; }
+#seat-switch { font-size: 12px; color: var(--muted); }
+#seat-switch select { font: inherit; color: var(--ink); background: #2b2924; border: 1px solid var(--panel-line); border-radius: 4px; }
 #topbar .back { font-size: 22px; line-height: 1; padding: 0 4px; }
 #game-name { font-family: Bahnschrift, "Arial Narrow", sans-serif; font-weight: 700; font-size: 18px; text-transform: uppercase; letter-spacing: 0.03em; }
 #game-turn { font-size: 12px; }
@@ -324,6 +368,19 @@ button:hover { background: rgba(217, 180, 90, 0.18); }
 #hover { bottom: 10px; left: 320px; width: 380px; font-size: 13px; }
 #hover .hexid { font-weight: 700; font-size: 15px; color: var(--ink); }
 #loading { top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 16px; }
+#mode, #toast { left: 50%; transform: translateX(-50%); max-width: min(560px, calc(100vw - 32px)); }
+#mode { top: 84px; border-color: var(--select); }
+#mode button { margin-left: 8px; }
+#toast { bottom: 64px; border-color: #d98a5a; z-index: 1100; }
+
+.log { list-style: none; margin: 4px 0; padding: 0; font-size: 13px; }
+.log li { display: flex; gap: 8px; padding: 3px 0; border-top: 1px solid rgba(255, 255, 255, 0.06); }
+.log .seq { color: var(--muted); min-width: 28px; text-align: right; font-variant-numeric: tabular-nums; }
+.log .clock { color: var(--sand); }
+.ubuttons { display: flex; gap: 6px; margin-top: 4px; }
+.ubuttons button, .place-all { font-size: 12px; padding: 1px 8px; }
+.place-all { margin-top: 8px; }
+#selection .note.hint { color: var(--select); }
 
 dialog#briefing {
   width: min(880px, calc(100vw - 32px));
