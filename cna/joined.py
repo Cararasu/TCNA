@@ -20,6 +20,7 @@ from .corrections import (auto_side, hex_correction, hex_effective, load_correct
                           write_corrections, check_corrections)
 from .hexgrid import TiledGrid, hex_id, neighbour, parse_id
 from .paths import map_corrections, map_data, map_tiles
+from .rules import implements
 
 SECTIONS = 'ABCDE'
 SHIFT = 33  # columns between a hex and the same number on the next section east
@@ -43,6 +44,7 @@ def _set(d, key, value):
         d.pop(key, None)
 
 
+@implements('4.1')
 class Joined:
     """Which hexes and hexsides of the sections are the same on the joined map."""
 

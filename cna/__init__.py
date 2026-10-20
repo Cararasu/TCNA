@@ -8,6 +8,7 @@
   scans        the scanned map sheets: download, zoom levels, tiles
   mapdata      what the server sends: map overlays, the game board, the title image
   rulebook     rule text from the local rulebook transcription
+  rules        rule coverage marks: implements(...) and not_needed(...)
   server       the HTTP server (python -m cna.server)
   sync         copy each shared hex's corrections to all its copies (python -m cna.sync)
 """
