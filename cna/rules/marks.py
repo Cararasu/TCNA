@@ -11,3 +11,5 @@ not_needed('4.51', why='how the log sheets are grouped: "a presentation decision
 not_needed('4.6', why='the inventory of game parts')
 
 implements('4.26', where='web/game/board.js Board.shownAt: counters in a hex with a Holding Box are shown in the box')
+implements('4.45', where='tools/units/oa.py: the OA Charts read into data/units/, each unit with its sheet, '
+                          'ID code, parent, TOE on arrival and arrival date')
