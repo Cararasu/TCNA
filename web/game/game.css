@@ -335,6 +335,20 @@ button.primary:hover { background: #e6c46e; }
 .dep .where { font-weight: 600; }
 .flex-tag { font-weight: 400; font-size: 11px; color: var(--sand); margin-left: 4px; }
 .dep .who { color: var(--muted); font-size: 12px; }
+/* a counter and the units it carries */
+.tree { list-style: none; margin: 2px 0 0; padding: 0; font-size: 12px; cursor: default; }
+.tree ul { list-style: none; margin: 0; padding-left: 14px; border-left: 1px solid rgba(217, 180, 90, 0.2); }
+.tree li { padding: 1px 0; }
+.tree li.leaf { padding-left: 13px; }
+.tree summary { cursor: pointer; }
+.tree .tgo { cursor: pointer; }
+.tree .tgo:hover .tname { color: var(--sand); }
+.tree .tname { font-weight: 600; color: var(--ink); }
+.tree .tfull { color: var(--muted); }
+.tree .tnote { margin-left: 6px; font-style: italic; color: var(--sand); }
+.tree .tcount { color: var(--muted); font-size: 11px; }
+.tree .tdetail { color: var(--muted); font-size: 11px; padding-left: 2px; }
+.tree .tsheet { font-size: 10px; padding: 0 5px; margin-left: 4px; }
 .forces-head { margin: 10px 0 4px; font-size: 12px; color: var(--sand); text-transform: uppercase; letter-spacing: 0.08em; }
 .forces-head:first-child { margin-top: 2px; }
 
@@ -394,6 +408,32 @@ dialog#briefing {
 dialog#briefing::backdrop { background: rgba(10, 8, 5, 0.6); }
 #briefing-body { padding: 24px 28px; }
 dialog#briefing .close { color: var(--sheet-ink); font-size: 16px; }
+dialog#logsheet {
+  width: min(1100px, calc(100vw - 32px));
+  max-height: calc(100vh - 48px);
+  border: none;
+  padding: 0;
+  border-radius: 4px;
+  background: var(--sheet);
+  color: var(--sheet-ink);
+}
+dialog#logsheet::backdrop { background: rgba(10, 8, 5, 0.6); }
+dialog#logsheet .close { color: var(--sheet-ink); font-size: 16px; }
+#logsheet-body { padding: 20px 24px; font-size: 13px; }
+#logsheet-body .kind { color: var(--sand-deep); font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; }
+#logsheet-body h3 { margin: 2px 0 8px; font-size: 22px; }
+#logsheet-body h4 { margin: 16px 0 4px; border-bottom: 2px solid var(--sheet-ink); text-transform: uppercase; letter-spacing: 0.06em; }
+#logsheet-body .muted { color: var(--sheet-muted); }
+.lsid td { padding: 1px 12px 1px 0; }
+.lsid td:nth-child(odd) { color: var(--sheet-muted); }
+.lstable { border-collapse: collapse; width: 100%; margin-top: 4px; font-variant-numeric: tabular-nums; }
+.lstable th { text-align: left; font-weight: 600; font-size: 11px; color: var(--sheet-muted); padding: 2px 6px; border-bottom: 1px solid var(--sheet-muted); }
+.lstable td { padding: 2px 6px; vertical-align: top; }
+.lstable tr.lsbox td { border-top: 1px solid rgba(42, 37, 27, 0.25); }
+.lstable td:not(.lsunit):not(.lsw) { text-align: center; }
+.lsunit { width: 230px; }
+.lsunit .lsname { color: var(--sheet-muted); }
+.lsunder { font-size: 11px; color: var(--sheet-muted); }
 details.rule summary { cursor: pointer; font-weight: 600; }
 details.rule summary span { color: var(--sheet-muted); font-weight: 400; }
 

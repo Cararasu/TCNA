@@ -7,7 +7,10 @@ a local server, saved as they are played, with each player in their own browser
 or both sides in one (hot-seat). The rules themselves come next, milestone by
 milestone; see [docs/ROADMAP.md](docs/ROADMAP.md). For now a game has the
 sequence of play, the secret set-up of each scenario, and, in a sandbox game,
-moving units by hand.
+moving units by hand. Every unit is a unit of the Organization at Arrival
+Charts, with its TOE, ratings and morale: a counter carries the units attached
+to it, and each player can open the TOE Log Sheet of their own counters, while
+the other side sees only the counters' faces.
 
 ## Running it
 
@@ -45,6 +48,15 @@ text); `tools/rules/cases.py` builds it from the local transcription. Code marks
 the cases it carries out with `@implements(...)` from `cna.rules`, and
 `cna/rules/marks.py` records the cases that need no code.
 
+## Checking a set-up
+
+```
+python -m cna.engine.roster crusader   # a scenario (or setup): each side's units at its start
+```
+
+prints each side's counters place by place, each with the units it carries,
+their TOE and morale, for checking a set-up against the rulebook by eye.
+
 ## Tests
 
 ```
@@ -56,9 +68,11 @@ The tests cover the hex geometry, the corrections checks and the joining of the
 sections, and check that the data files agree with the vocabulary and with each
 other. They cover the engine: commands and their refusals, the sequence of play,
 the set-up of every scenario, saving and loading, what each player may see, and
-the API on a real server. They also check that every coverage mark names a real
-case. If Node.js is on `PATH`, they check that the browser's hex rules give the
-same results as the Python ones.
+the API on a real server. They check the unit data: the charts as extracted, the
+scenarios' links to them, each set-up's units as the rulebook gives them, and
+the units' characteristics and log sheets worked out by hand. They also check
+that every coverage mark names a real case. If Node.js is on `PATH`, they check
+that the browser's hex rules give the same results as the Python ones.
 
 ## Layout
 
@@ -78,7 +92,10 @@ same results as the Python ones.
 | `data/map/offmap.json` | The off-map boxes printed on the sheets (Tunis, Tripoli, holding boxes, …). |
 | `data/scenarios.json` | The scenarios (rulebook 59–64), their initial land deployments and who starts with the Initiative. |
 | `data/rules/cases.json` | Every section, subsection and case of the rulebook by number and heading, for the coverage report. Built by `tools/rules/cases.py`. |
-| `docs/` | The roadmap to a complete game, and the plan of the milestone being built. |
+| `data/tables/` | The characteristics charts: each nationality's units by ID code (4.46) and its tanks and guns (4.47–4.49). Built by `tools/units/tables.py` from the transcription; corrections to the printed charts are listed there. |
+| `data/units/` | The Organization at Arrival Charts (4.45): every land unit counter, by sheet, with its ID code, parent formation, TOE on arrival and arrival date. Built by `tools/units/oa.py`, with the three sheets the addenda add. |
+| `tools/units/` | Extraction of the unit data from the transcription: `tables.py` (characteristics charts), `oa.py` (OA charts), and `link.py`, which proposes the OA units a scenario listing means, for review. |
+| `docs/` | The roadmap to a complete game, and each milestone's plan. |
 | `tools/map/` | Extraction pipeline: `fit_grid.py` → `fit_tiles.py` → `extract.py`, with `overlay.py` / `check_crop.py` for checking by eye and `find_symbols.py` for landmark candidates. Needs SciPy. |
 
 ## Map conventions
@@ -98,8 +115,8 @@ same results as the Python ones.
 
 ## Not in version control
 
-The rulebook PDF/EPUB and its Markdown transcription
-(`The Campaign for North Africa.md`) stay local, since the transcription is
-copyrighted. When the transcription is present, the game shows the text of the
+The rulebook PDF/EPUB, its Markdown transcription
+(`The Campaign for North Africa.md`) and the scanned addenda
+(`CNA Addenda Sep 79.pdf`) stay local, since they are copyrighted. When the transcription is present, the game shows the text of the
 rulebook cases it cites. Rendered scans and tile caches live in `.cache/`, and
 saved games in `saves/`.

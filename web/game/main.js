@@ -14,7 +14,7 @@ import { $, escapeHtml, store } from '../shared/util.js';
 import { JoinedLayer, drawLandmarks, drawSideFeatures, drawTerrain } from '../shared/draw.js';
 import { Board } from './board.js';
 import { ApiError, GameClient, createGame, joinGame, listGames, stepTitles, tokensFor } from './client.js';
-import { locKey, parseLocKey, stacks, turnDate, turnText, unitList, unitsAt, unitsOf } from './state.js';
+import { carriedBy, counterOf, locKey, parseLocKey, stacks, turnDate, turnText, unitList, unitsAt, unitsOf } from './state.js';
 import { counterHtml } from './units.js';
 import { markdown } from './markdown.js';
 
@@ -330,6 +330,9 @@ function drawSelection() {
     .addTo(ui.groups.selection);
 }
 
+// Whether the seat holds the unit's log sheet: its own units, all of them for the referee.
+const hasSheet = (u) => u.oa && (u.side === seat() || seat() === 'referee');
+
 // May this seat place the unit now (Set-up Stage, own flexible unit)?
 const placeable = (u) => inSetup() && allowed('place-unit') && u.side === seat() && u.flex;
 
@@ -337,12 +340,18 @@ const placeable = (u) => inSetup() && allowed('place-unit') && u.side === seat()
 // set-up buttons for the units the player may place.
 function entryBlock(e, units) {
   const trucks = e.trucks && Object.entries(e.trucks).filter(([, n]) => n).map(([k, n]) => `${n} ${k}`).join(', ');
+  const by = carriedBy(ui.view);
   const items = units.map((u) => {
-    const buttons = placeable(u) ? `<div class="ubuttons"><button type="button" data-place="${u.id}">Place…</button>
-      ${u.loc.kind !== 'pool' ? `<button type="button" data-unplace="${u.id}">To the pool</button>` : ''}</div>` : '';
+    const buttons = [
+      ...(placeable(u) ? [`<button type="button" data-place="${u.id}">Place…</button>`] : []),
+      ...(placeable(u) && u.loc.kind !== 'pool' ? [`<button type="button" data-unplace="${u.id}">To the pool</button>`] : []),
+      ...(hasSheet(u) ? [`<button type="button" data-sheet="${u.id}">Log sheet</button>`] : []),
+    ];
+    const carried = by.get(u.id)?.length;
     return `<li>${counterHtml([u])}
       <div><div class="uname">${escapeHtml(u.name)}</div>
-        <div class="udetail">${escapeHtml(NATIONS[u.nat] || '')}${u.detail ? ` · ${escapeHtml(u.detail)}` : ''}</div>${buttons}</div></li>`;
+        <div class="udetail">${escapeHtml(NATIONS[u.nat] || '')}${carried ? ` · carries ${carried} unit${carried > 1 ? 's' : ''}` : ''}${
+          u.detail ? ` · ${escapeHtml(u.detail)}` : ''}</div>${buttons.length ? `<div class="ubuttons">${buttons.join('')}</div>` : ''}</div></li>`;
   }).join('');
   const flex = inSetup() && units[0].flex && units[0].loc.kind !== 'pool';
   const pooled = units.filter((u) => u.loc.kind === 'pool' && placeable(u));
@@ -406,14 +415,15 @@ $('#selection').addEventListener('click', (ev) => {
     ev.preventDefault();
     focusOn(a.dataset.zone ? { kind: 'zone', id: a.dataset.zone } : { kind: 'hex', id: a.dataset.hex });
   }
-  const b = ev.target.closest('[data-place], [data-place-all], [data-unplace]');
+  const b = ev.target.closest('[data-place], [data-place-all], [data-unplace], [data-sheet]');
+  if (b?.dataset.sheet) openLogSheet(b.dataset.sheet);
   if (b?.dataset.place) startPlacing([b.dataset.place]);
   if (b?.dataset.placeAll) startPlacing(b.dataset.placeAll.split(','));
   if (b?.dataset.unplace) act('place-unit', { unit: b.dataset.unplace, loc: { kind: 'pool' } });
   if (ev.target.closest('.close')) select(null);
 });
 document.addEventListener('keydown', (ev) => {
-  if (ev.key !== 'Escape' || $('#game').hidden || $('#briefing').open) return;
+  if (ev.key !== 'Escape' || $('#game').hidden || $('#briefing').open || $('#logsheet').open) return;
   if (ui.placing) stopPlacing(); else select(null);
 });
 
@@ -509,9 +519,10 @@ function renderForces() {
     if (sel.kind === 'pool') return units === d.pooled && sel.id === d.i;
     return units === d.placed && units.some((u) => locKey(sel) === locKey(sel.kind === 'hex' ? u.loc : ui.board.shownAt(u.loc)));
   };
+  const by = carriedBy(ui.view);
   const row = (d, units, pool) => `<div class="dep ${isOn(d, units) ? 'on' : ''}" data-entry="${d.i}" data-pool="${pool ? 1 : 0}">
       <div class="where">${escapeHtml(placeText(d.e.at))}${!pool && inSetup() && units[0].flex ? '<span class="flex-tag">flexible</span>' : ''}</div>
-      <div class="who">${units.map((u) => escapeHtml(u.name)).join(' · ')}</div></div>`;
+      <ul class="tree">${units.map((u) => treeHtml(u, by)).join('')}</ul></div>`;
   const mine = deploymentsOf(ui.side);
   const placed = mine.filter((d) => d.placed.length);
   const pool = mine.filter((d) => d.pooled.length);
@@ -526,13 +537,44 @@ function renderForces() {
     + (notes ? `<div class="forces-head">Notes</div>${notes.map((n) => `<div class="who">${escapeHtml(n)}</div>`).join('<br>')}` : '');
 }
 
+// A unit and the units it carries (4.25), each marked where it is assigned
+// elsewhere: attached but not assigned, or detached from its parent.
+function treeHtml(u, by) {
+  const kids = by.get(u.id) || [];
+  // Its parent, where that is in the game: not every formation a unit belongs to is in a scenario
+  const parent = u.parent && u.parent !== u.attached ? ui.view.units[u.parent] : null;
+  const note = parent ? `${u.attached ? 'attached; ' : ''}assigned to ${parent.name}`
+    : !u.attached || u.parent === u.attached ? ''
+      : u.parent ? 'attached; assigned to a formation not in play' : 'attached only';
+  const line = `<span class="tgo" data-unit="${u.id}" title="Show where it is"><span class="tname">${escapeHtml(u.abbr)}</span> <span class="tfull">${escapeHtml(u.name)}</span></span>${
+    kids.length ? ` <span class="tcount" title="Units it carries">${kids.length}</span>` : ''}${
+    note ? `<span class="tnote">${escapeHtml(note)}</span>` : ''}${
+    hasSheet(u) ? ` <button type="button" class="tsheet" data-sheet="${u.id}" title="Its TOE Log Sheet (4.52)">Log sheet</button>` : ''}${
+    !u.attached && u.detail ? `<div class="tdetail">${escapeHtml(u.detail)}</div>` : ''}`;
+  if (!kids.length) return `<li class="leaf">${line}</li>`;
+  return `<li><details><summary>${line}</summary>
+    <ul>${kids.map((k) => treeHtml(k, by)).join('')}</ul></details></li>`;
+}
+
 $('#forces .tabs').addEventListener('click', (ev) => {
   const b = ev.target.closest('button[data-side]');
   if (b && ui.view) { ui.side = b.dataset.side; renderForces(); }
 });
 $('#forces-body').addEventListener('click', (ev) => {
+  if (!ui.view) return;
+  const sheet = ev.target.closest('[data-sheet]');
+  if (sheet) { ev.preventDefault(); openLogSheet(sheet.dataset.sheet); return; }
+  const go = ev.target.closest('[data-unit]');
+  if (go) {  // a unit's name: where its counter is (not opening or closing its tree)
+    ev.preventDefault();
+    const c = counterOf(ui.view, ui.view.units[go.dataset.unit]);
+    if (c.loc.kind === 'pool') select({ kind: 'pool', id: c.deployment });
+    else focusOn(ui.board.shownAt(c.loc));
+    return;
+  }
+  if (ev.target.closest('.tree')) return;  // opening and closing a unit's tree
   const d = ev.target.closest('[data-entry]');
-  if (!d || !ui.view) return;
+  if (!d) return;
   const i = +d.dataset.entry;
   const units = unitsOf(ui.view, i).filter((u) => (u.loc.kind === 'pool') === (d.dataset.pool === '1'));
   if (!units.length) return;
@@ -570,6 +612,68 @@ function renderLog() {
   const items = [...ui.view.log].reverse().map((ev) => `<li><span class="seq">${ev.seq ?? ''}</span>
     <span class="${ev.type === 'clock-advanced' ? 'clock' : ''}">${ev.type === 'clock-advanced' ? eventText(ev) : escapeHtml(eventText(ev))}</span></li>`);
   $('#forces-body').innerHTML = `<ol class="log">${items.join('')}</ol>`;
+}
+
+// ---------- log sheets ----------
+
+// A counter's TOE Log Sheet (4.52), as the server keeps it for the counter's
+// owner (cna/engine/logsheets.py): A Counter Identity, B Maneuver Elements,
+// C Divisional Assets, D Augmentation. A box per unit, a line per weapons
+// system; parenthesized ratings are shown so.
+const RATINGS = [['aa', 'AA'], ['barrage', 'Barr'], ['anti_armor', 'Anti-armor'], ['vulnerability', 'Vul'],
+                 ['armor', 'Armor'], ['assault_off', 'CA Off'], ['assault_def', 'CA Def']];
+const rated = (x, k) => (x[k] === undefined || x[k] === null ? '–' : x.paren?.includes(k) ? `(${x[k]})` : `${x[k]}`);
+const barText = (b) => (b === undefined || b === null ? '–' : b > 0 ? `${b}R` : b < 0 ? `${-b}L` : '0');
+const SHEET_HEAD = `<tr><th>Unit</th><th>Weapons system</th><th>TOE</th><th>CPA</th><th>Fuel</th><th>BAR</th>${
+  RATINGS.map(([, t]) => `<th>${t}</th>`).join('')}</tr>`;
+
+function boxRows(b) {
+  const under = b.under && ui.view.units[b.under];
+  const c = b.characteristics;
+  const unit = `<b>${escapeHtml(b.abbr)}</b> <span class="lsname">${escapeHtml(b.name)}</span>${
+    under ? `<div class="lsunder">under ${escapeHtml(under.abbr)}</div>` : ''}${
+    c ? `<div class="lsunder">${escapeHtml(c.type)} · CPA ${c.cpa ?? '?'} · max TOE ${c.max_toe ?? '–'}</div>` : ''}`;
+  if (b.detached) {
+    return `<tr class="lsbox"><td class="lsunit">${unit}</td><td colspan="12" class="lsw muted">Detached: ${escapeHtml(placeName(b.detached))}</td></tr>`;
+  }
+  const lines = c ? c.toe : b.toe;
+  if (!lines.length) return `<tr class="lsbox"><td class="lsunit">${unit}</td><td colspan="12" class="lsw muted">No TOE Strength Points</td></tr>`;
+  return lines.map((x, i) => `<tr class="${i ? '' : 'lsbox'}">${i ? '' : `<td class="lsunit" rowspan="${lines.length}">${unit}</td>`}
+    <td class="lsw">${escapeHtml(x.name || x.type || (c ? c.type : ''))}${x.land ? ` <span class="muted">(${x.land} on land)</span>` : ''}</td>
+    <td>${x.n}</td><td>${x.cpa ?? '–'}</td><td>${x.fuel ?? '–'}</td><td>${barText(x.bar ?? (x.w ? null : c?.bar))}</td>
+    ${RATINGS.map(([k]) => `<td>${rated(x, k)}</td>`).join('')}</tr>`).join('');
+}
+
+function sheetSection(title, boxes, empty) {
+  return `<h4>${title}</h4>${boxes.length ? `<table class="lstable">${SHEET_HEAD}${boxes.map(boxRows).join('')}</table>`
+    : `<p class="muted">${empty}</p>`}`;
+}
+
+async function openLogSheet(id) {
+  let s;
+  try {
+    s = await ui.client.logSheet(id);
+  } catch (e) {
+    toast(e.message, e instanceof ApiError ? e.case : null);
+    return;
+  }
+  const a = s.identity;
+  const morale = a.morale ? `${a.morale.basic >= 0 ? '+' : ''}${a.morale.basic}${
+    a.morale.current !== a.morale.basic ? ` (now ${a.morale.current >= 0 ? '+' : ''}${a.morale.current})` : ''}` : '–';
+  $('#logsheet-body').innerHTML = `<div class="kind">TOE Log Sheet <span class="muted">(Case 4.52)</span></div>
+    <h3>${escapeHtml(a.name)} <span class="muted">${escapeHtml(a.abbr)}</span></h3>
+    <h4>A. Counter Identity</h4>
+    <table class="lsid">
+      <tr><td>Nationality</td><td>${escapeHtml(NATIONS[a.nat] || a.nat)}</td><td>Basic Morale</td><td>${morale}</td></tr>
+      <tr><td>Assigned to</td><td>${escapeHtml(a.parent ? `${a.parent}${a.parent_in_play ? '' : ' (not in play)'}` : 'none')}</td><td>Where</td><td>${escapeHtml(placeName(a.loc))}</td></tr>
+      <tr><td>Garrison</td><td>${escapeHtml(a.garrison || '–')}</td><td>Engineering capability</td><td>${a.eng ? 'yes' : 'no'}</td></tr>
+    </table>
+    <table class="lstable">${SHEET_HEAD}${boxRows({ ...a, under: null })}</table>
+    ${sheetSection('B. Maneuver Elements', s.maneuver, 'None.')}
+    ${a.division ? sheetSection('C. Divisional Assets', s.assets, 'None.') : ''}
+    ${sheetSection('D. Augmentation', s.augmentation, 'No units attached from other formations.')}
+    <h4>E. Logistics</h4><p class="muted">Trucks and supplies come with the Logistics Game.</p>`;
+  $('#logsheet').showModal();
 }
 
 // ---------- the game ----------

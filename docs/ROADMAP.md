@@ -18,15 +18,15 @@ Case numbers below refer to the rulebook. The rulebook text itself stays local
 | Have | Missing |
 | --- | --- |
 | Joined map: 7300 hexes with terrain, hexsides and landmarks. The map vocabulary covers every terrain and hexside row of the Terrain Effects Chart (8.37). | Map review: 0 of 7300 hexes are marked reviewed. Movement and combat costs are only as good as this data. |
-| Land deployments for all 8 scenarios (4 setups), linked to hexes and off-map boxes. | Each unit's composition, strength and characteristics. Supplies, trucks, air forces, the fleet and Malta for each scenario. |
-| A board that shows a scenario's starting position, and a map editor. | Every rule. No game state is kept after the page loads. |
+| The engine (M0): games on a local server, saved as they are played, the sequence of play, the secret Set-up Stage, hot-seat and two-browser play. | Every rule of play: movement, combat, supply. |
+| The unit data (M1): every OA unit with its TOE, ratings and morale; all 8 scenarios' set-ups expanded into them, with the tank tables; attachment, log sheets, and hidden strengths. | Reinforcements, organization, breakdown and the set-ups' upgrades (M4). Supplies, trucks, air forces, the fleet and Malta for each scenario. |
 
 The rulebook transcription contains everything the rules need as Markdown
 tables, so it can be parsed rather than typed in:
 
 - the Organization at Arrival charts (4.44), giving each unit's ID code, TOE,
-  weapon systems and arrival
-- the unit, tank and gun characteristics (4.46–4.49)
+  weapon systems and arrival (extracted in M1)
+- the unit, tank and gun characteristics (4.46–4.49) (extracted in M1)
 - the reinforcement schedules (4.43)
 - every combat results table and modifier chart
 - the 45 worked examples, which become test cases
@@ -135,6 +135,9 @@ they left off.
 
 **Done when** every unit in every set-up resolves to its OA entry with its full
 characteristics, checked by a test.
+
+Done. What the set-ups say that a later milestone carries out is listed under
+`later` in `data/scenarios.json`.
 
 ### M2 — Land movement
 
@@ -269,15 +272,17 @@ game of its own.
 
 ## Decisions to make
 
-1. **Data drawn from the rulebook.** The unit charts, combat tables and
-   schedules, once extracted, are rulebook content. Either commit them to the
-   (GitHub) repository, or commit only the extraction script and build them
-   locally from the transcription, as the transcription itself is handled now.
-2. **How it is played.** Hot-seat and local-network play come with the server
+1. **How it is played.** Hot-seat and local-network play come with the server
    design. A computer opponent would be a separate, very large project.
-3. **Order after the Land Game.** This plan puts logistics before air.
+2. **Order after the Land Game.** This plan puts logistics before air.
 
 Decided:
+
+- **Data drawn from the rulebook is committed.** The unit charts, combat
+  tables and schedules are extracted from the transcription by scripts under
+  `tools/`, and the results are committed with them, as `scenarios.json` is.
+  The game can't run without them. The transcription itself, and any rule
+  text, stay local.
 
 - **The rules run only on the server**, in Python, for play across browsers.
   The browser has no rule code. To show what an order would do, it asks the

@@ -80,6 +80,11 @@ export class GameClient {
   get seats() { return Object.keys(tokensFor(this.id)); }
 
   view() { return call('GET', `/api/games/${this.id}/view`, undefined, this.token); }
+  // The TOE Log Sheet of one of the seat's counters (cna/engine/logsheets.py).
+  logSheet(unit) {
+    const path = unit.split('/').map(encodeURIComponent).join('/');
+    return call('GET', `/api/games/${this.id}/logsheet/${path}`, undefined, this.token);
+  }
 
   // Gives an order. If the network fails it is sent once more with the same
   // id, which the server runs at most once.

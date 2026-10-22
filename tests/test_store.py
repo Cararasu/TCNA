@@ -54,8 +54,8 @@ class Saving(unittest.TestCase):
     def shuffle(self, times):
         """Places a pooled Axis unit and takes it back, `times` times: two commands each."""
         unit = next(u['id'] for u in self.game.state['units'].values()
-                    if u['side'] == 'axis' and u['loc']['kind'] == 'pool')
-        some_hex = next(u['loc'] for u in self.game.state['units'].values() if u['loc']['kind'] == 'hex')
+                    if u['side'] == 'axis' and u['loc'] and u['loc']['kind'] == 'pool')
+        some_hex = next(u['loc'] for u in self.game.state['units'].values() if u['loc'] and u['loc']['kind'] == 'hex')
         for _ in range(times):
             self.give('axis', 'place-unit', unit=unit, loc=some_hex)
             self.give('axis', 'undo')
@@ -94,10 +94,10 @@ class Saving(unittest.TestCase):
         self.assertEqual(self.reopened().state, again.state)
 
     def pooled(self, side, game):
-        return next(u['id'] for u in game.state['units'].values() if u['side'] == side and u['loc']['kind'] == 'pool')
+        return next(u['id'] for u in game.state['units'].values() if u['side'] == side and u['loc'] and u['loc']['kind'] == 'pool')
 
     def some_hex(self, game):
-        return next(u['loc'] for u in game.state['units'].values() if u['loc']['kind'] == 'hex')
+        return next(u['loc'] for u in game.state['units'].values() if u['loc'] and u['loc']['kind'] == 'hex')
 
     def test_a_damaged_line_inside_the_log_is_an_error(self):
         self.shuffle(1)
@@ -317,7 +317,7 @@ class Saving(unittest.TestCase):
             with self.assertRaises(OSError):
                 self.game.view('axis')  # still unreadable: refused, not shown half-loaded
         self.assertIn('could not read game', err.getvalue())
-        self.assertEqual(self.game.view('referee')['units'], before['units'])
+        self.assertEqual(set(self.game.view('referee')['units']), set(before['units']))
         self.assertFalse(self.game.broken)
         self.assertEqual(self.game.state, before)
 

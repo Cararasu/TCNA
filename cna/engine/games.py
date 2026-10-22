@@ -21,7 +21,7 @@ import traceback
 from collections import OrderedDict, deque
 
 from ..paths import SAVES
-from . import events, seats, setup, views
+from . import events, logsheets, seats, setup, views
 from .commands import COMMANDS, Broken, Refused, run
 from .state import SIDES
 from .store import SNAPSHOT_EVERY, Save, reported, saved_games
@@ -172,6 +172,12 @@ class Game:
         with self.changed:
             self._check()
             return views.view(self.state, seat, self.log, self.registry, seq=self.seq_for(seat))
+
+    def log_sheet(self, seat, uid):
+        """The TOE Log Sheet of one of the seat's counters (logsheets.py); raises Refused."""
+        with self.changed:
+            self._check()
+            return logsheets.log_sheet(self.state, seat, uid)
 
     def visible(self, evs, seat):
         """The events as the seat may see them."""

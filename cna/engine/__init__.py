@@ -7,11 +7,13 @@
   sequence  the sequence of play as data, and the clock that walks it
   play      the commands that move a game along the sequence of play
   board     the map as the rules see it: hexes, section labels, off-map boxes
+  oa        the units as the charts give them: OA entries and characteristics
   setup     a new game's starting state from a scenario
   units     placing units in the Set-up Stage, sandbox moves, undo
   store     saving a game: its event log, snapshot and meta (saves/<id>/)
   seats     who plays which side: tokens and their keys
   views     what one seat may see, for showing and for previews
+  logsheets a counter's TOE Log Sheet, for its owner
   games     open games: one lock each, commands saved before they are answered, waiting for changes
 """
 from . import play, seats, units  # noqa: F401  register their commands

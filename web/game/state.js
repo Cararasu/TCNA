@@ -1,7 +1,8 @@
 // Reading a game's view: what the server sends one seat of a game
 // (/api/games/<id>/view, cna/engine/views.py). The view has the shape of the
-// game's state; its units are {id: unit}, each at a loc. The rules are on the
-// server, so nothing here changes a game.
+// game's state; its units are {id: unit}, each a counter at a loc, or attached
+// to another unit and carried by it (no loc). The rules are on the server, so
+// nothing here changes a game.
 
 // ---------- time ----------
 
@@ -27,7 +28,8 @@ export function parseLocKey(key) {
 
 // ---------- queries ----------
 
-export const unitList = (view) => Object.values(view.units);
+// The counters: units not attached to another, which go where their carrier goes.
+export const unitList = (view) => Object.values(view.units).filter((u) => !u.attached);
 
 // The units at each place (the pool left out), in deployment order.
 export function stacks(view) {
@@ -39,6 +41,25 @@ export function stacks(view) {
     out.get(k).push(u);
   }
   return out;
+}
+
+// The units each unit carries: carrier id -> [unit], in the view's order. The
+// other side's are not in the view: only their counters are.
+export function carriedBy(view) {
+  const out = new Map();
+  for (const u of Object.values(view.units)) {
+    if (!u.attached) continue;
+    if (!out.has(u.attached)) out.set(u.attached, []);
+    out.get(u.attached).push(u);
+  }
+  return out;
+}
+
+// The counter a unit is in: itself, or the one carrying it.
+export function counterOf(view, u) {
+  let c = u;
+  for (let i = 0; c.attached && view.units[c.attached] && i < 50; i++) c = view.units[c.attached];
+  return c;
 }
 
 export const unitsAt = (view, loc) => unitList(view).filter((u) => locKey(u.loc) === locKey(loc));

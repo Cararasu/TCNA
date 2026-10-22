@@ -1,5 +1,6 @@
 """The game API on a real server (cna/server.py): routes, tokens and the stream."""
 import contextlib
+import copy
 import http.client
 import io
 import json
@@ -51,10 +52,10 @@ class Api(unittest.TestCase):
         return made['id'], made['token'], joined['token']
 
     def pooled(self, view, side):
-        return next(u for u in view['units'].values() if u['side'] == side and u['loc']['kind'] == 'pool')
+        return next(u for u in view['units'].values() if u['side'] == side and u['loc'] and u['loc']['kind'] == 'pool')
 
     def a_hex(self, view):
-        return next(u['loc'] for u in view['units'].values() if u['loc']['kind'] == 'hex')
+        return next(u['loc'] for u in view['units'].values() if u['loc'] and u['loc']['kind'] == 'hex')
 
     def stream(self, gid, query=''):
         """Opens the game's stream; returns the connection and a function
@@ -143,7 +144,7 @@ class Api(unittest.TestCase):
         conn, next_changed = self.stream(gid, f'?token={cw}')
         first = next_changed()  # where the game is now, as the Commonwealth may know it
         _, v = self.call('GET', f'/api/games/{gid}/view', token=axis)
-        pooled = [u['id'] for u in v['units'].values() if u['side'] == 'axis' and u['loc']['kind'] == 'pool']
+        pooled = [u['id'] for u in v['units'].values() if u['side'] == 'axis' and u['loc'] and u['loc']['kind'] == 'pool']
         place = {'id': 's1', 'type': 'place-unit', 'args': {'units': pooled, 'loc': self.a_hex(v)}}
         self.assertEqual(self.call('POST', f'/api/games/{gid}/commands', place, axis)[0], 200)
         # The placement is secret, so the stream stays quiet; ending the set-up is not.
@@ -158,7 +159,7 @@ class Api(unittest.TestCase):
         stream once took it, only gets the number anyone may know of."""
         gid, axis, cw = self.new_game()
         _, v = self.call('GET', f'/api/games/{gid}/view', token=axis)
-        pooled = [u['id'] for u in v['units'].values() if u['side'] == 'axis' and u['loc']['kind'] == 'pool']
+        pooled = [u['id'] for u in v['units'].values() if u['side'] == 'axis' and u['loc'] and u['loc']['kind'] == 'pool']
         for i, unit in enumerate(pooled[:3]):
             cmd = {'id': f'p{i}', 'type': 'place-unit', 'args': {'unit': unit, 'loc': self.a_hex(v)}}
             self.assertEqual(self.call('POST', f'/api/games/{gid}/commands', cmd, axis)[0], 200)
@@ -200,6 +201,26 @@ class Api(unittest.TestCase):
         status, cat = self.call('GET', '/api/scenarios')
         self.assertEqual(status, 200)
         self.assertEqual(set(cat['setups']['italians']['counts']['axis']), {'map', 'pool'})
+        gid, axis, cw = self.new_game()
+        status, sheet = self.call('GET', f'/api/games/{gid}/logsheet/it/ltc/ltc', token=axis)
+        self.assertEqual((status, sheet['identity']['name']), (200, 'Libyan Tank Command HQ'))
+        self.assertEqual(self.call('GET', f'/api/games/{gid}/logsheet/it/ltc/ltc', token=cw)[0], 404)
+        self.assertEqual(self.call('GET', f'/api/games/{gid}/logsheet/it/ltc/ltc')[0], 401)
+        status, charts = self.call('GET', '/api/units')
+        self.assertEqual(status, 200)
+        self.assertEqual(set(charts), {'cw', 'it', 'gm'})
+        self.assertEqual(charts['cw']['codes']['g']['type'], 'Tank Bn-Eq')
+        self.assertEqual(charts['cw']['sheets'][0]['id'], 'cw/1-armd')
+        self.assertIn('a9-cruiser', charts['cw']['weapons'])
+
+    def test_a_setup_no_scenario_uses_yet(self):
+        cat = server.read_json(server.SCENARIOS)
+        cat['setups']['spare'] = copy.deepcopy(cat['setups']['crusader'])
+        with mock.patch.object(server, 'read_json', return_value=cat):
+            status, got = self.call('GET', '/api/scenarios')
+        self.assertEqual(status, 200)
+        self.assertNotIn('counts', got['setups']['spare'])
+        self.assertIn('counts', got['setups']['crusader'])
 
     def test_a_damaged_save_is_not_taken_for_a_missing_game(self):
         gid, _, _ = self.new_game()

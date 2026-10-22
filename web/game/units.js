@@ -1,5 +1,5 @@
-// How a unit looks: its counter, NATO-style symbol and short name. Takes the
-// units of a game (state.js).
+// How a unit looks: its counter, NATO-style symbol and abbreviation, as the
+// view gives them (cna/engine/oa.py face). Takes the units of a game (state.js).
 
 import { UNIT_SIZES } from '../shared/vocab.js';
 import { escapeHtml } from '../shared/util.js';
@@ -42,6 +42,6 @@ export function counterHtml(units, opts = {}) {
   return `<div class="${cls.join(' ')}" style="${style}" title="${escapeHtml(units.map((x) => x.name).join(', '))}">
     <span class="side-strip"></span>
     <span class="size">${top.size}</span>${unitSymbol(top.type)}
-    <span class="nm">${escapeHtml(shortName(top.name))}</span>
+    <span class="nm">${escapeHtml(top.abbr || shortName(top.name))}</span>
     ${units.length > 1 ? `<span class="n">${units.length}</span>` : ''}</div>`;
 }

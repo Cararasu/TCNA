@@ -9,6 +9,7 @@ from cna.engine.commands import COMMANDS, Refused
 from cna.engine.dice import DiceNeeded
 from cna.engine.events import applies, event
 from cna.engine.games import Games
+from cna.engine.oa import face
 
 TEST = COMMANDS.extended()
 
@@ -38,9 +39,16 @@ class Seen(unittest.TestCase):
         return self.game.submit({'id': f'c{self.n}', 'type': type_, 'args': args}, seat)
 
     def units(self, side, **match):
+        """The side's counters: its units not attached to another."""
         return [u for u in self.game.state['units'].values()
-                if u['side'] == side and all(u[k] == x if k != 'pool' else (u['loc']['kind'] == 'pool') == x
+                if u['side'] == side and u['attached'] is None
+                and all(u[k] == x if k != 'pool' else (u['loc']['kind'] == 'pool') == x
                                              for k, x in match.items())]
+
+    def every(self, side, **match):
+        """The side's units, attached or not."""
+        return [u for u in self.game.state['units'].values()
+                if u['side'] == side and all(u[k] == x for k, x in match.items())]
 
     def a_hex(self, side):
         return next(u['loc'] for u in self.units(side, flex=False) if u['loc']['kind'] == 'hex')
@@ -59,7 +67,7 @@ class Seen(unittest.TestCase):
         self.assertEqual(cw['undo']['axis'], [])
         self.assertFalse([ev for ev in cw['log'] if ev['type'] == 'unit-placed'])
         self.assertEqual(len(self.game.view('axis')['units']),
-                         len(self.units('axis')) + len(self.units('cw', flex=False)))
+                         len(self.every('axis')) + len(self.units('cw', flex=False)))
         self.assertEqual(len(self.game.view('referee')['units']), len(self.game.state['units']))
         self.assertEqual(cw['unseen'], len(self.units('axis', flex=True)))
         self.assertEqual(self.game.view('referee')['unseen'], 0)
@@ -81,6 +89,37 @@ class Seen(unittest.TestCase):
             self.assertNotIn(token, text, seat)
             self.assertNotIn(self.game.state['seats']['axis']['key'], text, seat)
         self.assertNotIn(self.game.state['seats']['axis']['key'], self.game.save.meta_path.read_text())
+
+    def test_the_other_side_sees_counter_faces_only(self):
+        """Its counters as their faces show them; their log sheets (TOE, morale,
+        assignment, the units they carry) stay with their owner, before and after
+        the Set-up Stage."""
+        def check():
+            for seat, foe in (('axis', 'cw'), ('cw', 'axis')):
+                v = self.game.view(seat)
+                theirs = {uid: u for uid, u in v['units'].items() if u['side'] == foe}
+                self.assertTrue(theirs)
+                for u in theirs.values():
+                    self.assertFalse({'toe', 'morale', 'parent'} & set(u), u)
+                    self.assertIsNone(u['attached'], u)
+                    self.assertTrue(u['name'] and u['type'], u)  # the face
+                self.assertFalse([u for u in self.every(foe) if u['attached'] and u['id'] in v['units']])
+                # Its own units, all of them, as they are
+                mine = {uid: u for uid, u in v['units'].items() if u['side'] == seat}
+                self.assertEqual(set(mine), {u['id'] for u in self.every(seat)})
+                self.assertTrue(all('toe' in u and 'morale' in u for u in mine.values()))
+                # Nor does the log tell: game-created, which holds the state, is shown without it
+                self.assertFalse([ev for ev in v['log'] if 'state' in ev])
+            self.assertEqual(len(self.game.view('referee')['units']), len(self.game.state['units']))
+
+        check()
+        self.place_all('axis')
+        self.place_all('cw')
+        self.give('axis', 'end-step')
+        self.give('cw', 'end-step')
+        self.assertNotEqual(self.game.state['clock']['step'], 'setup')
+        check()
+        self.assertEqual(self.game.view('cw')['unseen'], 0)
 
     def test_what_the_view_says_about_now(self):
         now = self.game.view('axis')['now']
@@ -130,9 +169,9 @@ class Seats(unittest.TestCase):
         self.assertEqual(self.game.view('axis')['seats']['cw'], {'name': 'Ann Smith'})
         self.assertIsNone(self.game.seat_of('not-a-token'))
         self.assertIsNone(self.game.seat_of(None))
-        unit = next(u for u in self.game.state['units'].values() if u['side'] == 'axis' and u['flex'])
+        unit = next(u for u in self.game.state['units'].values() if u['side'] == 'axis' and u['flex'] and u['attached'] is None)
         loc = {'kind': 'pool'} if unit['loc']['kind'] != 'pool' else next(
-            u['loc'] for u in self.game.state['units'].values() if u['loc']['kind'] == 'hex')
+            u['loc'] for u in self.game.state['units'].values() if u['loc'] and u['loc']['kind'] == 'hex')
         with self.assertRaises(Refused):
             self.game.submit({'id': 'x', 'type': 'place-unit', 'args': {'unit': unit['id'], 'loc': loc}},
                              self.game.seat_of(cw))
@@ -198,7 +237,7 @@ class Previews(Seen):
                 attempt(cmd, 'cw')
             refusals.append(r.exception.message)
         self.assertEqual(refusals[0], refusals[1])
-        self.assertNotIn(unit['name'], refusals[0])
+        self.assertNotIn(face(unit)['name'], refusals[0])
 
 
 if __name__ == '__main__':

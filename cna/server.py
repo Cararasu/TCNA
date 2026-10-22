@@ -17,7 +17,8 @@ saves only for a browser on this machine: others may look but not change.
   GET  /api/game/map                  the joined board with corrections applied
   GET  /api/scenarios                 data/scenarios.json, with each setup's units on the map and to place
   GET  /api/rules/<case>              rule text from the local rulebook transcription
-  GET  /title.jpg                     the title screen's board
+  GET  /api/units                     the OA and characteristics charts, by chart (data/units/, data/tables/)
+  GET  /title.jpg                    the title screen's board
 
 Games (cna/engine), saved under saves/. A player is known by the token joining
 a seat gave them, sent as "Authorization: Bearer <token>":
@@ -28,6 +29,7 @@ a seat gave them, sent as "Authorization: Bearer <token>":
                                       -> {id}, and {seat, token} when a seat is taken too
   POST /api/games/<id>/join           {seat, name} -> {seat, token}
   GET  /api/games/<id>/view           what the token's seat sees
+  GET  /api/games/<id>/logsheet/<unit> the TOE Log Sheet of one of the seat's counters (4.52)
   POST /api/games/<id>/commands       {id, type, args} -> {events, seq}, or 422 with the refusal
   POST /api/games/<id>/preview        {type, args} -> {events}, or {dice} if it needs dice, or 422
   GET  /api/games/<id>/stream?token=  server-sent events: 'changed' with the token's seat's event number;
@@ -56,7 +58,7 @@ from pathlib import Path
 from urllib.parse import parse_qs, urlsplit
 
 from . import mapdata, rulebook, scans
-from .engine import sequence, setup
+from .engine import oa, sequence, setup
 from .engine.board import board
 from .engine.commands import Refused
 from .engine.dice import DiceNeeded
@@ -216,9 +218,18 @@ def get_game_map():
 def get_scenarios():
     cat = read_json(SCENARIOS)
     b = board()
-    for su in cat['setups'].values():
-        su['counts'] = setup.counts(su, b)
+    for sid, su in cat['setups'].items():
+        # The scenarios of a setup start together; the counts are the first's.
+        # A setup no scenario uses yet has none to show.
+        start = next((s['start'] for s in cat['scenarios'] if s['setup'] == sid), None)
+        if start:
+            su['counts'] = setup.counts(su, b, start)
     return {**cat, 'rulebook': rulebook.available()}
+
+
+@route('GET', r'/api/units')
+def get_units():
+    return oa.charts().payload()
 
 
 @route('GET', r'/api/rules/(\d{1,2}\.\d{1,3})')
@@ -313,6 +324,15 @@ def join_game(game_id, req):
 def get_view(game_id, req):
     game = _game(game_id)
     return game.view(_seat(game, req.token))
+
+
+@route('GET', rf'/api/games/{GAME_ID}/logsheet/([a-z0-9./-]{{1,80}})')
+def get_log_sheet(game_id, uid, req):
+    game = _game(game_id)
+    try:
+        return game.log_sheet(_seat(game, req.token), uid)
+    except Refused as exc:
+        raise HTTPError(HTTPStatus.NOT_FOUND, exc.message, exc.case) from None
 
 
 @route('POST', rf'/api/games/{GAME_ID}/commands')

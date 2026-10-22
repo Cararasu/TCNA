@@ -15,13 +15,31 @@ is saved, sent and checked in tests. Only events change it (events.py).
               scenario through Game-Turn `through` (7.15)
   clock       the place in the sequence of play (sequence.py)
   dice        {seed, rolls}: the dice's seed and how many have been rolled (dice.py)
-  units       unit id -> unit
-  deployments the scenario's deployments, less their units, by index: a unit's
-              `deployment` (setup.py). Only shown, never changed.
+  units       unit id -> unit: one per unit of the log sheets, attached or not
+              (setup.py). The charts' data (names, ID code, ratings) is not
+              copied here but looked up by oa (oa.py), so that a fix in the
+              data reaches games already started.
+                id        the OA id, or <setup>.<deployment>.<listing> for a
+                          unit with no OA entry
+                oa        the OA id; None for those, which carry their own kind,
+                          name, type and size
+                side, nat
+                toe       the TOE Strength Points it has now: {w, n} of a
+                          weapons system, {n} of its own kind, {code, n} of
+                          another ID code (oa.py)
+                morale    {basic, current} (17.1, 17.3), or None
+                parent    the formation it is assigned to, or None
+                attached  the unit it is attached to and carried by, or None (4.25)
+                loc       where its counter is; None while it is attached
+                flex      whether the player places it in the Set-up Stage
+                deployment, listing   the deployment and listing it came from
+  deployments the scenario's deployments, with their listings' names and texts
+              but not their units, by index: a unit's `deployment` and
+              `listing` (setup.py). Only shown, never changed.
   undo       side -> the side's moves in the current step that it can take back (units.py)
   seq        the number of the last event applied
 """
-EVENT_VERSION = 1
+EVENT_VERSION = 2  # 2: a unit per OA unit, attached or not (M1)
 SIDES = ('axis', 'cw')
 SIDE_NAMES = {'axis': 'Axis', 'cw': 'Commonwealth'}
 SEATS = (*SIDES, 'referee')  # the referee sees everything and gives no orders
